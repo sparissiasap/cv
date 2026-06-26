@@ -1,8 +1,7 @@
-name: Deploy CV to Netlify
+name: Deploy to Netlify (Manual)
 
 on:
-  push:
-    branches: [main, master]
+  workflow_dispatch:
 
 jobs:
   deploy:
