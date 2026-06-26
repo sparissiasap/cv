@@ -50,5 +50,9 @@ function closeModal(e) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', buildCertsGrid);
+document.addEventListener('DOMContentLoaded', () => {
+  buildCertsGrid();
+  // Trigger skill bar fill animations after a short paint delay
+  setTimeout(() => document.body.classList.add('loaded'), 200);
+});
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
