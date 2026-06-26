@@ -50,6 +50,17 @@ function closeModal(e) {
   }
 }
 
+function copyLink() {
+  const url = 'https://sparissiasap.github.io/cv/';
+  const label = document.getElementById('copyLabel');
+  navigator.clipboard.writeText(url).then(() => {
+    label.textContent = '✓ Copiado';
+    setTimeout(() => { label.textContent = 'Copiar enlace'; }, 2000);
+  }).catch(() => {
+    prompt('Copia este enlace:', url);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   buildCertsGrid();
   // Trigger skill bar fill animations after a short paint delay
