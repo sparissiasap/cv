@@ -26,7 +26,21 @@
       background: #0d2b55;
       color: #ffffff;
       padding: 36px 48px 28px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
     }
+    .header-photo {
+      flex-shrink: 0;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid #93c5e8;
+      object-fit: cover;
+      object-position: center top;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .header-text { flex: 1; }
     .header h1 {
       font-size: 28pt;
       font-weight: 700;
@@ -266,14 +280,17 @@
 
   <!-- ═══════════════ HEADER ═══════════════ -->
   <div class="header">
-    <h1>Sergio Parissi Reyes</h1>
-    <h2>Senior .NET Developer &amp; Sitecore Specialist &nbsp;|&nbsp; CMS Architecture &nbsp;|&nbsp; Cloud &amp; Azure Solutions</h2>
-    <div class="contact-row">
-      <span>📍 Cancún, Mexico</span>
-      <span>📞 +52 998 200 2898</span>
-      <span>✉️ <a href="mailto:sergioparissireyes@gmail.com">sergioparissireyes@gmail.com</a></span>
-      <span>🔗 <a href="https://www.linkedin.com/in/sergioparissi" target="_blank">LinkedIn</a></span>
-      <span>💻 <a href="https://github.com/sergioparissi" target="_blank">GitHub</a></span>
+    <img src="perfil.png" alt="Sergio Parissi" class="header-photo" />
+    <div class="header-text">
+      <h1>Sergio Parissi Reyes</h1>
+      <h2>Senior .NET Developer &amp; Sitecore Specialist &nbsp;|&nbsp; CMS Architecture &nbsp;|&nbsp; Cloud &amp; Azure Solutions</h2>
+      <div class="contact-row">
+        <span>📍 Cancún, Mexico</span>
+        <span>📞 +52 998 200 2898</span>
+        <span>✉️ <a href="mailto:sergioparissireyes@gmail.com">sergioparissireyes@gmail.com</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/sergioparissi" target="_blank">LinkedIn</a></span>
+        <span>💻 <a href="https://github.com/sparissiasap" target="_blank">GitHub</a></span>
+      </div>
     </div>
   </div>
 
