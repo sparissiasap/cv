@@ -858,16 +858,11 @@ body.loaded .eb-fill { width: var(--w); }
     box-decoration-break: clone;
   }
 
-  /* ── Prevent content cuts inside individual blocks ───────────── */
-
-  /* Timeline items, cert rows, skill bars must never be cut mid-item */
-  .timeline-item, .cert-item, .exp-bar, .edu-block, .lang-item {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  /* Sidebar cards are short enough to keep whole */
-  .sidebar-col .card {
+  /* ── Prevent cuts only for small single-line elements ───────── */
+  /* Skill bars, cert rows, and language items are short enough to keep
+     whole. Larger blocks (timeline-item, cards) are allowed to break
+     across pages — box-decoration-break: clone handles the visual. */
+  .cert-item, .exp-bar, .lang-item {
     break-inside: avoid;
     page-break-inside: avoid;
   }
