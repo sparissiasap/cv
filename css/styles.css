@@ -849,30 +849,45 @@ body.loaded .eb-fill { width: var(--w); }
   /* ── Hero: allow overflow so ::before/::after gradients render ── */
   .hero { overflow: visible !important; break-inside: avoid; }
 
-  /* ── Prevent content cuts between pages ──────────────────── */
-
-  /* Never break mid-card — but only for sidebar cards (short ones).
-     Main-col cards (experience, summary) CAN break across pages. */
-  .sidebar-col .card {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  /* ── Cards: clone background + border on every page fragment ─────
+     Without this, a card that spans a page break looks "sliced" —
+     no border-radius or background on the cut edge.
+     With clone, each fragment gets its own complete box appearance. */
+  .card {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
-  /* Individual items inside main col should never be cut */
+  /* ── Prevent content cuts inside individual blocks ───────────── */
+
+  /* Timeline items, cert rows, skill bars must never be cut mid-item */
   .timeline-item, .cert-item, .exp-bar, .edu-block, .lang-item {
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
-  /* Keep section label attached to the first item below it */
+  /* Sidebar cards are short enough to keep whole */
+  .sidebar-col .card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Keep section label attached to content below it */
   .section-label {
     break-after: avoid;
     page-break-after: avoid;
   }
 
-  /* Keep job header (title + company + dates) with its first bullet */
+  /* Keep job header glued to its first bullet */
   .job-meta {
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  /* ── Photo: cap resolution so PDF doesn't embed full 5MB source ─ */
+  .hero-photo {
+    image-rendering: auto;
+    max-width: 136px !important;
+    max-height: 136px !important;
   }
 }
