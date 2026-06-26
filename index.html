@@ -4,658 +4,805 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sergio Parissi Reyes — Senior .NET & Sitecore Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      font-size: 10.5pt;
-      color: #1a1a1a;
-      background: #f4f4f4;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      font-size: 10pt;
+      -webkit-font-smoothing: antialiased;
     }
 
     .page {
-      max-width: 900px;
-      margin: 30px auto;
-      background: #ffffff;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      max-width: 980px;
+      margin: 40px auto 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
 
-    /* ─── HEADER ─── */
-    .header {
-      background: #0d2b55;
-      color: #ffffff;
-      padding: 36px 48px 28px;
+    /* ─── HERO HEADER ─── */
+    .hero {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 48px 52px;
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 40px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+      margin-bottom: 16px;
     }
-    .header-photo {
+    .hero-photo {
       flex-shrink: 0;
-      width: 110px;
-      height: 110px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      border: 3px solid #93c5e8;
       object-fit: cover;
       object-position: center top;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
     }
-    .header-text { flex: 1; }
-    .header h1 {
-      font-size: 28pt;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      line-height: 1.15;
+    .hero-info { flex: 1; }
+    .hero-name {
+      font-size: 34pt;
+      font-weight: 800;
+      color: #1d1d1f;
+      letter-spacing: -1px;
+      line-height: 1.1;
     }
-    .header h2 {
-      font-size: 13pt;
+    .hero-title {
+      font-size: 12pt;
       font-weight: 400;
-      color: #93c5e8;
-      margin-top: 6px;
-      letter-spacing: 0.3px;
+      color: #6e6e73;
+      margin-top: 8px;
+      letter-spacing: -0.2px;
     }
-    .contact-row {
-      margin-top: 18px;
+    .hero-contact {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
-      font-size: 9.5pt;
-      color: #cde4f5;
+      gap: 10px;
+      margin-top: 20px;
     }
-    .contact-row span::before {
-      margin-right: 5px;
-    }
-    .contact-row a {
-      color: #93c5e8;
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #f5f5f7;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 8.5pt;
+      font-weight: 500;
+      color: #1d1d1f;
       text-decoration: none;
+      transition: background 0.15s;
     }
+    .contact-chip:hover { background: #e8e8ed; }
+    .contact-chip .icon { font-size: 10pt; }
 
-    /* ─── BODY LAYOUT ─── */
-    .body {
+    /* ─── GRID LAYOUT ─── */
+    .grid {
       display: grid;
-      grid-template-columns: 1fr 260px;
+      grid-template-columns: 1fr 300px;
+      gap: 16px;
+      align-items: start;
     }
 
-    /* ─── MAIN COLUMN ─── */
-    .main {
-      padding: 32px 36px 36px 48px;
-      border-right: 1px solid #e8ecf0;
+    /* ─── CARDS ─── */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 36px 40px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+      margin-bottom: 16px;
     }
+    .card:last-child { margin-bottom: 0; }
 
-    /* ─── SIDEBAR ─── */
-    .sidebar {
-      padding: 32px 28px;
-      background: #f8fafc;
-    }
-
-    /* ─── SECTION TITLES ─── */
-    .section-title {
-      font-size: 10pt;
+    /* ─── SECTION LABELS ─── */
+    .section-label {
+      font-size: 9pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.4px;
-      color: #0d2b55;
-      border-bottom: 2px solid #0d2b55;
-      padding-bottom: 5px;
-      margin-bottom: 16px;
-      margin-top: 28px;
-    }
-    .section-title:first-child { margin-top: 0; }
-
-    .sidebar .section-title {
-      font-size: 9.5pt;
+      letter-spacing: 1.2px;
+      color: #6e6e73;
+      margin-bottom: 20px;
     }
 
     /* ─── SUMMARY ─── */
-    .summary p {
+    .summary-text {
       font-size: 10.5pt;
-      line-height: 1.65;
-      color: #333;
+      line-height: 1.7;
+      color: #3a3a3c;
+      font-weight: 400;
     }
+    .summary-text + .summary-text { margin-top: 14px; }
+    .summary-text strong { color: #1d1d1f; font-weight: 600; }
 
-    /* ─── JOB ENTRY ─── */
-    .job { margin-bottom: 22px; }
-    .job-header {
+    /* ─── TIMELINE EXPERIENCE ─── */
+    .timeline { position: relative; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 16px 1fr;
+      gap: 0 20px;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 4px;
+    }
+    .timeline-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #0071e3;
+      flex-shrink: 0;
+    }
+    .timeline-dot.current {
+      background: #0071e3;
+      box-shadow: 0 0 0 3px rgba(0,113,227,0.18);
+    }
+    .timeline-line {
+      flex: 1;
+      width: 1.5px;
+      background: #e5e5ea;
+      margin-top: 6px;
+    }
+    .timeline-item:last-child .timeline-line { display: none; }
+
+    .job-meta {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 10px;
     }
-    .job-title {
+    .job-title-text {
       font-size: 11pt;
       font-weight: 700;
-      color: #0d2b55;
+      color: #1d1d1f;
+      letter-spacing: -0.3px;
     }
-    .job-company {
-      font-size: 10pt;
-      font-weight: 600;
-      color: #2a6496;
-      margin-top: 1px;
+    .job-company-text {
+      font-size: 9.5pt;
+      font-weight: 500;
+      color: #0071e3;
+      margin-top: 2px;
     }
-    .job-date {
-      font-size: 9pt;
-      color: #666;
-      white-space: nowrap;
-      text-align: right;
-      flex-shrink: 0;
-    }
-    .job-location {
-      font-size: 9pt;
-      color: #888;
-      text-align: right;
-    }
-    .job ul {
-      margin-top: 8px;
-      padding-left: 16px;
-    }
-    .job ul li {
-      font-size: 10pt;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 4px;
-    }
-    .job ul li strong {
-      color: #0d2b55;
-    }
-    .tag-highlight {
-      background: #e8f0fb;
-      color: #0d2b55;
+    .job-date-text {
       font-size: 8.5pt;
-      font-weight: 600;
-      border-radius: 3px;
-      padding: 1px 6px;
+      font-weight: 500;
+      color: #6e6e73;
+      text-align: right;
       white-space: nowrap;
     }
+    .job-location-text {
+      font-size: 8pt;
+      color: #aeaeb2;
+      text-align: right;
+    }
+    .job-bullets {
+      list-style: none;
+      padding: 0;
+    }
+    .job-bullets li {
+      font-size: 9.5pt;
+      line-height: 1.65;
+      color: #3a3a3c;
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 5px;
+    }
+    .job-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #aeaeb2;
+    }
+    .job-bullets li strong { color: #1d1d1f; font-weight: 600; }
 
     /* ─── SKILLS ─── */
-    .skill-group { margin-bottom: 14px; }
-    .skill-label {
-      font-size: 8.5pt;
+    .skill-group { margin-bottom: 18px; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group-label {
+      font-size: 8pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      color: #0d2b55;
-      margin-bottom: 6px;
+      color: #aeaeb2;
+      margin-bottom: 8px;
     }
-    .skill-tags {
+    .skill-pills {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 6px;
     }
-    .skill-tag {
-      background: #e1eaf5;
-      color: #0d2b55;
+    .pill {
       font-size: 8.5pt;
       font-weight: 500;
-      border-radius: 4px;
-      padding: 3px 8px;
+      border-radius: 20px;
+      padding: 4px 11px;
+      background: #f5f5f7;
+      color: #1d1d1f;
     }
-    .skill-tag.accent {
-      background: #0d2b55;
-      color: #ffffff;
+    .pill.primary {
+      background: #e8f1fd;
+      color: #0055b3;
+      font-weight: 600;
     }
 
     /* ─── CERTS ─── */
-    .cert { margin-bottom: 12px; }
-    .cert-name {
-      font-size: 9.5pt;
-      font-weight: 700;
-      color: #1a1a1a;
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f2f2f7;
+    }
+    .cert-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .cert-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #0071e3;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+    .cert-dot.gold { background: #ff9f0a; }
+    .cert-body { flex: 1; }
+    .cert-name-text {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #1d1d1f;
       line-height: 1.35;
     }
-    .cert-issuer {
-      font-size: 8.5pt;
-      color: #666;
-    }
-    .cert-date {
+    .cert-meta {
       font-size: 8pt;
-      color: #888;
-      margin-top: 1px;
+      color: #aeaeb2;
+      margin-top: 2px;
+    }
+    .cert-meta a { color: #0071e3; text-decoration: none; }
+    .cert-badge {
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: #1a7f37;
+      background: #d1f0dc;
+      border-radius: 10px;
+      padding: 1px 7px;
+      margin-left: 5px;
+    }
+    .cert-in-progress {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: #b25000;
+      background: #fff3e0;
+      border-radius: 10px;
+      padding: 2px 8px;
+      margin-bottom: 8px;
     }
 
     /* ─── EDUCATION ─── */
-    .edu-degree {
+    .edu-block {
+      background: #f5f5f7;
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+    .edu-degree-text {
       font-size: 10pt;
       font-weight: 700;
-      color: #1a1a1a;
-      line-height: 1.35;
+      color: #1d1d1f;
     }
-    .edu-school {
-      font-size: 9.5pt;
-      color: #2a6496;
+    .edu-spec {
+      font-size: 8.5pt;
+      color: #6e6e73;
+      font-style: italic;
+      margin-top: 2px;
     }
-    .edu-date {
+    .edu-school-text {
       font-size: 9pt;
-      color: #888;
+      font-weight: 500;
+      color: #0071e3;
+      margin-top: 4px;
+    }
+    .edu-date-text {
+      font-size: 8pt;
+      color: #aeaeb2;
       margin-top: 2px;
     }
 
     /* ─── LANGUAGES ─── */
-    .lang-row {
+    .lang-item { margin-bottom: 12px; }
+    .lang-item:last-child { margin-bottom: 0; }
+    .lang-top {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
-    .lang-name {
-      font-size: 9.5pt;
-      font-weight: 600;
-      color: #1a1a1a;
-    }
-    .lang-level {
-      font-size: 8.5pt;
-      color: #555;
-    }
-    .lang-bar {
-      height: 4px;
-      background: #dce8f5;
+    .lang-name-text { font-size: 9.5pt; font-weight: 600; color: #1d1d1f; }
+    .lang-level-text { font-size: 8.5pt; color: #6e6e73; }
+    .lang-track {
+      height: 3px;
+      background: #e5e5ea;
       border-radius: 2px;
-      margin-top: 3px;
+      overflow: hidden;
     }
     .lang-fill {
       height: 100%;
+      background: #0071e3;
       border-radius: 2px;
-      background: #0d2b55;
     }
 
     /* ─── LINKS ─── */
-    .link-item {
-      font-size: 9pt;
-      color: #2a6496;
-      margin-bottom: 5px;
-      word-break: break-all;
+    .link-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
-    .link-item a { color: #2a6496; text-decoration: none; }
-    .link-item a:hover { text-decoration: underline; }
+    .profile-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 9pt;
+      font-weight: 500;
+      color: #0071e3;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: #f5f5f7;
+      transition: background 0.15s;
+    }
+    .profile-link:hover { background: #e8f1fd; }
 
     /* ─── PRINT ─── */
     @media print {
       body { background: #fff; }
-      .page { box-shadow: none; margin: 0; max-width: 100%; }
+      .page { margin: 0; max-width: 100%; }
+      .card, .hero { box-shadow: none; border-radius: 12px; }
     }
   </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- ═══════════════ HEADER ═══════════════ -->
-  <div class="header">
-    <img src="perfil.png" alt="Sergio Parissi" class="header-photo" />
-    <div class="header-text">
-      <h1>Sergio Parissi Reyes</h1>
-      <h2>Senior .NET Developer &amp; Sitecore Specialist &nbsp;|&nbsp; CMS Architecture &nbsp;|&nbsp; Cloud &amp; Azure Solutions</h2>
-      <div class="contact-row">
-        <span>📍 Cancún, Mexico</span>
-        <span>📞 +52 998 200 2898</span>
-        <span>✉️ <a href="mailto:sergioparissireyes@gmail.com">sergioparissireyes@gmail.com</a></span>
-        <span>🔗 <a href="https://www.linkedin.com/in/sergioparissi" target="_blank">LinkedIn</a></span>
-        <span>💻 <a href="https://github.com/sparissiasap" target="_blank">GitHub</a></span>
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <img src="perfil.png" alt="Sergio Parissi" class="hero-photo" />
+    <div class="hero-info">
+      <div class="hero-name">Sergio Parissi Reyes</div>
+      <div class="hero-title">Senior .NET Developer &amp; Sitecore Specialist &nbsp;·&nbsp; CMS Architecture &nbsp;·&nbsp; Cloud &amp; Azure Solutions</div>
+      <div class="hero-contact">
+        <span class="contact-chip"><span class="icon">📍</span> Cancún, Mexico</span>
+        <a href="tel:+529982002898" class="contact-chip"><span class="icon">📞</span> +52 998 200 2898</a>
+        <a href="mailto:sergioparissireyes@gmail.com" class="contact-chip"><span class="icon">✉️</span> sergioparissireyes@gmail.com</a>
+        <a href="https://www.linkedin.com/in/sergioparissi" target="_blank" class="contact-chip"><span class="icon">🔗</span> LinkedIn</a>
+        <a href="https://github.com/sparissiasap" target="_blank" class="contact-chip"><span class="icon">💻</span> GitHub</a>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════ BODY ═══════════════ -->
-  <div class="body">
+  <!-- ═══ GRID ═══ -->
+  <div class="grid">
 
-    <!-- ─── MAIN COLUMN ─── -->
-    <div class="main">
+    <!-- ── MAIN ── -->
+    <div class="main-col">
 
-      <!-- PROFESSIONAL SUMMARY -->
-      <div class="section-title">Professional Summary</div>
-      <div class="summary">
-        <p>
+      <!-- SUMMARY -->
+      <div class="card">
+        <div class="section-label">About</div>
+        <p class="summary-text">
           Results-driven <strong>Senior .NET Developer</strong> with <strong>10+ years of experience</strong> architecting, developing, and delivering
           enterprise-grade web applications across diverse industries. For the past <strong>7+ years</strong>, I have deep-specialized in the
           <strong>Sitecore ecosystem</strong> — including Helix/Habitat architecture, SXA, JSS (Headless CMS), Sitecore Commerce, and
           Personalization — delivering scalable CMS solutions for global enterprise clients.
         </p>
-        <br/>
-        <p>
+        <p class="summary-text" style="margin-top:14px;">
           Currently at <strong>EPAM Systems</strong> as a Senior .NET Developer, I serve as a trusted technical liaison between development teams
           and clients, leading architectural decisions, root-cause analysis on critical issues, and Azure cloud deployments. I combine
           deep backend expertise in <strong>C#, ASP.NET MVC, and .NET Core</strong> with hands-on frontend knowledge in React and Angular,
           bringing full-stack perspective to every project.
         </p>
-        <br/>
-        <p>
+        <p class="summary-text" style="margin-top:14px;">
           Beyond code, I am a proactive technical advisor — translating complex business requirements into optimal software solutions,
-          clearly articulating trade-offs and risks, and consistently elevating team and client satisfaction through clear communication
-          and ownership mentality.
+          clearly articulating trade-offs and risks, and consistently elevating team and client satisfaction.
         </p>
       </div>
 
       <!-- EXPERIENCE -->
-      <div class="section-title">Professional Experience</div>
+      <div class="card">
+        <div class="section-label">Experience</div>
+        <div class="timeline">
 
-      <!-- EPAM -->
-      <div class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-title">Senior .NET Developer</div>
-            <div class="job-company">EPAM Systems</div>
+          <!-- EPAM -->
+          <div class="timeline-item">
+            <div class="timeline-dot-col">
+              <div class="timeline-dot current"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div>
+              <div class="job-meta">
+                <div>
+                  <div class="job-title-text">Senior .NET Developer</div>
+                  <div class="job-company-text">EPAM Systems</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="job-date-text">May 2022 – Present</div>
+                  <div class="job-location-text">Cancún, Mexico (Remote)</div>
+                </div>
+              </div>
+              <ul class="job-bullets">
+                <li><strong>Primary technical point of contact</strong> for multiple enterprise clients, leading root-cause analysis, technical roadmap discussions, and feature design for mission-critical Sitecore applications.</li>
+                <li>Architected and developed custom <strong>Sitecore solutions using Helix, SXA, JSS, and Sitecore Personalization</strong>, ensuring performance, scalability, and long-term maintainability.</li>
+                <li>Proactively proposed and evaluated multiple technical solutions per client request, clearly outlining trade-offs, risks, and implementation strategies — accelerating decision-making cycles.</li>
+                <li>Deployed, configured, and managed <strong>Azure resources</strong> (App Services, Azure Functions, Storage, SQL), maintaining high availability and security across all environments.</li>
+                <li>Monitored application health, validated infrastructure stability, and coordinated rapid incident response — reducing client-reported downtime.</li>
+                <li>Produced comprehensive technical documentation for knowledge transfer, onboarding, and client audits.</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <div class="job-date">May 2022 – Present</div>
-            <div class="job-location">Cancún, Mexico (Remote)</div>
+
+          <!-- Freelance -->
+          <div class="timeline-item">
+            <div class="timeline-dot-col">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div>
+              <div class="job-meta">
+                <div>
+                  <div class="job-title-text">Senior Sitecore Developer (Independent)</div>
+                  <div class="job-company-text">Freelance / Contract Projects</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="job-date-text">Apr 2020 – Apr 2022</div>
+                  <div class="job-location-text">Cancún, Mexico (Remote)</div>
+                </div>
+              </div>
+              <ul class="job-bullets">
+                <li>Designed and delivered end-to-end <strong>Sitecore CMS solutions</strong> for clients across multiple industries, following Helix architecture and Sitecore best practices.</li>
+                <li>Built and integrated <strong>headless CMS components</strong> via custom REST APIs and the Sitecore JSS framework, enabling decoupled front-end architectures.</li>
+                <li>Provided strategic technical consulting for Sitecore upgrades, SXA implementations, and personalization initiatives.</li>
+                <li>Managed full project lifecycle independently: requirements, scoping, development, QA, delivery, and documentation.</li>
+              </ul>
+            </div>
           </div>
+
+          <!-- Vanco SmartCare -->
+          <div class="timeline-item">
+            <div class="timeline-dot-col">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div>
+              <div class="job-meta">
+                <div>
+                  <div class="job-title-text">Senior Software Development Engineer</div>
+                  <div class="job-company-text">Vanco Payments – SmartCare</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="job-date-text">Apr 2020 – May 2022</div>
+                  <div class="job-location-text">Cancún, Mexico</div>
+                </div>
+              </div>
+              <ul class="job-bullets">
+                <li>Built and maintained enterprise web apps using <strong>C#, ASP.NET MVC, .NET Core, Web API, Angular, and React</strong>.</li>
+                <li>Integrated <strong>Azure Functions</strong> and event-driven cloud services to support scalable, asynchronous workflows in a multi-tenant architecture.</li>
+                <li>Authored and maintained <strong>NUnit unit and integration tests</strong>, raising code quality and reducing regression risk.</li>
+                <li>Defined and rolled out a <strong>Git branching strategy</strong> adopted company-wide, improving collaboration and release velocity.</li>
+                <li>Contributed actively to <strong>Azure DevOps CI/CD pipelines</strong>, enabling automated builds, tests, and deployments.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Vanco ASAP -->
+          <div class="timeline-item">
+            <div class="timeline-dot-col">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div>
+              <div class="job-meta">
+                <div>
+                  <div class="job-title-text">Software Development Engineer in Test (SDET)</div>
+                  <div class="job-company-text">Vanco Payments – ASAP</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="job-date-text">Apr 2018 – Apr 2020</div>
+                  <div class="job-location-text">Cancún, Mexico</div>
+                </div>
+              </div>
+              <ul class="job-bullets">
+                <li>Designed and implemented a <strong>centralized automated testing framework</strong> used across multiple products, standardizing regression coverage company-wide.</li>
+                <li>Implemented <strong>application monitoring and observability</strong> using ELK Stack and MongoDB, enabling proactive production issue detection.</li>
+                <li>Defined, documented, and rolled out a new <strong>QA process</strong> improving consistency and software quality across teams.</li>
+                <li>Developed and maintained <strong>Azure DevOps CI/CD pipelines</strong> for automated test execution and deployment workflows.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- BestDay -->
+          <div class="timeline-item">
+            <div class="timeline-dot-col">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div>
+              <div class="job-meta">
+                <div>
+                  <div class="job-title-text">QA Automation Engineer / Senior QA</div>
+                  <div class="job-company-text">BestDay.com</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="job-date-text">Jun 2015 – Apr 2018</div>
+                  <div class="job-location-text">Cancún, Mexico</div>
+                </div>
+              </div>
+              <ul class="job-bullets">
+                <li>Planned, designed, and executed test strategies for web and mobile applications (iOS), driving early adoption of mobile automation.</li>
+                <li>Developed automated test scripts with <strong>Selenium</strong>, expanding regression coverage and reducing manual testing effort.</li>
+                <li>Defined QA policies, testing standards, and technical procedures to ensure data integrity and system reliability.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- MayanAccess -->
+          <div class="timeline-item">
+            <div class="timeline-dot-col">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div>
+              <div class="job-meta">
+                <div>
+                  <div class="job-title-text">Junior Software Developer (PHP)</div>
+                  <div class="job-company-text">MayanAccess</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="job-date-text">Aug 2016 – Sep 2017</div>
+                  <div class="job-location-text">Cancún, Mexico</div>
+                </div>
+              </div>
+              <ul class="job-bullets">
+                <li>Developed data management web applications using <strong>PHP</strong> and SQL Server, supporting internal business processes.</li>
+                <li>Designed and executed SQL scripts to process and manipulate large data volumes efficiently.</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
-        <ul>
-          <li><strong>Primary technical point of contact</strong> for multiple enterprise clients, leading root-cause analysis, technical roadmap discussions, and feature design for mission-critical Sitecore applications.</li>
-          <li>Architected and developed custom <strong>Sitecore solutions using Helix, SXA, JSS, and Sitecore Personalization</strong>, ensuring performance, scalability, and long-term maintainability.</li>
-          <li>Proactively proposed and evaluated multiple technical solutions per client request, clearly outlining trade-offs, risks, and implementation strategies — accelerating decision-making cycles.</li>
-          <li>Deployed, configured, and managed <strong>Azure resources</strong> (App Services, Azure Functions, Storage, SQL), maintaining high availability and security across all environments.</li>
-          <li>Monitored application health, validated infrastructure stability, and coordinated rapid incident response — reducing client-reported downtime.</li>
-          <li>Produced comprehensive technical documentation for knowledge transfer, onboarding, and client audits.</li>
-          <li>Continuously expanded expertise through EPAM's internal training ecosystem and self-directed learning in emerging .NET and cloud technologies.</li>
-        </ul>
       </div>
+    </div><!-- /main-col -->
 
-      <!-- Freelance -->
-      <div class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-title">Senior Sitecore Developer (Independent)</div>
-            <div class="job-company">Freelance / Contract Projects</div>
-          </div>
-          <div>
-            <div class="job-date">Apr 2020 – Apr 2022</div>
-            <div class="job-location">Cancún, Mexico (Remote)</div>
-          </div>
-        </div>
-        <ul>
-          <li>Designed and delivered end-to-end <strong>Sitecore CMS solutions</strong> for clients across multiple industries, following Helix architecture and Sitecore best practices.</li>
-          <li>Built and integrated <strong>headless CMS components</strong> via custom REST APIs and the Sitecore JSS framework, enabling decoupled front-end architectures.</li>
-          <li>Provided strategic technical consulting for Sitecore upgrades, SXA implementations, and personalization initiatives — aligning technical execution with business objectives.</li>
-          <li>Managed full project lifecycle independently: requirements gathering, solution scoping, development, QA, delivery, and documentation.</li>
-          <li>Ensured high code quality through rigorous peer reviews, refactoring, and performance optimization practices.</li>
-        </ul>
-      </div>
-
-      <!-- Vanco SmartCare -->
-      <div class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-title">Senior Software Development Engineer</div>
-            <div class="job-company">Vanco Payments – SmartCare</div>
-          </div>
-          <div>
-            <div class="job-date">Apr 2020 – May 2022</div>
-            <div class="job-location">Cancún, Mexico</div>
-          </div>
-        </div>
-        <ul>
-          <li>Built and maintained enterprise web applications for Day Care Center management platforms using <strong>C#, ASP.NET MVC, .NET Core, Web API, Angular, and React</strong>.</li>
-          <li>Integrated <strong>Azure Functions</strong> and event-driven cloud services to support scalable, asynchronous workflows in a multi-tenant architecture.</li>
-          <li>Authored and maintained <strong>NUnit unit and integration tests</strong>, raising code quality standards and reducing regression risk across multiple service layers.</li>
-          <li>Defined and rolled out a <strong>Git branching and workflow strategy</strong> adopted by the entire development team, improving collaboration and release velocity.</li>
-          <li>Contributed actively to <strong>Azure DevOps CI/CD pipelines</strong>, enabling automated builds, tests, and deployments.</li>
-          <li>Partnered with customer support teams to analyze, prioritize, and resolve tickets aligned with customer satisfaction goals.</li>
-        </ul>
-      </div>
-
-      <!-- Vanco ASAP -->
-      <div class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-title">Software Development Engineer in Test (SDET)</div>
-            <div class="job-company">Vanco Payments – ASAP</div>
-          </div>
-          <div>
-            <div class="job-date">Apr 2018 – Apr 2020</div>
-            <div class="job-location">Cancún, Mexico</div>
-          </div>
-        </div>
-        <ul>
-          <li>Designed and implemented a <strong>centralized automated testing framework</strong> used across multiple products, standardizing regression coverage company-wide.</li>
-          <li>Built automated regression and integration test suites for .NET applications, significantly increasing release confidence and deployment frequency.</li>
-          <li>Implemented <strong>application monitoring and observability</strong> solutions using ELK Stack and MongoDB, enabling proactive production issue detection.</li>
-          <li>Defined, documented, and rolled out a new <strong>QA process</strong> that improved consistency, efficiency, and overall software quality across teams.</li>
-          <li>Developed and maintained <strong>Azure DevOps CI/CD pipelines</strong> for automated test execution and deployment workflows.</li>
-          <li>Contributed to full-stack feature development across .NET, Angular, React, and JavaScript layers alongside QA responsibilities.</li>
-        </ul>
-      </div>
-
-      <!-- BestDay -->
-      <div class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-title">QA Automation Engineer / Senior QA</div>
-            <div class="job-company">BestDay.com</div>
-          </div>
-          <div>
-            <div class="job-date">Jun 2015 – Apr 2018</div>
-            <div class="job-location">Cancún, Mexico</div>
-          </div>
-        </div>
-        <ul>
-          <li>Planned, designed, and executed test strategies and test cases for web and mobile applications (iOS), driving early adoption of mobile automation.</li>
-          <li>Developed automated test scripts with <strong>Selenium</strong>, expanding regression coverage and reducing manual testing effort.</li>
-          <li>Defined QA policies, testing standards, and technical procedures to ensure data integrity and system reliability.</li>
-          <li>Coordinated cross-functional workflows with UI/UX, design, product, and development teams — ensuring alignment from design through release.</li>
-        </ul>
-      </div>
-
-      <!-- MayanAccess -->
-      <div class="job">
-        <div class="job-header">
-          <div>
-            <div class="job-title">Junior Software Developer (PHP)</div>
-            <div class="job-company">MayanAccess</div>
-          </div>
-          <div>
-            <div class="job-date">Aug 2016 – Sep 2017</div>
-            <div class="job-location">Cancún, Mexico</div>
-          </div>
-        </div>
-        <ul>
-          <li>Developed data management web applications using <strong>PHP</strong> and SQL Server, supporting internal business processes.</li>
-          <li>Designed and executed SQL scripts to process and manipulate large data volumes efficiently.</li>
-          <li>Gained foundational experience across the full development lifecycle — from requirements to deployment and post-launch maintenance.</li>
-        </ul>
-      </div>
-
-    </div><!-- /main -->
-
-    <!-- ─── SIDEBAR ─── -->
-    <div class="sidebar">
+    <!-- ── SIDEBAR ── -->
+    <div class="sidebar-col">
 
       <!-- SKILLS -->
-      <div class="section-title">Core Skills</div>
+      <div class="card">
+        <div class="section-label">Skills</div>
 
-      <div class="skill-group">
-        <div class="skill-label">CMS &amp; Architecture</div>
-        <div class="skill-tags">
-          <span class="skill-tag accent">Sitecore</span>
-          <span class="skill-tag accent">Helix / Habitat</span>
-          <span class="skill-tag">SXA</span>
-          <span class="skill-tag">Sitecore JSS</span>
-          <span class="skill-tag">Headless CMS</span>
-          <span class="skill-tag">Sitecore Commerce</span>
-          <span class="skill-tag">Personalization</span>
+        <div class="skill-group">
+          <div class="skill-group-label">CMS &amp; Architecture</div>
+          <div class="skill-pills">
+            <span class="pill primary">Sitecore</span>
+            <span class="pill primary">Helix / Habitat</span>
+            <span class="pill">SXA</span>
+            <span class="pill">Sitecore JSS</span>
+            <span class="pill">Headless CMS</span>
+            <span class="pill">Sitecore Commerce</span>
+            <span class="pill">Personalization</span>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-group">
-        <div class="skill-label">Backend</div>
-        <div class="skill-tags">
-          <span class="skill-tag accent">C#</span>
-          <span class="skill-tag accent">.NET Core</span>
-          <span class="skill-tag">ASP.NET MVC</span>
-          <span class="skill-tag">Web API / REST</span>
-          <span class="skill-tag">NUnit</span>
+        <div class="skill-group">
+          <div class="skill-group-label">Backend</div>
+          <div class="skill-pills">
+            <span class="pill primary">C#</span>
+            <span class="pill primary">.NET Core</span>
+            <span class="pill">ASP.NET MVC</span>
+            <span class="pill">Web API / REST</span>
+            <span class="pill">NUnit</span>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-group">
-        <div class="skill-label">Frontend</div>
-        <div class="skill-tags">
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Angular</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">HTML / CSS</span>
+        <div class="skill-group">
+          <div class="skill-group-label">Frontend</div>
+          <div class="skill-pills">
+            <span class="pill">React</span>
+            <span class="pill">Angular</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">HTML / CSS</span>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-group">
-        <div class="skill-label">Cloud &amp; DevOps</div>
-        <div class="skill-tags">
-          <span class="skill-tag accent">Azure</span>
-          <span class="skill-tag">Azure DevOps</span>
-          <span class="skill-tag">Azure Functions</span>
-          <span class="skill-tag">CI/CD</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">AWS (Accredited)</span>
+        <div class="skill-group">
+          <div class="skill-group-label">Cloud &amp; DevOps</div>
+          <div class="skill-pills">
+            <span class="pill primary">Azure</span>
+            <span class="pill">Azure DevOps</span>
+            <span class="pill">Azure Functions</span>
+            <span class="pill">CI/CD</span>
+            <span class="pill">Git</span>
+            <span class="pill">AWS</span>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-group">
-        <div class="skill-label">AI &amp; LLM Engineering</div>
-        <div class="skill-tags">
-          <span class="skill-tag accent">Claude API</span>
-          <span class="skill-tag accent">MCP</span>
-          <span class="skill-tag">AI Agents</span>
-          <span class="skill-tag">Subagents</span>
-          <span class="skill-tag">Claude Code</span>
-          <span class="skill-tag">Prompt Engineering</span>
-          <span class="skill-tag">LLM Integration</span>
+        <div class="skill-group">
+          <div class="skill-group-label">AI &amp; LLM Engineering</div>
+          <div class="skill-pills">
+            <span class="pill primary">Claude API</span>
+            <span class="pill primary">MCP</span>
+            <span class="pill">AI Agents</span>
+            <span class="pill">Subagents</span>
+            <span class="pill">Claude Code</span>
+            <span class="pill">Prompt Engineering</span>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-group">
-        <div class="skill-label">Data &amp; Testing</div>
-        <div class="skill-tags">
-          <span class="skill-tag">SQL Server</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">ELK Stack</span>
-          <span class="skill-tag">Selenium</span>
-          <span class="skill-tag">Test Automation</span>
+        <div class="skill-group">
+          <div class="skill-group-label">Data &amp; Testing</div>
+          <div class="skill-pills">
+            <span class="pill">SQL Server</span>
+            <span class="pill">MongoDB</span>
+            <span class="pill">ELK Stack</span>
+            <span class="pill">Selenium</span>
+            <span class="pill">Test Automation</span>
+          </div>
         </div>
       </div>
 
       <!-- CERTIFICATIONS -->
-      <div class="section-title">Certifications</div>
+      <div class="card">
+        <div class="section-label">Certifications</div>
 
-      <div class="cert">
-        <div class="cert-name">Sitecore 10 .NET Developer Certification</div>
-        <div class="cert-issuer">Sitecore</div>
-        <div class="cert-date">Mar 2024 &nbsp;·&nbsp; <a href="https://www.credly.com/badges/f31a40f7-b427-495f-ae20-4a91f231585c/public_url" target="_blank" style="color:#2a6496;font-size:8pt">Verify ↗</a></div>
-      </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Sitecore 10 .NET Developer Certification</div>
+            <div class="cert-meta">Sitecore &nbsp;·&nbsp; Mar 2024 &nbsp;·&nbsp; <a href="https://www.credly.com/badges/f31a40f7-b427-495f-ae20-4a91f231585c/public_url" target="_blank">Verify ↗</a></div>
+          </div>
+        </div>
 
-      <div class="cert">
-        <div class="cert-name">AWS Partner: Technical Accredited</div>
-        <div class="cert-issuer">Amazon Web Services</div>
-        <div class="cert-date">Feb 2026 &nbsp;·&nbsp; <a href="https://www.credly.com/badges/7006324f-9fdc-4761-891a-0b5d67d18dcc/public_url" target="_blank" style="color:#2a6496;font-size:8pt">Verify ↗</a></div>
-      </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">AWS Partner: Technical Accredited</div>
+            <div class="cert-meta">Amazon Web Services &nbsp;·&nbsp; Feb 2026 &nbsp;·&nbsp; <a href="https://www.credly.com/badges/7006324f-9fdc-4761-891a-0b5d67d18dcc/public_url" target="_blank">Verify ↗</a></div>
+          </div>
+        </div>
 
-      <div class="cert">
-        <div class="cert-name">Professional Scrum Developer I (PSD I)</div>
-        <div class="cert-issuer">Scrum.org</div>
-        <div class="cert-date">Jan 2019 &nbsp;·&nbsp; <a href="https://www.credly.com/badges/88d2a88d-fabb-4a1d-9b16-eb41d81236e1/public_url" target="_blank" style="color:#2a6496;font-size:8pt">Verify ↗</a></div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Professional Scrum Developer I (PSD I)</div>
+            <div class="cert-meta">Scrum.org &nbsp;·&nbsp; Jan 2019 &nbsp;·&nbsp; <a href="https://www.credly.com/badges/88d2a88d-fabb-4a1d-9b16-eb41d81236e1/public_url" target="_blank">Verify ↗</a></div>
+          </div>
+        </div>
       </div>
 
       <!-- ANTHROPIC ACADEMY -->
-      <div class="section-title">Anthropic Academy</div>
+      <div class="card">
+        <div class="section-label">Anthropic Academy</div>
 
-      <div style="margin-bottom:10px;padding:7px 10px;background:#fff3cd;border-left:3px solid #e6a817;border-radius:3px;">
-        <div style="font-size:8.5pt;font-weight:700;color:#7a4f00;">🎯 In Progress</div>
-        <div style="font-size:9pt;font-weight:700;color:#1a1a1a;margin-top:2px;">Claude Certified Architect – Foundations</div>
-        <div style="font-size:8pt;color:#888;">Anthropic &nbsp;·&nbsp; Expected 2026</div>
-      </div>
+        <div class="cert-in-progress">⏳ In Progress — Claude Certified Architect</div>
 
-      <div class="cert">
-        <div class="cert-name">Model Context Protocol: Advanced Topics</div>
-        <div class="cert-issuer">Anthropic Academy</div>
-        <div class="cert-date">Apr 2026</div>
-      </div>
-
-      <div class="cert">
-        <div class="cert-name">Building with the Claude API</div>
-        <div class="cert-issuer">Anthropic Academy</div>
-        <div class="cert-date">Apr 2026</div>
-      </div>
-
-      <div class="cert">
-        <div class="cert-name">Introduction to subagents</div>
-        <div class="cert-issuer">Anthropic Academy</div>
-        <div class="cert-date">Apr 2026</div>
-      </div>
-
-      <div class="cert">
-        <div class="cert-name">Introduction to Model Context Protocol</div>
-        <div class="cert-issuer">Anthropic Academy</div>
-        <div class="cert-date">Apr 2026</div>
-      </div>
-
-      <div class="cert">
-        <div class="cert-name">Introduction to Claude Cowork &amp; Claude Code 101</div>
-        <div class="cert-issuer">Anthropic Academy</div>
-        <div class="cert-date">Apr 2026</div>
-      </div>
-
-      <div class="cert">
-        <div class="cert-name">Claude Code in Action</div>
-        <div class="cert-issuer">Anthropic Academy</div>
-        <div class="cert-date">Mar 2026</div>
-      </div>
-
-      <div class="cert">
-        <div class="cert-name">Introduction to Agent Skills</div>
-        <div class="cert-issuer">Anthropic Academy</div>
-        <div class="cert-date">Apr 2026</div>
-      </div>
-
-      <div class="cert">
-        <div class="cert-name">AI Fluency: Framework &amp; Foundations</div>
-        <div class="cert-issuer">Anthropic Academy &nbsp;·&nbsp; <span style="color:#1a7f37;font-weight:700;">Score: 10/10</span></div>
-        <div class="cert-date">Apr 2026</div>
-      </div>
-
-      <div class="cert">
-        <div class="cert-name">Claude 101</div>
-        <div class="cert-issuer">Anthropic Academy</div>
-        <div class="cert-date">Apr 2026</div>
+        <div class="cert-item">
+          <div class="cert-dot gold"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">AI Fluency: Framework &amp; Foundations <span class="cert-badge">10 / 10</span></div>
+            <div class="cert-meta">Anthropic &nbsp;·&nbsp; Apr 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Model Context Protocol: Advanced Topics</div>
+            <div class="cert-meta">Anthropic &nbsp;·&nbsp; Apr 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Building with the Claude API</div>
+            <div class="cert-meta">Anthropic &nbsp;·&nbsp; Apr 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Introduction to subagents</div>
+            <div class="cert-meta">Anthropic &nbsp;·&nbsp; Apr 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Introduction to Model Context Protocol</div>
+            <div class="cert-meta">Anthropic &nbsp;·&nbsp; Apr 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Introduction to Agent Skills</div>
+            <div class="cert-meta">Anthropic &nbsp;·&nbsp; Apr 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Claude Code in Action</div>
+            <div class="cert-meta">Anthropic &nbsp;·&nbsp; Mar 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Claude Code 101 &amp; Claude 101</div>
+            <div class="cert-meta">Anthropic &nbsp;·&nbsp; Apr 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div class="cert-body">
+            <div class="cert-name-text">Introduction to Claude Cowork</div>
+            <div class="cert-meta">Anthropic &nbsp;·&nbsp; Apr 2026</div>
+          </div>
+        </div>
       </div>
 
       <!-- EDUCATION -->
-      <div class="section-title">Education</div>
-      <div>
-        <div class="edu-degree">B.Eng. Computer Systems Engineering</div>
-        <div style="font-size:8.5pt;color:#555;margin-top:2px;font-style:italic;">Specialization: Mobile Application Development</div>
-        <div class="edu-school">Instituto Tecnológico de Cancún</div>
-        <div class="edu-date">Aug 2010 – Dec 2015</div>
+      <div class="card">
+        <div class="section-label">Education</div>
+        <div class="edu-block">
+          <div class="edu-degree-text">B.Eng. Computer Systems Engineering</div>
+          <div class="edu-spec">Specialization: Mobile Application Development</div>
+          <div class="edu-school-text">Instituto Tecnológico de Cancún</div>
+          <div class="edu-date-text">Aug 2010 – Dec 2015</div>
+        </div>
       </div>
 
       <!-- LANGUAGES -->
-      <div class="section-title">Languages</div>
-      <div>
-        <div class="lang-row">
-          <span class="lang-name">Spanish</span>
-          <span class="lang-level">Native</span>
+      <div class="card">
+        <div class="section-label">Languages</div>
+        <div class="lang-item">
+          <div class="lang-top">
+            <span class="lang-name-text">Spanish</span>
+            <span class="lang-level-text">Native</span>
+          </div>
+          <div class="lang-track"><div class="lang-fill" style="width:100%"></div></div>
         </div>
-        <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
-        <br/>
-        <div class="lang-row">
-          <span class="lang-name">English</span>
-          <span class="lang-level">Professional Proficiency</span>
+        <div class="lang-item">
+          <div class="lang-top">
+            <span class="lang-name-text">English</span>
+            <span class="lang-level-text">Professional Proficiency</span>
+          </div>
+          <div class="lang-track"><div class="lang-fill" style="width:80%"></div></div>
         </div>
-        <div class="lang-bar"><div class="lang-fill" style="width:80%"></div></div>
       </div>
 
-      <!-- LINKS -->
-      <div class="section-title">Online Profiles</div>
-      <div class="link-item">🔗 <a href="https://linkedin.com/in/sergioparissi" target="_blank">linkedin.com/in/sergioparissi</a></div>
-      <div class="link-item">💻 <a href="https://github.com/sergioparissi" target="_blank">github.com/sergioparissi</a></div>
-      <div class="link-item">📚 <a href="https://stackoverflow.com/users/sergioparissi" target="_blank">stackoverflow.com</a></div>
-
-      <!-- NOTE FOR USER -->
-      <div style="margin-top:22px;padding:12px;background:#fff8e1;border-left:3px solid #f0a500;border-radius:3px;font-size:8.5pt;color:#555;line-height:1.5;">
-        <strong style="color:#333;">💡 Tip:</strong> Where possible, add specific numbers to your bullets (e.g., "reduced deployment time by 40%", "supported 5 enterprise clients"). Metrics make bullets 2× more memorable to recruiters.
+      <!-- PROFILES -->
+      <div class="card">
+        <div class="section-label">Online Profiles</div>
+        <div class="link-row">
+          <a href="https://linkedin.com/in/sergioparissi" target="_blank" class="profile-link">🔗 linkedin.com/in/sergioparissi</a>
+          <a href="https://github.com/sparissiasap" target="_blank" class="profile-link">💻 github.com/sparissiasap</a>
+          <a href="https://stackoverflow.com" target="_blank" class="profile-link">📚 stackoverflow.com</a>
+        </div>
       </div>
 
-    </div><!-- /sidebar -->
-
-  </div><!-- /body -->
-
+    </div><!-- /sidebar-col -->
+  </div><!-- /grid -->
 </div><!-- /page -->
 </body>
 </html>
