@@ -816,7 +816,7 @@ body.loaded .eb-fill { width: var(--w); }
 
 /* ─── PRINT ─── */
 @media print {
-  /* Print exactly what the screen shows — colors, backgrounds, gradients */
+  /* Print exact colors — no browser "optimize for paper" conversion */
   *, *::before, *::after {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
@@ -824,21 +824,55 @@ body.loaded .eb-fill { width: var(--w); }
 
   @page { margin: 8mm 10mm; size: A4; }
 
-  /* Hide interactive/non-printable elements */
-  .share-bar, .modal-overlay, .certs-section { display: none !important; }
+  /* ── Root cause fixes ─────────────────────────────────────── */
 
-  /* Freeze background orbs — keep them visible but stop animation */
-  .orb { animation: none !important; }
+  /* 1. body min-height:100vh forces a full blank page gap — remove it */
+  body { min-height: 0 !important; }
 
-  /* Remove fixed positioning from bg-fx so it doesn't repeat on every page */
-  .bg-fx { position: absolute !important; }
+  /* 2. page margin-top:48px wastes space on page 1 — collapse it */
+  .page { margin: 0 auto !important; max-width: 100% !important; }
 
-  /* Avoid cutting cards or timeline entries mid-page */
-  .card, .timeline-item, .cert-item, .exp-bar {
-    page-break-inside: avoid;
-    break-inside: avoid;
+  /* 3. backdrop-filter creates isolated stacking contexts that confuse
+        the print renderer and cause random gaps — disable it */
+  * {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
   }
 
-  /* Keep max-width clean for A4 */
-  .page { max-width: 100% !important; }
+  /* ── Hide non-printable elements ─────────────────────────── */
+  .share-bar, .modal-overlay, .certs-section, .bg-fx { display: none !important; }
+
+  /* ── Disable animations & hover transforms ───────────────── */
+  .orb { animation: none !important; }
+  .card, .pill, .hero-photo { transform: none !important; transition: none !important; }
+
+  /* ── Hero: allow overflow so ::before/::after gradients render ── */
+  .hero { overflow: visible !important; break-inside: avoid; }
+
+  /* ── Prevent content cuts between pages ──────────────────── */
+
+  /* Never break mid-card — but only for sidebar cards (short ones).
+     Main-col cards (experience, summary) CAN break across pages. */
+  .sidebar-col .card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Individual items inside main col should never be cut */
+  .timeline-item, .cert-item, .exp-bar, .edu-block, .lang-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Keep section label attached to the first item below it */
+  .section-label {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Keep job header (title + company + dates) with its first bullet */
+  .job-meta {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
 }
