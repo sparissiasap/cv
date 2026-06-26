@@ -54,7 +54,7 @@ function serveFile(req, res) {
     format: 'A4',
     printBackground: true,
     scale: 0.82,
-    margin: { top: '8mm', right: '8mm', bottom: '8mm', left: '8mm' },
+    margin: { top: '14mm', right: '16mm', bottom: '14mm', left: '16mm' },
     displayHeaderFooter: false,
   });
 

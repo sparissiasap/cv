@@ -822,7 +822,7 @@ body.loaded .eb-fill { width: var(--w); }
     print-color-adjust: exact !important;
   }
 
-  @page { margin: 8mm 10mm; size: A4; }
+  @page { margin: 14mm 16mm; size: A4; }
 
   /* ── Root cause fixes ─────────────────────────────────────── */
 
@@ -856,6 +856,7 @@ body.loaded .eb-fill { width: var(--w); }
   .card {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+    margin-bottom: 14px !important;
   }
 
   /* ── Prevent cuts only for small single-line elements ───────── */
