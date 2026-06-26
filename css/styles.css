@@ -796,9 +796,9 @@ body.loaded .eb-fill { width: var(--w); }
   transform: translateY(-1px);
 }
 .share-btn:active { transform: translateY(0); }
-.share-svg {
-  width: 14px;
-  height: 14px;
+.share-icon {
+  font-size: 15px;
+  line-height: 1;
   flex-shrink: 0;
 }
 .share-divider {
