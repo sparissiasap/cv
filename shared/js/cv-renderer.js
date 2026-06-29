@@ -65,7 +65,7 @@
     toggle.style.cssText = 'position:fixed;top:14px;right:14px;z-index:300;display:flex;gap:2px;background:rgba(8,10,18,0.78);border:1px solid rgba(255,255,255,0.13);border-radius:20px;padding:4px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 2px 18px rgba(0,0,0,0.45);';
     availableLangs.forEach(function (lang) {
       var active = lang === currentLang;
-      var btn = el('button', { text: lang.toUpperCase() });
+      var btn = el('button', { class: 'cv-lang-btn', text: lang.toUpperCase() });
       btn.style.cssText = 'border:none;cursor:pointer;font-size:7.5pt;font-weight:700;font-family:inherit;padding:3px 11px;border-radius:14px;transition:all 0.2s;letter-spacing:0.4px;' +
         (active
           ? 'background:rgba(255,255,255,0.18);color:rgba(255,255,255,0.95);'
@@ -79,9 +79,13 @@
       }
       toggle.appendChild(btn);
     });
-    // Hide on print
+    // Hide on print; enlarge touch target on mobile
     var s = document.createElement('style');
-    s.textContent = '@media print{.cv-lang-toggle{display:none!important}}';
+    s.textContent = '@media print{.cv-lang-toggle{display:none!important}}' +
+      '@media screen and (max-width:767px){' +
+        '.cv-lang-toggle{top:max(12px,env(safe-area-inset-top,0px) + 8px)!important;right:max(12px,env(safe-area-inset-right,0px) + 8px)!important;padding:6px!important;}' +
+        '.cv-lang-btn{padding:10px 18px!important;font-size:9pt!important;border-radius:16px!important;}' +
+      '}';
     document.head.appendChild(s);
     toggle.classList.add('cv-lang-toggle');
     return toggle;
