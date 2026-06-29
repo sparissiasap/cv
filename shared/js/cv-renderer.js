@@ -72,9 +72,18 @@
           : 'background:transparent;color:rgba(255,255,255,0.4);');
       if (!active) {
         btn.addEventListener('click', function () {
-          var url = new URL(window.location.href);
-          url.searchParams.set('lang', lang);
-          window.location.href = url.toString();
+          var overlay = document.createElement('div');
+          overlay.style.cssText = 'position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0);' +
+            'transition:background 0.18s ease;pointer-events:none;';
+          document.body.appendChild(overlay);
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () { overlay.style.background = 'rgba(0,0,0,0.45)'; });
+          });
+          setTimeout(function () {
+            var url = new URL(window.location.href);
+            url.searchParams.set('lang', lang);
+            window.location.href = url.toString();
+          }, 200);
         });
       }
       toggle.appendChild(btn);
@@ -383,8 +392,34 @@
     return bar;
   }
 
+  // ── Loader ──────────────────────────────────────────────────────
+  function buildLoader() {
+    var s = document.createElement('style');
+    s.textContent =
+      '@keyframes cv-spin{to{transform:rotate(360deg)}}' +
+      '.cv-loader{position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;' +
+        'align-items:center;justify-content:center;gap:16px;pointer-events:none;}' +
+      '.cv-loader.out{opacity:0;transition:opacity 0.35s ease;}';
+    document.head.appendChild(s);
+    var ring = document.createElement('div');
+    ring.style.cssText = 'width:36px;height:36px;border:2.5px solid rgba(255,255,255,0.1);' +
+      'border-top-color:rgba(255,255,255,0.65);border-radius:50%;animation:cv-spin 0.75s linear infinite;';
+    var txt = document.createElement('div');
+    txt.style.cssText = 'font-size:8pt;font-weight:500;color:rgba(255,255,255,0.28);' +
+      'letter-spacing:1.5px;text-transform:uppercase;';
+    txt.textContent = _langParam === 'en' ? 'Loading' : 'Cargando';
+    var loader = document.createElement('div');
+    loader.className = 'cv-loader';
+    loader.appendChild(ring);
+    loader.appendChild(txt);
+    return loader;
+  }
+
   // ── Main ────────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', function () {
+    var loader = buildLoader();
+    document.body.appendChild(loader);
+
     var base = window.CV_ASSETS_BASE || '';
     var dataFile = base + (_langParam ? ('data.' + _langParam + '.json') : 'data.json');
     fetch(dataFile)
@@ -429,9 +464,14 @@
         var toggle = buildLangToggle(meta.lang, meta.availableLangs);
         if (toggle) document.body.appendChild(toggle);
 
+        loader.classList.add('out');
+        setTimeout(function () { if (loader.parentNode) loader.parentNode.removeChild(loader); }, 380);
         setTimeout(function () { document.body.classList.add('loaded'); }, 200);
       })
-      .catch(function (err) { console.error('cv-renderer: failed to load data.json', err); });
+      .catch(function (err) {
+        console.error('cv-renderer: failed to load data.json', err);
+        if (loader.parentNode) loader.parentNode.removeChild(loader);
+      });
   });
 
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') window.closeModal(); });
