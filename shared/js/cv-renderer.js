@@ -383,6 +383,33 @@
   }
 
   // ── Loader ──────────────────────────────────────────────────────
+  function buildJsonLd(data) {
+    var p = data.profile || {};
+    var email = '', phone = '', locality = '';
+    (p.contact || []).forEach(function (c) {
+      if (c.href && c.href.indexOf('mailto:') === 0) email = c.href.slice(7);
+      else if (c.href && c.href.indexOf('tel:') === 0) phone = c.href.slice(4);
+      else if (!c.href && c.text) locality = c.text;
+    });
+    var desc = '';
+    if (data.summary && data.summary.paragraphs && data.summary.paragraphs.length) {
+      desc = data.summary.paragraphs[0].replace(/<[^>]+>/g, '');
+    }
+    var sameAs = [];
+    (data.sidebar || []).forEach(function (s) {
+      if (s.type === 'profiles') (s.items || []).forEach(function (it) { if (it.href) sameAs.push(it.href); });
+    });
+    var person = { '@context': 'https://schema.org', '@type': 'Person', 'name': p.name, 'jobTitle': p.title, 'url': (data.meta || {}).shareUrl || window.location.href, 'description': desc };
+    if (email) person.email = email;
+    if (phone) person.telephone = phone;
+    if (locality) person.address = { '@type': 'PostalAddress', 'addressLocality': locality, 'addressCountry': 'MX' };
+    if (sameAs.length) person.sameAs = sameAs;
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.text = JSON.stringify(person);
+    document.head.appendChild(s);
+  }
+
   function buildLoader() {
     var s = document.createElement('style');
     s.textContent =
@@ -424,9 +451,14 @@
           if (!m) { m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); }
           m.content = meta.description;
         }
-        if (meta.shareUrl) {
-          window.CV_SHARE_URL = _langParam ? (meta.shareUrl + '?lang=' + _langParam) : meta.shareUrl;
+        var canonicalUrl = _langParam ? (meta.shareUrl + '?lang=' + _langParam) : meta.shareUrl;
+        if (canonicalUrl) {
+          var cLink = document.querySelector('link[rel="canonical"]');
+          if (!cLink) { cLink = document.createElement('link'); cLink.rel = 'canonical'; document.head.appendChild(cLink); }
+          cLink.href = canonicalUrl;
+          window.CV_SHARE_URL = canonicalUrl;
         }
+        buildJsonLd(data);
 
         var page = el('div', { class: 'page' });
         if (data.profile) page.appendChild(buildHero(data.profile));
