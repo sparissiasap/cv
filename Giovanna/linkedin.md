@@ -1,5 +1,27 @@
 # LinkedIn — Giovanna Parissi Reyes
 
+---
+
+## INSTRUCCIONES — Cómo actualizar el perfil
+
+1. Ve a **linkedin.com** e inicia sesión con tu cuenta
+2. Entra a tu perfil y clic en el ícono ✏️ de cada sección
+3. Sigue el orden de las secciones de abajo:
+
+| Sección LinkedIn   | Qué copiar de este archivo          |
+|--------------------|-------------------------------------|
+| Titular (Headline) | Bloque "Titular"                    |
+| Acerca de          | Bloque "Acerca de"                  |
+| Experiencia        | Cada bloque de experiencia          |
+| Educación          | Bloque "Educación"                  |
+| Aptitudes          | Lista de "Aptitudes" (una por una)  |
+
+> **Tip Multimedia:** En cada experiencia, LinkedIn tiene un campo "Multimedia" al fondo.
+> Agrega ahí el enlace del CV: https://sparissiasap.github.io/cv/Giovanna/
+> Aparecerá como card visual en tu perfil.
+
+---
+
 ## Titular
 ```
 Ingeniera Civil · Supervisora y Residente de Obra | Grand Hyatt Puerto Cancún | AutoCAD · Neodata
