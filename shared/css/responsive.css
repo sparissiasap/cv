@@ -1,0 +1,113 @@
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE STYLES  —  screen only (never applied during print)
+   Mobile phones  (≤ 599px)  : Galaxy A54 · iPhone SE/14/15 · Pixel 8 · Galaxy S24
+   Intermediate   (600–767px): landscape phones / small tablets
+   Tablet         (768–1023px): iPad mini 6 · iPad 10th gen · iPad Air · iPad Pro 11" · Galaxy Tab S9
+   Tablet large   (1024–1179px): iPad Pro 12.9" portrait · iPad landscape
+   ═══════════════════════════════════════════════════════ */
+
+/* ── iPad Pro 12.9" portrait (1024–1179px) ───────────────────────── */
+@media screen and (min-width: 1024px) and (max-width: 1179px) {
+  .page { margin: 36px 24px 80px; max-width: 100%; }
+  .hero { padding: 44px 44px 32px; gap: 34px; }
+  .hero-photo { width: 148px; height: 148px; }
+  .hero-name { font-size: 30pt; }
+  .grid { grid-template-columns: 1fr 295px; }
+  .card { padding: 30px 32px; }
+}
+
+/* ── Tablet portrait: iPad mini 6 · iPad · iPad Air · iPad Pro 11" (768–1023px) ─ */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .page { margin: 24px 20px 80px; max-width: 100%; }
+  .hero { padding: 38px 34px 28px; gap: 26px; }
+  .hero-photo { width: 136px; height: 136px; }
+  .hero-name { font-size: 26pt; letter-spacing: -1px; }
+  .hero-title { font-size: 10.5pt; }
+  .hero-chips span { font-size: 8pt !important; padding: 4px 11px !important; }
+  .grid { grid-template-columns: 1fr 262px; gap: 16px; }
+  .card { padding: 26px 26px; }
+  .certs-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+}
+
+/* ── Intermediate: landscape phones / small tablets (600–767px) ───── */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .page { margin: 18px 16px 88px; max-width: 100%; }
+  .hero { padding: 30px 26px 24px; gap: 20px; }
+  .hero-photo { width: 118px; height: 118px; }
+  .hero-name { font-size: 21pt; letter-spacing: -0.8px; }
+  .hero-title { font-size: 10pt; }
+  .hero-chips span { font-size: 8pt !important; padding: 4px 10px !important; }
+  .grid { grid-template-columns: 1fr; gap: 0; }
+  .card { padding: 22px 22px; }
+  .job-title-text { font-size: 10.5pt; }
+  .certs-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+}
+
+/* ── Mobile phones (≤ 599px) ─────────────────────────────────────── */
+@media screen and (max-width: 599px) {
+
+  /* Page */
+  .page { margin: 12px 0 88px; padding: 0 14px; max-width: 100%; }
+
+  /* Hero: stack photo above info, center everything */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 26px 18px 22px;
+    gap: 16px;
+    border-radius: 20px;
+  }
+  .hero-photo { width: 100px; height: 100px; margin-top: 0; }
+  .hero-info { width: 100%; }
+  .hero-name { font-size: 18pt; letter-spacing: -0.5px; line-height: 1.2; }
+  .hero-title { font-size: 9pt; margin-top: 6px; }
+
+  /* Chips & contact center-aligned */
+  .hero-chips { justify-content: center; gap: 5px; margin-top: 12px; }
+  .hero-chips span { font-size: 7.5pt !important; padding: 4px 10px !important; }
+  .hero-contact { justify-content: center; gap: 5px; margin-top: 12px; }
+  .contact-chip { font-size: 7.5pt; padding: 5px 10px; }
+
+  /* Stats: 2×2 grid so labels don't get crushed */
+  .hero-stats { flex-wrap: wrap; margin-top: 16px; padding-top: 14px; gap: 0; }
+  .stat-item { flex: 0 0 50%; border-left: none !important; padding: 6px 0; }
+  .stat-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.07); }
+  .stat-item:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .stat-number { font-size: 16pt; }
+  .stat-label { font-size: 6.5pt; }
+
+  /* Layout: single column */
+  .grid { grid-template-columns: 1fr; gap: 0; }
+
+  /* Cards */
+  .card { padding: 20px 16px; border-radius: 18px; }
+  .section-label { margin-bottom: 18px; }
+
+  /* Summary */
+  .summary-text { font-size: 9.5pt; line-height: 1.7; }
+
+  /* Timeline */
+  .timeline-item { gap: 0 12px; margin-bottom: 26px; }
+  .job-meta { flex-direction: column; gap: 6px; }
+  .job-meta > div:last-child { text-align: left !important; }
+  .job-title-text { font-size: 10.5pt; }
+  .job-location-text { text-align: left; margin-top: 0; }
+  .job-date-text { align-self: flex-start; white-space: normal; }
+  .job-bullets li { font-size: 9pt; padding-left: 14px; }
+
+  /* Skill bars */
+  .eb-meta { flex-wrap: wrap; gap: 2px; }
+  .eb-name { font-size: 9pt; }
+  .eb-tag { font-size: 7pt; }
+
+  /* Cert gallery: single column */
+  .certs-grid { grid-template-columns: 1fr; }
+  .cert-card { padding: 18px 16px 16px; }
+
+  /* Modal */
+  .modal-overlay { padding: 10px; }
+  .modal-box { border-radius: 16px; max-height: 94vh; }
+  .modal-header { padding: 14px 16px; }
+  .modal-body iframe { min-height: 280px; }
+}

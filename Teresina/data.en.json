@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "lang": "en",
+    "availableLangs": ["es", "en"],
+    "pageTitle": "Teresina Parissi Reyes — Business Administration",
+    "description": "Professional CV of Teresina Parissi Reyes, B.A. Business Administration with a Master's in Senior Management and Strategic Intelligence.",
+    "shareUrl": "https://sparissiasap.github.io/cv/Teresina/"
+  },
+  "profile": {
+    "name": "Teresina Parissi Reyes",
+    "title": "B.A. Business Administration · Master in Senior Management",
+    "photo": "perfil.png",
+    "photoPosition": "center 12%",
+    "chips": ["⚡ Senior Management", "⚡ Administration", "Master's · IEU", "Aspel SAE · NOI", "10+ years experience"],
+    "contact": [
+      { "icon": "📞", "text": "998 152 8045", "href": "tel:9981528045" },
+      { "icon": "✉️", "text": "tparissi@hotmail.com", "href": "mailto:tparissi@hotmail.com" },
+      { "icon": "📍", "text": "Cancún, Q. Roo" }
+    ],
+    "stats": [
+      { "number": "10+",   "label": "Years exp." },
+      { "number": "3",     "label": "Companies" },
+      { "number": "Mtra.", "label": "Senior Mgmt." }
+    ]
+  },
+  "summary": {
+    "label": "About Me",
+    "paragraphs": [
+      "Bachelor's degree in Business Administration with a <strong>Master's in Senior Management and Strategic Intelligence</strong>. Over 10 years of experience in administrative management, financial control, and personnel management at private sector companies in Cancún, Q. Roo.",
+      "Extensive expertise in <strong>Aspel SAE and NOI</strong>, accounts payable, bank reconciliation, invoicing, and inventory control. Additional training in <strong>financial literacy</strong> (CONDUSEF) and participation in international marketing and administration congresses."
+    ]
+  },
+  "experience": {
+    "label": "Experience",
+    "jobs": [
+      {
+        "title": "Administrative Assistant",
+        "company": "JAX Uniformes",
+        "dateRange": "Sep 2019 – Present",
+        "location": "Cancún, Q. Roo",
+        "current": true,
+        "bullets": [
+          "Management and organization of executive schedule.",
+          "Procurement management and supplier quotations.",
+          "Accounts payable control and recording.",
+          "Receipt and inspection of merchandise.",
+          "File control and administration."
+        ]
+      },
+      {
+        "title": "Administrative Analyst",
+        "company": "Pendulum S.A. de C.V.",
+        "dateRange": "Feb 2018 – Jul 2019",
+        "location": "Cancún, Q. Roo",
+        "current": false,
+        "bullets": [
+          "Schedule management and coordination.",
+          "Inventory and warehouse control.",
+          "Accounts payable recording and follow-up.",
+          "Quotation preparation.",
+          "Personnel management and file control."
+        ]
+      },
+      {
+        "title": "Administration",
+        "company": "Prisaire S.A. de C.V.",
+        "dateRange": "Apr 2015 – Oct 2017",
+        "location": "Cancún, Q. Roo",
+        "current": false,
+        "bullets": [
+          "Recording and analysis of banking transactions (bank reconciliation).",
+          "Comprehensive accounts payable control.",
+          "Invoicing and online banking management.",
+          "Procurement and warehouse management.",
+          "Payments to suppliers, contractors, and personnel payroll.",
+          "Personnel control and supervision."
+        ]
+      }
+    ]
+  },
+  "sidebar": [
+    {
+      "type": "expertise",
+      "label": "Expertise",
+      "bars": [
+        { "name": "Administrative Management", "tag": "90%", "pct": 90 },
+        { "name": "Accounts Payable",          "tag": "88%", "pct": 88 },
+        { "name": "Financial Control",         "tag": "85%", "pct": 85 },
+        { "name": "Personnel Management",      "tag": "82%", "pct": 82 },
+        { "name": "Aspel SAE / NOI",           "tag": "80%", "pct": 80 }
+      ],
+      "skillGroups": [
+        {
+          "label": "Software",
+          "skills": [
+            { "text": "Excel",     "primary": true },
+            { "text": "Aspel SAE", "primary": true },
+            { "text": "Aspel NOI", "primary": true },
+            { "text": "Word" },
+            { "text": "PowerPoint" },
+            { "text": "Outlook" },
+            { "text": "Publisher" },
+            { "text": "Adobe Reader" },
+            { "text": "Prezi" },
+            { "text": "Gmail" }
+          ]
+        },
+        {
+          "label": "Management",
+          "skills": [
+            { "text": "Executive Scheduling" },
+            { "text": "Procurement" },
+            { "text": "Quotations" },
+            { "text": "Inventory Control" },
+            { "text": "Accounts Payable" },
+            { "text": "Invoicing" },
+            { "text": "Online Banking" },
+            { "text": "File Management" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "education",
+      "label": "Education",
+      "items": [
+        {
+          "degree": "Master's Degree",
+          "spec": "Senior Management and Strategic Intelligence",
+          "school": "IEU University",
+          "dateRange": "2019 – 2024"
+        },
+        {
+          "degree": "B.A. Business Administration",
+          "school": "Technological Institute of Cancún (ITC)",
+          "dateRange": "2010 – 2014"
+        }
+      ]
+    },
+    {
+      "type": "training",
+      "label": "Training",
+      "items": [
+        { "name": "Financial Education Diploma",              "meta": "CONDUSEF · Feb – Mar 2019",               "dot": "gold" },
+        { "name": "Professional Internship — HR Dept.",       "meta": "ITC Cancún · Aug – Dec 2014",             "dot": "default" },
+        { "name": "Professional Practice — Hotel Blue Bay",   "meta": "Playa del Carmen · May 2014",             "dot": "default" },
+        { "name": "Technical-Scientific English Course",      "meta": "For Business Admin. students · Jul–Aug 2014", "dot": "default" },
+        { "name": "World Congress of Marketing Students",     "meta": "Jun – Jul 2012",                          "dot": "gold" },
+        { "name": "Bancomer Finance Course",                  "meta": "Nov 2012",                                "dot": "default" },
+        { "name": "Economic-Administrative Sciences Symposium", "meta": "Nov 2011",                              "dot": "default" }
+      ]
+    },
+    {
+      "type": "languages",
+      "label": "Languages",
+      "items": [
+        { "name": "Spanish", "level": "Native",       "pct": 100 },
+        { "name": "English", "level": "Intermediate", "pct": 55 },
+        { "name": "Italian", "level": "Basic",        "pct": 20 },
+        { "name": "French",  "level": "Basic",        "pct": 20 }
+      ]
+    }
+  ],
+  "certGallery": {
+    "label": "Certificates & Credentials",
+    "certs": []
+  },
+  "shareBar": [
+    { "type": "print",   "icon": "🖨️", "label": "Print" },
+    { "type": "divider" },
+    { "type": "link",    "icon": "💬", "label": "WhatsApp", "href": "https://wa.me/?text=CV%20of%20Teresina%20Parissi%20Reyes%20%E2%80%94%20Business%20Administration%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FTeresina%2F" },
+    { "type": "divider" },
+    { "type": "copy",    "icon": "🔗", "label": "Copy link" }
+  ]
+}

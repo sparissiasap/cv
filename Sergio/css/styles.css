@@ -816,22 +816,24 @@ body.loaded .eb-fill { width: var(--w); }
 }
 
 /* ─── PRINT ─── */
+/* margin:0 + element padding is more reliable than @page margins across browsers */
+@page { margin: 0; size: A4 portrait; }
+
 @media print {
-  /* Print exact colors — no browser "optimize for paper" conversion */
   *, *::before, *::after {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
-  @page { margin: 14mm 16mm; size: A4; }
+  body { margin: 0 !important; padding: 0 !important; min-height: 0 !important; background: white !important; }
 
-  /* ── Root cause fixes ─────────────────────────────────────── */
-
-  /* 1. body min-height:100vh forces a full blank page gap — remove it */
-  body { min-height: 0 !important; }
-
-  /* 2. page margin-top:48px wastes space on page 1 — collapse it */
-  .page { margin: 0 auto !important; max-width: 100% !important; }
+  .page {
+    margin: 0 !important;
+    padding: 14mm 16mm !important;
+    max-width: 210mm !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
 
   /* 3. backdrop-filter creates isolated stacking contexts that confuse
         the print renderer and cause random gaps — disable it */
@@ -888,3 +890,4 @@ body.loaded .eb-fill { width: var(--w); }
     max-height: 172px !important;
   }
 }
+

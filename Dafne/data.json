@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "lang": "es",
+    "availableLangs": ["es", "en"],
+    "pageTitle": "Dafne Cuevas — Coordinadora de Operaciones & Logística",
+    "description": "Profesional con 9+ años en administración, logística operativa y manejo de personal. Liderazgo de equipos hasta 35 personas · Grupo Xcaret · Cancún, MX.",
+    "shareUrl": "https://sparissiasap.github.io/cv/Dafne/"
+  },
+  "profile": {
+    "name": "Dafne Cuevas",
+    "title": "Coordinadora de Operaciones · Logística & Administración · Lic. Comunicación",
+    "photo": "perfil.png",
+    "chips": ["⚡ Liderazgo Operativo", "⚡ Gestión de Equipos", "Xcaret Group · 5 yrs", "Logística", "9+ yrs de experiencia"],
+    "contact": [
+      { "icon": "📍", "text": "Cancún, Quintana Roo" },
+      { "icon": "📞", "text": "229 393 4921", "href": "tel:+522293934921" },
+      { "icon": "✉️", "text": "belenalfonseca.20@hotmail.com", "href": "mailto:belenalfonseca.20@hotmail.com" }
+    ],
+    "stats": [
+      { "number": "9+", "label": "Años de exp." },
+      { "number": "35", "label": "Personas lideradas" },
+      { "number": "5",  "label": "Años en Xcaret" },
+      { "number": "4",  "label": "Empresas" }
+    ]
+  },
+  "summary": {
+    "label": "Resumen Profesional",
+    "paragraphs": [
+      "<strong>Coordinadora de operaciones con enfoque en resultados.</strong> Profesional con más de <strong>9 años de experiencia</strong> en administración, logística operativa y manejo de personal, especializada en la coordinación de equipos y resolución de incidencias en entornos dinámicos y de alta exigencia.",
+      "He liderado equipos de <strong>hasta 35 personas</strong>, optimizando procesos operativos, controlando recursos y garantizando el cumplimiento de objetivos diarios. Mi paso por <strong>Grupo Xcaret</strong> —tanto en el corporativo como en operaciones de marina— me permitió desarrollar una visión integral del negocio: desde la planeación logística y control de inventarios, hasta la elaboración de reportes gerenciales y gestión de presupuestos en <strong>SAP</strong>.",
+      "Destaco por mi capacidad de organización, <strong>toma de decisiones ágiles</strong> y orientación al cliente. Busco desarrollarme en posiciones donde pueda aportar liderazgo, eficiencia operativa y valor tangible al equipo."
+    ]
+  },
+  "experience": {
+    "label": "Experiencia Laboral",
+    "jobs": [
+      {
+        "title": "Reparto y Logística Independiente",
+        "company": "Mercado Libre / MELI",
+        "dateRange": "2026 – Presente",
+        "location": "Cancún, México",
+        "current": true,
+        "bullets": [
+          "<strong>Gestión de entregas</strong> y optimización de rutas de distribución para cumplimiento de tiempos.",
+          "Atención al cliente y resolución de incidencias en campo, garantizando la satisfacción del usuario final."
+        ]
+      },
+      {
+        "title": "Jefa de Operaciones (Marina)",
+        "company": "Grupo Xcaret — Xcaret Xailing",
+        "dateRange": "2022 – 2024",
+        "location": "Cancún, México",
+        "current": false,
+        "bullets": [
+          "<strong>Coordinación de operación diaria</strong> y planeación de ruta logística del área de marina.",
+          "Supervisión directa del equipo de trabajo, asegurando estándares de calidad y seguridad operativa.",
+          "Control de inventarios e insumos operativos, reduciendo desvíos y optimizando el uso de recursos.",
+          "Elaboración y seguimiento a reportes administrativos para dirección.",
+          "<strong>Resolución de incidentes con clientes</strong>, garantizando continuidad del servicio y experiencia de alta calidad."
+        ]
+      },
+      {
+        "title": "Asistente Administrativo",
+        "company": "Grupo Xcaret — Corporativo",
+        "dateRange": "2019 – 2022",
+        "location": "Cancún, México",
+        "current": false,
+        "bullets": [
+          "Administración de <strong>presupuesto del departamento</strong> y manejo de caja chica con control de gastos.",
+          "Organización de agendas y coordinación de eventos internos corporativos.",
+          "Elaboración de reportes y <strong>presentaciones gerenciales</strong> para toma de decisiones.",
+          "Gestión de facturas en sistema <strong>SAP</strong>."
+        ]
+      },
+      {
+        "title": "Auxiliar Administrativo y Eventos",
+        "company": "Casa de la Cultura Jurídica",
+        "dateRange": "2017 – 2019",
+        "location": "Cancún, México",
+        "current": false,
+        "bullets": [
+          "<strong>Coordinación y logística de eventos y conferencias</strong> institucionales.",
+          "Elaboración de convenios y documentación institucional.",
+          "Vinculación con universidades y entidades académicas."
+        ]
+      }
+    ]
+  },
+  "sidebar": [
+    {
+      "type": "expertise",
+      "label": "Skills & Expertise",
+      "bars": [
+        { "name": "Liderazgo & Manejo de Personal",       "tag": "Experta · 7+ yrs",    "pct": 90 },
+        { "name": "Logística & Coordinación Operativa",   "tag": "Experta · 5+ yrs",    "pct": 88 },
+        { "name": "Administración & Control de Recursos", "tag": "Avanzada · 7+ yrs",   "pct": 84 },
+        { "name": "Resolución de Problemas",              "tag": "Avanzada · 9+ yrs",   "pct": 82 },
+        { "name": "Atención al Cliente",                  "tag": "Avanzada · 9+ yrs",   "pct": 78 }
+      ],
+      "skillGroups": [
+        {
+          "label": "Operaciones",
+          "skills": [
+            { "text": "Planeación de Rutas",    "primary": true },
+            { "text": "Control de Inventarios", "primary": true },
+            { "text": "Supervisión de Equipos" },
+            { "text": "Reportes Operativos" },
+            { "text": "Gestión de Insumos" }
+          ]
+        },
+        {
+          "label": "Administración",
+          "skills": [
+            { "text": "SAP", "primary": true },
+            { "text": "Presupuestos" },
+            { "text": "Caja Chica" },
+            { "text": "Facturación" },
+            { "text": "Eventos Corporativos" },
+            { "text": "Presentaciones Gerenciales" }
+          ]
+        },
+        {
+          "label": "Habilidades Blandas",
+          "skills": [
+            { "text": "Toma de Decisiones" },
+            { "text": "Organización" },
+            { "text": "Trabajo en Equipo" },
+            { "text": "Enfoque en Resultados" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "education",
+      "label": "Educación",
+      "items": [
+        {
+          "degree": "Licenciatura en Comunicación y Publicidad",
+          "school": "Centro Universitario Hispano Mexicano",
+          "dateRange": "2014 – 2018"
+        }
+      ]
+    },
+    {
+      "type": "languages",
+      "label": "Idiomas",
+      "items": [
+        { "name": "Español", "level": "Nativo", "pct": 100 }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "Referencias",
+      "content": "Referencias profesionales disponibles a pedido."
+    }
+  ],
+  "certGallery": {
+    "label": "Certificados & Credenciales",
+    "certs": []
+  },
+  "shareBar": [
+    { "type": "print",   "icon": "🖨️", "label": "PDF / Imprimir" },
+    { "type": "divider" },
+    { "type": "link",    "icon": "🔗", "label": "LinkedIn", "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FDafne%2F" },
+    { "type": "link",    "icon": "💬", "label": "WhatsApp", "href": "https://wa.me/?text=Mi%20CV%3A%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FDafne%2F" },
+    { "type": "divider" },
+    { "type": "copy",    "icon": "🔗", "label": "Copiar enlace" }
+  ]
+}

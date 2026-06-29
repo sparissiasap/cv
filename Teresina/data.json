@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "lang": "es",
+    "availableLangs": ["es", "en"],
+    "pageTitle": "Teresina Parissi Reyes — Administración de Empresas",
+    "description": "CV profesional de Teresina Parissi Reyes, Licenciada en Administración con Maestría en Alta Gerencia e Inteligencia Estratégica.",
+    "shareUrl": "https://sparissiasap.github.io/cv/Teresina/"
+  },
+  "profile": {
+    "name": "Teresina Parissi Reyes",
+    "title": "Lic. Administración · Maestra en Alta Gerencia",
+    "photo": "perfil.png",
+    "photoPosition": "center 12%",
+    "chips": ["⚡ Alta Gerencia", "⚡ Administración", "Maestría · IEU", "Aspel SAE · NOI", "10+ años experiencia"],
+    "contact": [
+      { "icon": "📞", "text": "998 152 8045", "href": "tel:9981528045" },
+      { "icon": "✉️", "text": "tparissi@hotmail.com", "href": "mailto:tparissi@hotmail.com" },
+      { "icon": "📍", "text": "Cancún, Q. Roo" }
+    ],
+    "stats": [
+      { "number": "10+",  "label": "Años exp." },
+      { "number": "3",    "label": "Empresas" },
+      { "number": "Mtra.", "label": "Alta Gerencia" }
+    ]
+  },
+  "summary": {
+    "label": "Sobre mí",
+    "paragraphs": [
+      "Licenciada en Administración de Empresas con <strong>Maestría en Alta Gerencia e Inteligencia Estratégica</strong>. Más de 10 años de experiencia en gestión administrativa, control financiero y manejo de personal en empresas del sector privado en Cancún, Q. Roo.",
+      "Amplio dominio en <strong>Aspel SAE y NOI</strong>, cuentas por pagar, flujos bancarios, facturación y control de inventarios. Con formación adicional en <strong>educación financiera</strong> (CONDUSEF) y participación en congresos internacionales de mercadotecnia y administración."
+    ]
+  },
+  "experience": {
+    "label": "Experiencia",
+    "jobs": [
+      {
+        "title": "Asistente Administrativo",
+        "company": "JAX Uniformes",
+        "dateRange": "Sep 2019 – Actualidad",
+        "location": "Cancún, Q. Roo",
+        "current": true,
+        "bullets": [
+          "Manejo y organización de agenda ejecutiva.",
+          "Gestión de compras y cotizaciones con proveedores.",
+          "Control y registro de cuentas por pagar.",
+          "Recepción e inspección de mercancía.",
+          "Control y administración de archivo."
+        ]
+      },
+      {
+        "title": "Analista Administrativo",
+        "company": "Pendulum S.A. de C.V.",
+        "dateRange": "Feb 2018 – Jul 2019",
+        "location": "Cancún, Q. Roo",
+        "current": false,
+        "bullets": [
+          "Manejo y coordinación de agenda.",
+          "Control de inventarios y almacén.",
+          "Registro y seguimiento de cuentas por pagar.",
+          "Elaboración de cotizaciones.",
+          "Manejo de personal y control de archivo."
+        ]
+      },
+      {
+        "title": "Administración",
+        "company": "Prisaire S.A. de C.V.",
+        "dateRange": "Abr 2015 – Oct 2017",
+        "location": "Cancún, Q. Roo",
+        "current": false,
+        "bullets": [
+          "Registro y análisis de movimientos bancarios (flujos bancarios).",
+          "Control integral de cuentas por pagar.",
+          "Facturación y manejo de banca en línea.",
+          "Gestión de compras y control de almacén.",
+          "Pago a proveedores, contratistas y nómina de personal.",
+          "Control y supervisión de personal."
+        ]
+      }
+    ]
+  },
+  "sidebar": [
+    {
+      "type": "expertise",
+      "label": "Expertise",
+      "bars": [
+        { "name": "Gestión administrativa", "tag": "90%", "pct": 90 },
+        { "name": "Cuentas por pagar",      "tag": "88%", "pct": 88 },
+        { "name": "Control financiero",     "tag": "85%", "pct": 85 },
+        { "name": "Manejo de personal",     "tag": "82%", "pct": 82 },
+        { "name": "Aspel SAE / NOI",        "tag": "80%", "pct": 80 }
+      ],
+      "skillGroups": [
+        {
+          "label": "Software",
+          "skills": [
+            { "text": "Excel",     "primary": true },
+            { "text": "Aspel SAE", "primary": true },
+            { "text": "Aspel NOI", "primary": true },
+            { "text": "Word" },
+            { "text": "Power Point" },
+            { "text": "Outlook" },
+            { "text": "Publisher" },
+            { "text": "Adobe Reader" },
+            { "text": "Prezi" },
+            { "text": "Gmail" }
+          ]
+        },
+        {
+          "label": "Gestión",
+          "skills": [
+            { "text": "Agenda ejecutiva" },
+            { "text": "Compras" },
+            { "text": "Cotizaciones" },
+            { "text": "Inventarios" },
+            { "text": "CxP" },
+            { "text": "Facturación" },
+            { "text": "Banca en línea" },
+            { "text": "Control de archivo" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "education",
+      "label": "Educación",
+      "items": [
+        {
+          "degree": "Maestría",
+          "spec": "Alta Gerencia e Inteligencia Estratégica",
+          "school": "Universidad IEU",
+          "dateRange": "2019 – 2024"
+        },
+        {
+          "degree": "Lic. Administración",
+          "school": "Instituto Tecnológico de Cancún (ITC)",
+          "dateRange": "2010 – 2014"
+        }
+      ]
+    },
+    {
+      "type": "training",
+      "label": "Formaciones",
+      "items": [
+        { "name": "Diplomado en Educación Financiera",                "meta": "CONDUSEF · Feb – Mar 2019",              "dot": "gold" },
+        { "name": "Residencia profesional — Depto. RH",               "meta": "ITC Cancún · Ago – Dic 2014",            "dot": "default" },
+        { "name": "Prácticas profesionales — Hotel Blue Bay",         "meta": "Playa del Carmen · May 2014",            "dot": "default" },
+        { "name": "Curso técnico-científico de inglés",               "meta": "Para estudiantes de Administración · Jul-Ago 2014", "dot": "default" },
+        { "name": "Congreso Mundial de Estudiantes de Mercadotecnia", "meta": "Jun – Jul 2012",                          "dot": "gold" },
+        { "name": "Curso de Finanzas Bancomer",                       "meta": "Nov 2012",                               "dot": "default" },
+        { "name": "Simposium Ciencias Económico-Administrativas",     "meta": "Nov 2011",                               "dot": "default" }
+      ]
+    },
+    {
+      "type": "languages",
+      "label": "Idiomas",
+      "items": [
+        { "name": "Español", "level": "Nativo",     "pct": 100 },
+        { "name": "Inglés",  "level": "Intermedio", "pct": 55 },
+        { "name": "Italiano","level": "Básico",     "pct": 20 },
+        { "name": "Francés", "level": "Básico",     "pct": 20 }
+      ]
+    }
+  ],
+  "certGallery": {
+    "label": "Certificados & Credenciales",
+    "certs": []
+  },
+  "shareBar": [
+    { "type": "print",   "icon": "🖨️", "label": "Imprimir" },
+    { "type": "divider" },
+    { "type": "link",    "icon": "💬", "label": "WhatsApp", "href": "https://wa.me/?text=CV%20de%20Teresina%20Parissi%20Reyes%20%E2%80%94%20Lic.%20Administraci%C3%B3n%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FTeresina%2F" },
+    { "type": "divider" },
+    { "type": "copy",    "icon": "🔗", "label": "Copiar enlace" }
+  ]
+}
