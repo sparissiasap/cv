@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "lang": "en",
+    "availableLangs": ["es", "en"],
+    "pageTitle": "Giovanna Parissi Reyes — Civil Engineer",
+    "description": "Professional CV of Giovanna Parissi Reyes, Civil Engineer with 6+ years of experience in construction supervision for large-scale hotel projects in Cancún.",
+    "shareUrl": "https://sparissiasap.github.io/cv/Giovanna/"
+  },
+  "profile": {
+    "name": "Giovanna Parissi Reyes",
+    "title": "Civil Engineer",
+    "photo": "perfil.png",
+    "photoPosition": "center 15%",
+    "chips": ["⚡ Construction Supervisor", "⚡ Site Resident Engineer", "Civil Engineering · ITC", "AutoCAD · Neodata", "6+ years experience"],
+    "contact": [
+      { "icon": "📞", "text": "998 937 4514", "href": "tel:9989374514" },
+      { "icon": "✉️", "text": "gioparissi@hotmail.com", "href": "mailto:gioparissi@hotmail.com" },
+      { "icon": "📍", "text": "Cancún, Q. Roo" }
+    ],
+    "stats": [
+      { "number": "6+", "label": "Years exp." },
+      { "number": "4",  "label": "Projects" },
+      { "number": "3",  "label": "Companies" }
+    ]
+  },
+  "summary": {
+    "label": "About Me",
+    "paragraphs": [
+      "Civil Engineer with over <strong>6 years of experience</strong> in construction supervision and site residency for large-scale hotel projects along the Mexican Caribbean coast. Comprehensive expertise ranging from blueprint interpretation to estimation control, payroll management, and construction auditing.",
+      "Currently serving as site resident engineer for the <strong>Grand Hyatt Puerto Cancún</strong> hotel project, with technical expertise in finishes, drywall, pools, hydro-sanitary installations, and black iron piping. Proficient in <strong>AutoCAD</strong> and <strong>Neodata</strong> for progress tracking and quantity take-offs."
+    ]
+  },
+  "experience": {
+    "label": "Experience",
+    "jobs": [
+      {
+        "title": "Supervisor / Site Resident / Quantity Surveyor",
+        "company": "Grupo Constructor Cantepec S.A. de C.V.",
+        "dateRange": "Sep 2021 – Present",
+        "location": "Cancún · Puerto Cancún",
+        "current": true,
+        "bullets": [
+          "<strong>Grand Hyatt Puerto Cancún Hotel</strong> (Sep 2022 – present) — Full site residency in finishes, restaurant, and pool areas.",
+          "<strong>Hotel Emporio KM.16</strong>, buildings B, C, and D — Supervision of masonry, drywall, finishes, pools, and restaurant areas.",
+          "Interpretation of structural, architectural, and hydro-sanitary blueprints.",
+          "Preparation of progress estimates and quantity take-offs.",
+          "Subcontractor payroll control and on-site material auditing.",
+          "Material quantity takeoffs and warehouse requisitions."
+        ]
+      },
+      {
+        "title": "AA Supervisor / Security / Site Resident / Quantity Surveyor",
+        "company": "Comercial Verite S.A. de C.V.",
+        "dateRange": "Aug 2020 – Sep 2021",
+        "location": "Cancún",
+        "current": false,
+        "bullets": [
+          "<strong>Hotel Emporio Torre A</strong> — Supervision and site residency for hotel building construction.",
+          "Blueprint interpretation and technical specification verification.",
+          "Supervision of air conditioning (AC) and security system installations.",
+          "Supervision of black iron piping and fire suppression system installations.",
+          "Preparation of progress estimates and quantity take-offs."
+        ]
+      },
+      {
+        "title": "Construction Supervisor",
+        "company": "Diseño y Construcción",
+        "dateRange": "Jan 2020 – Aug 2020",
+        "location": "Cancún",
+        "current": false,
+        "bullets": [
+          "<strong>ZIVALAM and KALAM Residential Complexes</strong> — Supervision of residential housing construction.",
+          "Reading and interpretation of architectural and structural blueprints.",
+          "Material quantity takeoffs and requisition preparation.",
+          "Supervision of masonry, hydro-sanitary installations, carpentry, and finishes."
+        ]
+      }
+    ]
+  },
+  "sidebar": [
+    {
+      "type": "expertise",
+      "label": "Expertise",
+      "bars": [
+        { "name": "Construction Supervision",    "tag": "92%", "pct": 92 },
+        { "name": "Blueprint Interpretation",    "tag": "88%", "pct": 88 },
+        { "name": "Estimates & Quantity Take-offs", "tag": "85%", "pct": 85 },
+        { "name": "AutoCAD",                     "tag": "82%", "pct": 82 },
+        { "name": "Control & Auditing",          "tag": "78%", "pct": 78 }
+      ],
+      "skillGroups": [
+        {
+          "label": "Software",
+          "skills": [
+            { "text": "AutoCAD", "primary": true },
+            { "text": "Neodata", "primary": true },
+            { "text": "Office",  "primary": true }
+          ]
+        },
+        {
+          "label": "Specialties",
+          "skills": [
+            { "text": "Construction Supervision" },
+            { "text": "Site Residency" },
+            { "text": "Quantity Takeoff" },
+            { "text": "Estimates" },
+            { "text": "Quantity Surveys" },
+            { "text": "Drywall" },
+            { "text": "Masonry" },
+            { "text": "Finishes" },
+            { "text": "Pools" },
+            { "text": "Black Iron Piping" },
+            { "text": "Payroll" },
+            { "text": "Construction Auditing" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "education",
+      "label": "Education",
+      "items": [
+        {
+          "degree": "B.Eng. Civil Engineering",
+          "school": "Technological Institute of Cancún (ITC)",
+          "dateRange": "2016 – 2020"
+        },
+        {
+          "degree": "Architectural Drafting",
+          "spec": "Technical Baccalaureate",
+          "school": "COBACHQ",
+          "dateRange": "2013 – 2016"
+        }
+      ]
+    },
+    {
+      "type": "languages",
+      "label": "Languages",
+      "items": [
+        { "name": "Spanish", "level": "Native", "pct": 100 },
+        { "name": "English", "level": "Basic",  "pct": 22 }
+      ]
+    }
+  ],
+  "certGallery": {
+    "label": "Certificates & Credentials",
+    "certs": []
+  },
+  "shareBar": [
+    { "type": "print",   "icon": "🖨️", "label": "Print" },
+    { "type": "divider" },
+    { "type": "link",    "icon": "💬", "label": "WhatsApp", "href": "https://wa.me/?text=CV%20of%20Giovanna%20Parissi%20Reyes%20%E2%80%94%20Civil%20Engineer%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FGiovanna%2F" },
+    { "type": "divider" },
+    { "type": "copy",    "icon": "🔗", "label": "Copy link" }
+  ]
+}

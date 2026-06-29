@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "lang": "es",
+    "availableLangs": ["es", "en"],
+    "pageTitle": "Giovanna Parissi Reyes — Ingeniera Civil",
+    "description": "CV profesional de Giovanna Parissi Reyes, Ingeniera Civil con más de 6 años de experiencia en supervisión de obra en proyectos hoteleros de gran escala en Cancún.",
+    "shareUrl": "https://sparissiasap.github.io/cv/Giovanna/"
+  },
+  "profile": {
+    "name": "Giovanna Parissi Reyes",
+    "title": "Ingeniera Civil",
+    "photo": "perfil.png",
+    "photoPosition": "center 15%",
+    "chips": ["⚡ Supervisora de Obra", "⚡ Residente de Obra", "Ingeniería Civil · ITC", "AutoCAD · Neodata", "6+ años de experiencia"],
+    "contact": [
+      { "icon": "📞", "text": "998 937 4514", "href": "tel:9989374514" },
+      { "icon": "✉️", "text": "gioparissi@hotmail.com", "href": "mailto:gioparissi@hotmail.com" },
+      { "icon": "📍", "text": "Cancún, Q. Roo" }
+    ],
+    "stats": [
+      { "number": "6+", "label": "Años exp." },
+      { "number": "4",  "label": "Proyectos" },
+      { "number": "3",  "label": "Empresas" }
+    ]
+  },
+  "summary": {
+    "label": "Sobre mí",
+    "paragraphs": [
+      "Ingeniera Civil con más de <strong>6 años de experiencia</strong> en supervisión y residencia de obras de gran escala, especializada en proyectos hoteleros en el Caribe mexicano. Experiencia integral desde la interpretación de planos hasta el control de estimaciones, nóminas y auditoría de obra.",
+      "Actualmente residente en el proyecto <strong>Hotel Grand Hyatt Puerto Cancún</strong>, con dominio técnico en acabados, tablaroca, albercas, instalaciones hidrosanitarias y fierro negro. Manejo de <strong>AutoCAD</strong> y <strong>Neodata</strong> para control y cómputos de avance."
+    ]
+  },
+  "experience": {
+    "label": "Experiencia",
+    "jobs": [
+      {
+        "title": "Supervisora / Residente / Generadorista",
+        "company": "Grupo Constructor Cantepec S.A. de C.V.",
+        "dateRange": "Sep 2021 – Presente",
+        "location": "Cancún · Puerto Cancún",
+        "current": true,
+        "bullets": [
+          "<strong>Hotel Grand Hyatt Puerto Cancún</strong> (Sep 2022 – actual) — Residencia integral de obra en áreas de acabados, restaurantes y albercas.",
+          "<strong>Hotel Emporio KM.16</strong>, edificios B, C y D — Supervisión de albañilería, tablaroca, acabados, albercas y áreas de restaurantes.",
+          "Interpretación de planos estructurales, arquitectónicos e hidrosanitarios.",
+          "Elaboración de estimaciones de obra y generativas para cómputos de avance.",
+          "Control de nóminas de subcontratistas y auditoría de materiales en obra.",
+          "Cuantificación de materiales y requisiciones de almacén."
+        ]
+      },
+      {
+        "title": "Supervisor AA / Seguridad / Residente / Generadorista",
+        "company": "Comercial Verite S.A. de C.V.",
+        "dateRange": "Ago 2020 – Sep 2021",
+        "location": "Cancún",
+        "current": false,
+        "bullets": [
+          "<strong>Hotel Emporio Torre A</strong> — Supervisión y residencia de obra en edificio hotelero.",
+          "Interpretación de planos y verificación de especificaciones técnicas.",
+          "Supervisión de instalaciones de aire acondicionado (AA) y sistemas de seguridad.",
+          "Supervisión de instalaciones de fierro negro y sistema contra incendio.",
+          "Elaboración de estimaciones y generativas para avance de obra."
+        ]
+      },
+      {
+        "title": "Supervisora de Obra",
+        "company": "Diseño y Construcción",
+        "dateRange": "Ene 2020 – Ago 2020",
+        "location": "Cancún",
+        "current": false,
+        "bullets": [
+          "<strong>Residenciales ZIVALAM y KALAM</strong> — Supervisión de construcción de viviendas residenciales.",
+          "Lectura e interpretación de planos arquitectónicos y estructurales.",
+          "Cuantificación de materiales y elaboración de requisiciones.",
+          "Supervisión de albañilería, instalaciones hidrosanitarias, carpintería y acabados."
+        ]
+      }
+    ]
+  },
+  "sidebar": [
+    {
+      "type": "expertise",
+      "label": "Expertise",
+      "bars": [
+        { "name": "Supervisión de obra",        "tag": "92%", "pct": 92 },
+        { "name": "Interpretación de planos",   "tag": "88%", "pct": 88 },
+        { "name": "Estimaciones y generativas", "tag": "85%", "pct": 85 },
+        { "name": "AutoCAD",                    "tag": "82%", "pct": 82 },
+        { "name": "Control y auditoría",        "tag": "78%", "pct": 78 }
+      ],
+      "skillGroups": [
+        {
+          "label": "Software",
+          "skills": [
+            { "text": "AutoCAD", "primary": true },
+            { "text": "Neodata", "primary": true },
+            { "text": "Office",  "primary": true }
+          ]
+        },
+        {
+          "label": "Especialidades",
+          "skills": [
+            { "text": "Supervisión de obra" },
+            { "text": "Residencia de obra" },
+            { "text": "Cuantificación" },
+            { "text": "Estimaciones" },
+            { "text": "Generativas" },
+            { "text": "Tablaroca" },
+            { "text": "Albañilería" },
+            { "text": "Acabados" },
+            { "text": "Albercas" },
+            { "text": "Fierro negro" },
+            { "text": "Nóminas" },
+            { "text": "Auditoría de obra" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "education",
+      "label": "Educación",
+      "items": [
+        {
+          "degree": "Lic. Ingeniería Civil",
+          "school": "Instituto Tecnológico de Cancún (ITC)",
+          "dateRange": "2016 – 2020"
+        },
+        {
+          "degree": "Dibujo Arquitectónico",
+          "spec": "Bachillerato técnico",
+          "school": "COBACHQ",
+          "dateRange": "2013 – 2016"
+        }
+      ]
+    },
+    {
+      "type": "languages",
+      "label": "Idiomas",
+      "items": [
+        { "name": "Español", "level": "Nativo", "pct": 100 },
+        { "name": "Inglés",  "level": "Básico", "pct": 22 }
+      ]
+    }
+  ],
+  "certGallery": {
+    "label": "Certificados & Credenciales",
+    "certs": []
+  },
+  "shareBar": [
+    { "type": "print",   "icon": "🖨️", "label": "Imprimir" },
+    { "type": "divider" },
+    { "type": "link",    "icon": "💬", "label": "WhatsApp", "href": "https://wa.me/?text=CV%20de%20Giovanna%20Parissi%20Reyes%20%E2%80%94%20Ingeniera%20Civil%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FGiovanna%2F" },
+    { "type": "divider" },
+    { "type": "copy",    "icon": "🔗", "label": "Copiar enlace" }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "lang": "en",
+    "availableLangs": ["en", "es"],
+    "pageTitle": "Sergio Parissi Reyes — Senior .NET & Sitecore Specialist",
+    "description": "10+ years in .NET & C#, 7+ in Sitecore. Azure cloud, AI-assisted development. Senior Software Developer at EPAM Systems.",
+    "shareUrl": "https://sparissiasap.github.io/cv/Sergio/"
+  },
+  "profile": {
+    "name": "Sergio Parissi Reyes",
+    "title": "Senior .NET Developer · Sitecore Specialist · Cloud & Azure",
+    "photo": "perfil.png",
+    "chips": ["⚡ .NET Core", "⚡ C#", "Sitecore · 7+ yrs", "Azure", "10+ yrs experience"],
+    "contact": [
+      { "icon": "📍", "text": "Cancún, Mexico" },
+      { "icon": "📞", "text": "+52 998 200 2898", "href": "tel:+529982002898" },
+	  { "icon": "✉️", "text": "spr_123@hotmail.com", "href": "mailto:spr_123@hotmail.com" },
+      { "icon": "✉️", "text": "sergioparissireyes@gmail.com", "href": "mailto:sergioparissireyes@gmail.com" },
+      { "icon": "🔗", "text": "LinkedIn", "href": "https://www.linkedin.com/in/sergioparissi" },
+      { "icon": "💻", "text": "GitHub", "href": "https://github.com/sparissiasap" }
+    ],
+    "stats": [
+      { "number": "10+", "label": "Years .NET" },
+      { "number": "7+",  "label": "Sitecore Core" },
+      { "number": "12",  "label": "Certifications" },
+      { "number": "3",   "label": "Enterprise Clients" }
+    ]
+  },
+  "summary": {
+    "label": "About",
+    "paragraphs": [
+      "<strong>.NET developer at heart.</strong> With <strong>10+ years of experience</strong> in C#, ASP.NET MVC, and .NET Core, I architect and deliver robust, scalable enterprise applications — from clean API design and data layers to cloud infrastructure on Azure. My foundation is deep backend engineering: performant, maintainable, production-grade code.",
+      "Over the past <strong>7+ years</strong>, I have built a strong specialization on top of that .NET core: the <strong>Sitecore ecosystem</strong> — Helix/Habitat architecture, SXA, JSS (Headless CMS), Sitecore Commerce, and Personalization — delivering CMS solutions for global enterprise clients. Sitecore runs on .NET, and understanding the platform at its deepest level is what sets me apart.",
+      "Currently at <strong>EPAM Systems</strong>, I serve as the primary technical point of contact for enterprise clients — leading architectural decisions, Azure cloud deployments, and root-cause analysis on critical systems. I also build <strong>PowerShell automation</strong> for Sitecore operations — log analysis, layout management, and environment maintenance — reducing manual overhead and keeping environments healthy. Beyond code, I act as a trusted technical advisor and actively <strong>mentor developers</strong>: conducting code reviews, guiding onboarding, and promoting a culture of continuous learning across the team. Over the past year I have integrated <strong>AI-assisted development</strong> (Claude / Claude Code) into my daily workflow — accelerating code generation, refactoring, and documentation while personally reviewing and validating every change before it lands in production."
+    ]
+  },
+  "experience": {
+    "label": "Experience",
+    "jobs": [
+      {
+        "title": "Senior .NET Developer",
+        "company": "EPAM Systems",
+        "dateRange": "May 2022 – Present",
+        "location": "Cancún, Mexico (Remote)",
+        "current": true,
+        "bullets": [
+          "<strong>Primary technical point of contact</strong> for multiple enterprise clients, leading root-cause analysis, technical roadmap discussions, and feature design for mission-critical Sitecore applications.",
+          "Architected and developed custom <strong>Sitecore solutions using Helix, SXA, JSS, and Sitecore Personalization</strong>, ensuring performance, scalability, and long-term maintainability.",
+          "Proactively proposed and evaluated multiple technical solutions per client request, clearly outlining trade-offs, risks, and implementation strategies — accelerating decision-making cycles.",
+          "Deployed, configured, and managed <strong>Azure resources</strong> (App Services, Azure Functions, Storage, SQL), maintaining high availability and security across all environments.",
+          "Monitored application health, validated infrastructure stability, and coordinated rapid incident response — reducing client-reported downtime.",
+          "Produced comprehensive technical documentation for knowledge transfer, onboarding, and client audits.",
+          "Built and maintained <strong>PowerShell automation scripts</strong> for Sitecore environments — automating log analysis, layout management, reference cleanup, and IP-range configurations — significantly reducing manual operational overhead.",
+          "<strong>Mentored engineers</strong> across the team: conducted code reviews, facilitated knowledge-sharing sessions, and actively supported onboarding of new developers — fostering a culture of continuous learning and technical growth.",
+          "Used <strong>Azure Application Insights</strong> and the <strong>Sitecore Pipeline Profiler</strong> to diagnose performance bottlenecks, monitor application health in real time, and drive targeted optimizations across Sitecore environments.",
+          "Adopted <strong>AI-assisted development</strong> (Claude / Claude Code) over the past year to accelerate engineering workflows — code generation, refactoring, documentation, and analysis — maintaining full review and validation of every change before integration."
+        ]
+      },
+      {
+        "title": "Senior Sitecore Developer (Independent)",
+        "company": "Freelance / Contract Projects",
+        "dateRange": "Apr 2020 – Apr 2022",
+        "location": "Remote · Part-time / Parallel to Vanco role",
+        "current": false,
+        "bullets": [
+          "Designed and delivered end-to-end <strong>Sitecore CMS solutions</strong> for clients across multiple industries, following Helix architecture and Sitecore best practices.",
+          "Built and integrated <strong>headless CMS components</strong> via custom REST APIs and the Sitecore JSS framework, enabling decoupled front-end architectures.",
+          "Provided strategic technical consulting for Sitecore upgrades, SXA implementations, and personalization initiatives.",
+          "Managed full project lifecycle independently: requirements, scoping, development, QA, delivery, and documentation."
+        ]
+      },
+      {
+        "title": "Senior Software Development Engineer",
+        "company": "Vanco Payments · SmartCare (Business Unit)",
+        "dateRange": "Apr 2020 – May 2022",
+        "location": "Cancún, Mexico",
+        "current": false,
+        "bullets": [
+          "Built and maintained enterprise web apps using <strong>C#, ASP.NET MVC, .NET Core, Web API, Angular, and React</strong>.",
+          "Integrated <strong>Azure Functions</strong> and event-driven cloud services to support scalable, asynchronous workflows in a multi-tenant architecture.",
+          "Authored and maintained <strong>NUnit unit and integration tests</strong>, raising code quality and reducing regression risk.",
+          "Defined and rolled out a <strong>Git branching strategy</strong> adopted company-wide, improving collaboration and release velocity.",
+          "Contributed actively to <strong>Azure DevOps CI/CD pipelines</strong>, enabling automated builds, tests, and deployments."
+        ]
+      },
+      {
+        "title": "Software Development Engineer in Test (SDET)",
+        "company": "Vanco Payments – ASAP",
+        "dateRange": "Apr 2018 – Apr 2020",
+        "location": "Cancún, Mexico",
+        "current": false,
+        "bullets": [
+          "Designed and implemented a <strong>centralized automated testing framework</strong> used across multiple products, standardizing regression coverage company-wide.",
+          "Implemented <strong>application monitoring and observability</strong> using ELK Stack and MongoDB, enabling proactive production issue detection.",
+          "Defined, documented, and rolled out a new <strong>QA process</strong> improving consistency and software quality across teams.",
+          "Developed and maintained <strong>Azure DevOps CI/CD pipelines</strong> for automated test execution and deployment workflows."
+        ]
+      },
+      {
+        "title": "QA Automation Engineer / Senior QA",
+        "company": "BestDay.com",
+        "dateRange": "Jun 2015 – Apr 2018",
+        "location": "Cancún, Mexico",
+        "current": false,
+        "bullets": [
+          "Planned, designed, and executed test strategies for web and mobile applications (iOS), driving early adoption of mobile automation.",
+          "Developed automated test scripts with <strong>Selenium</strong>, expanding regression coverage and reducing manual testing effort.",
+          "Defined QA policies, testing standards, and technical procedures to ensure data integrity and system reliability."
+        ]
+      },
+      {
+        "title": "Junior Software Developer (PHP)",
+        "company": "MayanAccess",
+        "dateRange": "Aug 2016 – Sep 2017",
+        "location": "Cancún, Mexico",
+        "current": false,
+        "bullets": [
+          "Developed data management web applications using <strong>PHP</strong> and SQL Server, supporting internal business processes.",
+          "Designed and executed SQL scripts to process and manipulate large data volumes efficiently."
+        ]
+      }
+    ]
+  },
+  "sidebar": [
+    {
+      "type": "expertise",
+      "label": "Skills & Expertise",
+      "bars": [
+        { "name": "C# & .NET Core",       "tag": "Expert · 10+ yrs",   "pct": 95 },
+        { "name": "Sitecore CMS",          "tag": "Expert · 7+ yrs",    "pct": 90 },
+        { "name": "ASP.NET MVC / Web API", "tag": "Expert · 8+ yrs",    "pct": 88 },
+        { "name": "Azure Cloud",           "tag": "Advanced · 5+ yrs",  "pct": 78 },
+        { "name": "AI / Claude API / MCP", "tag": "Advanced · 2 yrs",   "pct": 74 }
+      ],
+      "skillGroups": [
+        {
+          "label": "Sitecore Ecosystem",
+          "skills": [
+            { "text": "Helix / Habitat", "primary": true },
+            { "text": "SXA" },
+            { "text": "JSS Headless" },
+            { "text": "Commerce" },
+            { "text": "Personalization" },
+            { "text": "Redis Cache" },
+            { "text": "Pipeline Profiler" }
+          ]
+        },
+        {
+          "label": "AI & LLM Engineering",
+          "skills": [
+            { "text": "Claude API", "primary": true },
+            { "text": "MCP", "primary": true },
+            { "text": "AI Agents" },
+            { "text": "Claude Code" },
+            { "text": "Subagents" }
+          ]
+        },
+        {
+          "label": "Cloud & DevOps",
+          "skills": [
+            { "text": "Azure", "primary": true },
+            { "text": "Azure Functions" },
+            { "text": "Application Insights" },
+            { "text": "CI/CD" },
+            { "text": "Azure DevOps" },
+            { "text": "AWS" },
+            { "text": "Docker (dev)" },
+            { "text": "PowerShell" },
+            { "text": "Swagger / OpenAPI" },
+            { "text": "Git" }
+          ]
+        },
+        {
+          "label": "Frontend & Data",
+          "skills": [
+            { "text": "React" },
+            { "text": "Angular" },
+            { "text": "JavaScript" },
+            { "text": "SQL Server" },
+            { "text": "Redis" },
+            { "text": "MongoDB" },
+            { "text": "ELK Stack" },
+            { "text": "NUnit" }
+          ]
+        },
+        {
+          "label": "LinkedIn Learning · .NET Ecosystem",
+          "skills": [
+            { "text": "Blazor" },
+            { "text": "Entity Framework" },
+            { "text": "LINQ" },
+            { "text": "SOLID Principles" },
+            { "text": "Design Patterns" },
+            { "text": "Microservices" },
+            { "text": "Software Architecture" },
+            { "text": "Serverless" },
+            { "text": "Secure Coding" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "certifications",
+      "label": "Certifications",
+      "items": [
+        { "name": "Sitecore 10 .NET Developer Certification", "meta": "Sitecore · Mar 2024", "verifyUrl": "https://www.credly.com/badges/f31a40f7-b427-495f-ae20-4a91f231585c/public_url", "dot": "default" },
+        { "name": "AWS Partner: Technical Accredited",        "meta": "Amazon Web Services · Feb 2026", "verifyUrl": "https://www.credly.com/badges/7006324f-9fdc-4761-891a-0b5d67d18dcc/public_url", "dot": "default" },
+        { "name": "Professional Scrum Developer I (PSD I)",   "meta": "Scrum.org · Jan 2019", "verifyUrl": "https://www.credly.com/badges/88d2a88d-fabb-4a1d-9b16-eb41d81236e1/public_url", "dot": "default" }
+      ]
+    },
+    {
+      "type": "certifications",
+      "label": "LinkedIn Learning",
+      "items": [
+        { "name": "Claude Code 101: From Prompt to Product",                        "meta": "LinkedIn Learning · Jun 2026", "dot": "gold" },
+        { "name": "Agentic AI Fundamentals: Architectures, Frameworks & Applications", "meta": "LinkedIn Learning · Jun 2026", "dot": "gold" },
+        { "name": "AI Evaluations: Foundations and Practical Examples",             "meta": "LinkedIn Learning · Jun 2026", "dot": "gold" },
+        { "name": "AI Coding: Impacts on System Design & Architecture",             "meta": "LinkedIn Learning · Jun 2026", "dot": "gold" },
+        { "name": "Introduction to IT Architecture",                                "meta": "LinkedIn Learning · Jun 2026", "dot": "default" },
+        { "name": "Managing AI Security Risks with ISO 27001",                      "meta": "LinkedIn Learning · Jun 2026", "dot": "default" },
+        { "name": "Learning REST APIs",                                             "meta": "LinkedIn Learning · Jun 2026", "dot": "default" },
+        { "name": ".NET 10 Esencial",                                               "meta": "LinkedIn Learning · Jan 2026", "dot": "default" }
+      ]
+    },
+    {
+      "type": "certifications",
+      "label": "Anthropic Academy",
+      "inProgressNote": "⏳ In Progress — Claude Certified Architect",
+      "items": [
+        { "name": "AI Fluency: Framework & Foundations",    "meta": "Anthropic · Apr 2026", "dot": "gold", "badge": "10 / 10" },
+        { "name": "Model Context Protocol: Advanced Topics","meta": "Anthropic · Apr 2026", "dot": "default" },
+        { "name": "Building with the Claude API",           "meta": "Anthropic · Apr 2026", "dot": "default" },
+        { "name": "Introduction to subagents",              "meta": "Anthropic · Apr 2026", "dot": "default" },
+        { "name": "Introduction to Model Context Protocol", "meta": "Anthropic · Apr 2026", "dot": "default" },
+        { "name": "Introduction to Agent Skills",           "meta": "Anthropic · Apr 2026", "dot": "default" },
+        { "name": "Claude Code in Action",                  "meta": "Anthropic · Mar 2026", "dot": "default" },
+        { "name": "Claude Code 101 & Claude 101",           "meta": "Anthropic · Apr 2026", "dot": "default" },
+        { "name": "Introduction to Claude Cowork",          "meta": "Anthropic · Apr 2026", "dot": "default" }
+      ]
+    },
+    {
+      "type": "education",
+      "label": "Education",
+      "items": [
+        {
+          "degree": "B.Eng. Computer Systems Engineering",
+          "spec": "Specialization: Mobile Application Development",
+          "school": "Instituto Tecnológico de Cancún",
+          "dateRange": "Aug 2010 – Dec 2015"
+        }
+      ]
+    },
+    {
+      "type": "languages",
+      "label": "Languages",
+      "items": [
+        { "name": "Spanish", "level": "Native",                "pct": 100 },
+        { "name": "English", "level": "Professional Proficiency", "pct": 80 }
+      ]
+    },
+    {
+      "type": "profiles",
+      "label": "Online Profiles",
+      "items": [
+        { "icon": "🔗", "text": "linkedin.com/in/sergioparissi", "href": "https://linkedin.com/in/sergioparissi" },
+        { "icon": "💻", "text": "github.com/sparissiasap",       "href": "https://github.com/sparissiasap" },
+        { "icon": "📚", "text": "stackoverflow.com",             "href": "https://stackoverflow.com" }
+      ]
+    }
+  ],
+  "certGallery": {
+    "label": "Certificates & Credentials",
+    "certs": [
+      { "title": "Claude Code in Action",                   "issuer": "Anthropic Academy", "date": "Mar 2026", "file": "pdf/certificate-6m2nfq2ge3ps-1774474974.pdf", "icon": "🤖", "type": "anthropic" },
+      { "title": "AI Fluency: Framework & Foundations",     "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-9sk4x2zuo2c6-1775172881.pdf", "icon": "🤖", "type": "anthropic", "badge": "10/10" },
+      { "title": "Claude 101",                              "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-y2wq672nm5mq-1775240172.pdf", "icon": "🤖", "type": "anthropic" },
+      { "title": "Introduction to Agent Skills",            "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-iebnmqjfiycv-1775246077.pdf", "icon": "🤖", "type": "anthropic" },
+      { "title": "Introduction to Model Context Protocol",  "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-ukekddvraomc-1775255538.pdf", "icon": "🤖", "type": "anthropic" },
+      { "title": "Introduction to subagents",               "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-zxtw2d5u9797-1775578166.pdf", "icon": "🤖", "type": "anthropic" },
+      { "title": "Building with the Claude API",            "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-ftchffjwh66e-1775586811.pdf", "icon": "🤖", "type": "anthropic" },
+      { "title": "Model Context Protocol: Advanced Topics", "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-8kjqw4p326od-1775588457.pdf", "icon": "🤖", "type": "anthropic" },
+      { "title": "Introduction to Claude Cowork",           "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-km7a7esp3ke7-1775755349.pdf", "icon": "🤖", "type": "anthropic" },
+      { "title": "Claude Code 101",                         "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-y3a89fbpadwk-1775756321.pdf", "icon": "🤖", "type": "anthropic" },
+      { "title": "Sitecore 10 .NET Developer Certification", "issuer": "Sitecore",  "date": "Mar 2024", "file": "pdf/Sitecore.pdf",                             "icon": "🏗️", "type": "sitecore" },
+      { "title": "Professional Scrum Developer I (PSD I)",   "issuer": "Scrum.org", "date": "Jan 2019", "file": "pdf/Professional Scrum Developer I.pdf",       "icon": "📋", "type": "scrum" }
+    ]
+  },
+  "shareBar": [
+    { "type": "print",   "icon": "🖨️", "label": "PDF / Imprimir" },
+    { "type": "divider" },
+    { "type": "link",    "icon": "🔗", "label": "LinkedIn",  "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
+    { "type": "link",    "icon": "𝕏",  "label": "X",         "href": "https://twitter.com/intent/tweet?text=CV%20interactivo%20%E2%80%94%20Sergio%20Parissi%20Reyes%2C%20Senior%20.NET%20%26%20Sitecore%20Developer&url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
+    { "type": "link",    "icon": "💬", "label": "WhatsApp",  "href": "https://wa.me/?text=Mi%20CV%20interactivo%3A%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
+    { "type": "divider" },
+    { "type": "copy",    "icon": "🔗", "label": "Copiar enlace" }
+  ]
+}

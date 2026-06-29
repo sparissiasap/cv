@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "lang": "en",
+    "availableLangs": ["es", "en"],
+    "pageTitle": "Dafne Cuevas — Operations Coordinator & Logistics",
+    "description": "Professional with 9+ years in administration, operational logistics, and personnel management. Team leadership up to 35 people · Grupo Xcaret · Cancún, MX.",
+    "shareUrl": "https://sparissiasap.github.io/cv/Dafne/"
+  },
+  "profile": {
+    "name": "Dafne Cuevas",
+    "title": "Operations Coordinator · Logistics & Administration · B.A. Communications",
+    "photo": "perfil.png",
+    "chips": ["⚡ Operational Leadership", "⚡ Team Management", "Xcaret Group · 5 yrs", "Logistics", "9+ years experience"],
+    "contact": [
+      { "icon": "📍", "text": "Cancún, Quintana Roo" },
+      { "icon": "📞", "text": "229 393 4921", "href": "tel:+522293934921" },
+      { "icon": "✉️", "text": "belenalfonseca.20@hotmail.com", "href": "mailto:belenalfonseca.20@hotmail.com" }
+    ],
+    "stats": [
+      { "number": "9+", "label": "Years exp." },
+      { "number": "35", "label": "People led" },
+      { "number": "5",  "label": "Years at Xcaret" },
+      { "number": "4",  "label": "Companies" }
+    ]
+  },
+  "summary": {
+    "label": "Professional Summary",
+    "paragraphs": [
+      "<strong>Results-driven operations coordinator.</strong> Professional with over <strong>9 years of experience</strong> in administration, operational logistics, and personnel management, specialized in team coordination and incident resolution in dynamic, high-demand environments.",
+      "I have led teams of <strong>up to 35 people</strong>, optimizing operational processes, controlling resources, and ensuring daily goals are met. My tenure at <strong>Grupo Xcaret</strong> — both at the corporate level and in marina operations — allowed me to develop a comprehensive business vision: from logistics planning and inventory control to executive reporting and budget management in <strong>SAP</strong>.",
+      "I stand out for my organizational skills, <strong>agile decision-making</strong>, and customer focus. I seek to grow in positions where I can contribute leadership, operational efficiency, and tangible value to the team."
+    ]
+  },
+  "experience": {
+    "label": "Work Experience",
+    "jobs": [
+      {
+        "title": "Independent Delivery & Logistics",
+        "company": "Mercado Libre / MELI",
+        "dateRange": "2026 – Present",
+        "location": "Cancún, México",
+        "current": true,
+        "bullets": [
+          "<strong>Delivery management</strong> and route optimization for on-time order fulfillment.",
+          "Customer service and field incident resolution, ensuring end-user satisfaction."
+        ]
+      },
+      {
+        "title": "Head of Operations (Marina)",
+        "company": "Grupo Xcaret — Xcaret Xailing",
+        "dateRange": "2022 – 2024",
+        "location": "Cancún, México",
+        "current": false,
+        "bullets": [
+          "<strong>Daily operations coordination</strong> and logistics route planning for the marina area.",
+          "Direct team supervision, ensuring quality and operational safety standards.",
+          "Operational inventory and supply control, reducing deviations and optimizing resource use.",
+          "Preparation and follow-up of administrative reports for management.",
+          "<strong>Customer incident resolution</strong>, ensuring service continuity and a high-quality experience."
+        ]
+      },
+      {
+        "title": "Administrative Assistant",
+        "company": "Grupo Xcaret — Corporate",
+        "dateRange": "2019 – 2022",
+        "location": "Cancún, México",
+        "current": false,
+        "bullets": [
+          "Management of <strong>department budget</strong> and petty cash with expense control.",
+          "Schedule organization and coordination of corporate internal events.",
+          "Preparation of reports and <strong>executive presentations</strong> for decision-making.",
+          "Invoice management in <strong>SAP</strong> system."
+        ]
+      },
+      {
+        "title": "Administrative & Events Assistant",
+        "company": "Casa de la Cultura Jurídica",
+        "dateRange": "2017 – 2019",
+        "location": "Cancún, México",
+        "current": false,
+        "bullets": [
+          "<strong>Coordination and logistics of institutional events and conferences</strong>.",
+          "Preparation of agreements and institutional documentation.",
+          "Liaison with universities and academic institutions."
+        ]
+      }
+    ]
+  },
+  "sidebar": [
+    {
+      "type": "expertise",
+      "label": "Skills & Expertise",
+      "bars": [
+        { "name": "Leadership & Personnel Management",  "tag": "Expert · 7+ yrs",    "pct": 90 },
+        { "name": "Logistics & Operational Coordination","tag": "Expert · 5+ yrs",    "pct": 88 },
+        { "name": "Administration & Resource Control",  "tag": "Advanced · 7+ yrs",  "pct": 84 },
+        { "name": "Problem Solving",                    "tag": "Advanced · 9+ yrs",  "pct": 82 },
+        { "name": "Customer Service",                   "tag": "Advanced · 9+ yrs",  "pct": 78 }
+      ],
+      "skillGroups": [
+        {
+          "label": "Operations",
+          "skills": [
+            { "text": "Route Planning",      "primary": true },
+            { "text": "Inventory Control",   "primary": true },
+            { "text": "Team Supervision" },
+            { "text": "Operational Reports" },
+            { "text": "Supply Management" }
+          ]
+        },
+        {
+          "label": "Administration",
+          "skills": [
+            { "text": "SAP", "primary": true },
+            { "text": "Budgets" },
+            { "text": "Petty Cash" },
+            { "text": "Invoicing" },
+            { "text": "Corporate Events" },
+            { "text": "Executive Presentations" }
+          ]
+        },
+        {
+          "label": "Soft Skills",
+          "skills": [
+            { "text": "Decision Making" },
+            { "text": "Organization" },
+            { "text": "Teamwork" },
+            { "text": "Results-Oriented" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "education",
+      "label": "Education",
+      "items": [
+        {
+          "degree": "B.A. in Communications and Advertising",
+          "school": "Centro Universitario Hispano Mexicano",
+          "dateRange": "2014 – 2018"
+        }
+      ]
+    },
+    {
+      "type": "languages",
+      "label": "Languages",
+      "items": [
+        { "name": "Spanish", "level": "Native", "pct": 100 }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "References",
+      "content": "Professional references available upon request."
+    }
+  ],
+  "certGallery": {
+    "label": "Certificates & Credentials",
+    "certs": []
+  },
+  "shareBar": [
+    { "type": "print",   "icon": "🖨️", "label": "Print" },
+    { "type": "divider" },
+    { "type": "link",    "icon": "🔗", "label": "LinkedIn", "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FDafne%2F" },
+    { "type": "link",    "icon": "💬", "label": "WhatsApp", "href": "https://wa.me/?text=My%20CV%3A%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FDafne%2F" },
+    { "type": "divider" },
+    { "type": "copy",    "icon": "🔗", "label": "Copy link" }
+  ]
+}

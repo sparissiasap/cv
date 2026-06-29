@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CVs — Parissi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #08080f;
+      --surface:   rgba(255,255,255,0.04);
+      --border:    rgba(255,255,255,0.10);
+      --border-hv: rgba(255,255,255,0.22);
+      --txt:       rgba(255,255,255,0.88);
+      --txt-dim:   rgba(255,255,255,0.45);
+      --accent1:   #7c6af5;
+      --accent2:   #e96db0;
+      --accent3:   #5dbfde;
+      --accent4:   #f5a623;
+    }
+
+    html, body { min-height: 100vh; background: var(--bg); font-family: 'Inter', sans-serif; color: var(--txt); }
+
+    /* ── animated orbs ── */
+    .bg-fx { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .18; }
+    .o1 { width: 680px; height: 680px; background: radial-gradient(circle, #7c6af5, transparent 70%); top: -20%; left: -15%; animation: drift 18s ease-in-out infinite alternate; }
+    .o2 { width: 520px; height: 520px; background: radial-gradient(circle, #e96db0, transparent 70%); bottom: -15%; right: -10%; animation: drift 22s ease-in-out infinite alternate-reverse; }
+    .o3 { width: 380px; height: 380px; background: radial-gradient(circle, #5dbfde, transparent 70%); top: 40%; left: 55%; animation: drift 16s ease-in-out infinite alternate; }
+    @keyframes drift { from { transform: translate(0,0) scale(1); } to { transform: translate(30px,40px) scale(1.06); } }
+
+    /* ── layout ── */
+    .page {
+      position: relative; z-index: 1;
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 60px 24px;
+      gap: 48px;
+    }
+
+    /* ── header ── */
+    .header { text-align: center; }
+    .header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(120deg, #fff 30%, var(--accent1) 70%, var(--accent2) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .header p {
+      margin-top: 10px;
+      font-size: .95rem;
+      color: var(--txt-dim);
+      letter-spacing: .2px;
+    }
+
+    /* ── cards grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .card {
+      display: flex; flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 24px 22px;
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      text-decoration: none; color: inherit;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+      position: relative; overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute; inset: 0; border-radius: 18px;
+      background: linear-gradient(135deg, rgba(255,255,255,.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .card:hover {
+      border-color: var(--border-hv);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,.45);
+    }
+
+    .card-accent {
+      width: 36px; height: 4px; border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .card:nth-child(1) .card-accent { background: linear-gradient(90deg, var(--accent1), var(--accent2)); }
+    .card:nth-child(2) .card-accent { background: linear-gradient(90deg, var(--accent2), var(--accent4)); }
+    .card:nth-child(3) .card-accent { background: linear-gradient(90deg, var(--accent3), var(--accent1)); }
+    .card:nth-child(4) .card-accent { background: linear-gradient(90deg, var(--accent4), var(--accent2)); }
+
+    .card-name {
+      font-size: 1.05rem; font-weight: 700;
+      letter-spacing: -.2px;
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-size: .78rem; color: var(--txt-dim);
+      line-height: 1.45;
+      flex: 1;
+      margin-bottom: 22px;
+    }
+    .card-btn {
+      align-self: flex-start;
+      font-family: inherit; font-size: .78rem; font-weight: 600;
+      color: var(--txt);
+      background: rgba(255,255,255,.08);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 16px;
+      letter-spacing: .3px;
+      transition: background .15s, border-color .15s;
+    }
+    .card:hover .card-btn {
+      background: rgba(255,255,255,.14);
+      border-color: var(--border-hv);
+    }
+
+    /* ── footer ── */
+    .footer {
+      font-size: .72rem;
+      color: rgba(255,255,255,.2);
+      letter-spacing: .3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-fx" aria-hidden="true">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+  </div>
+
+  <main class="page">
+    <header class="header">
+      <h1>Parissi CVs</h1>
+      <p>Selecciona un perfil para ver el CV interactivo</p>
+    </header>
+
+    <div class="grid">
+      <a class="card" href="../Sergio/">
+        <div class="card-accent"></div>
+        <div class="card-name">Sergio Parissi Reyes</div>
+        <div class="card-title">Desarrollador .NET Senior &amp; Especialista Sitecore · EPAM Systems · Azure · IA</div>
+        <span class="card-btn">Ver CV →</span>
+      </a>
+
+      <a class="card" href="../Dafne/">
+        <div class="card-accent"></div>
+        <div class="card-name">Dafne Cuevas</div>
+        <div class="card-title">Coordinadora de Operaciones · Logística &amp; Administración · Grupo Xcaret</div>
+        <span class="card-btn">Ver CV →</span>
+      </a>
+
+      <a class="card" href="../Giovanna/">
+        <div class="card-accent"></div>
+        <div class="card-name">Giovanna Parissi Reyes</div>
+        <div class="card-title">Ingeniera Civil · Supervisora de Obra · Residente · Gran Hyatt Puerto Cancún</div>
+        <span class="card-btn">Ver CV →</span>
+      </a>
+
+      <a class="card" href="../Teresina/">
+        <div class="card-accent"></div>
+        <div class="card-name">Teresina Parissi Reyes</div>
+        <div class="card-title">Lic. Administración · Maestra en Alta Gerencia e Inteligencia Estratégica</div>
+        <span class="card-btn">Ver CV →</span>
+      </a>
+    </div>
+
+    <footer class="footer">sparissiasap.github.io/cv</footer>
+  </main>
+</body>
+</html>
