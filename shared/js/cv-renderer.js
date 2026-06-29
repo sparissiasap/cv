@@ -72,29 +72,19 @@
           : 'background:transparent;color:rgba(255,255,255,0.4);');
       if (!active) {
         btn.addEventListener('click', function () {
-          var overlay = document.createElement('div');
-          overlay.style.cssText = 'position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0);' +
-            'transition:background 0.18s ease;pointer-events:none;';
-          document.body.appendChild(overlay);
-          requestAnimationFrame(function () {
-            requestAnimationFrame(function () { overlay.style.background = 'rgba(0,0,0,0.45)'; });
-          });
+          document.documentElement.style.transition = 'opacity 0.2s ease';
+          document.documentElement.style.opacity = '0';
           setTimeout(function () {
             var url = new URL(window.location.href);
             url.searchParams.set('lang', lang);
             window.location.href = url.toString();
-          }, 200);
+          }, 210);
         });
       }
       toggle.appendChild(btn);
     });
-    // Hide on print; enlarge touch target on mobile
     var s = document.createElement('style');
-    s.textContent = '@media print{.cv-lang-toggle{display:none!important}}' +
-      '@media screen and (max-width:767px){' +
-        '.cv-lang-toggle{top:max(12px,env(safe-area-inset-top,0px) + 8px)!important;right:max(12px,env(safe-area-inset-right,0px) + 8px)!important;padding:6px!important;}' +
-        '.cv-lang-btn{padding:10px 18px!important;font-size:9pt!important;border-radius:16px!important;}' +
-      '}';
+    s.textContent = '@media print{.cv-lang-toggle{display:none!important}}';
     document.head.appendChild(s);
     toggle.classList.add('cv-lang-toggle');
     return toggle;
@@ -407,7 +397,7 @@
     var txt = document.createElement('div');
     txt.style.cssText = 'font-size:8pt;font-weight:500;color:rgba(255,255,255,0.28);' +
       'letter-spacing:1.5px;text-transform:uppercase;';
-    txt.textContent = _langParam === 'en' ? 'Loading' : 'Cargando';
+    txt.textContent = (_langParam || window.CV_LANG_DEFAULT || 'es') === 'en' ? 'Loading' : 'Cargando';
     var loader = document.createElement('div');
     loader.className = 'cv-loader';
     loader.appendChild(ring);
