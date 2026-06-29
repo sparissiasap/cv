@@ -131,7 +131,7 @@ body {
 
 .hero-photo {
   flex-shrink: 0;
-  width: 136px; height: 136px;
+  width: 172px; height: 172px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -155,7 +155,8 @@ body {
   font-size: 36pt;
   font-weight: 800;
   letter-spacing: -1.5px;
-  line-height: 1.05;
+  line-height: 1.15;
+  padding-bottom: 4px;
   background: linear-gradient(125deg, #ffffff 0%, #a0c8ff 35%, #d4bbff 65%, #ffffff 100%);
   background-size: 250% auto;
   -webkit-background-clip: text;
@@ -883,7 +884,7 @@ body.loaded .eb-fill { width: var(--w); }
   /* ── Photo: cap resolution so PDF doesn't embed full 5MB source ─ */
   .hero-photo {
     image-rendering: auto;
-    max-width: 136px !important;
-    max-height: 136px !important;
+    max-width: 172px !important;
+    max-height: 172px !important;
   }
 }
