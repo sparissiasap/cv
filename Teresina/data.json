@@ -2,78 +2,78 @@
   "meta": {
     "lang": "es",
     "availableLangs": ["es", "en"],
-    "pageTitle": "Teresina Parissi Reyes — Administración de Empresas",
-    "description": "CV profesional de Teresina Parissi Reyes, Licenciada en Administración con Maestría en Alta Gerencia e Inteligencia Estratégica.",
+    "pageTitle": "Teresina Parissi Reyes — Administración · Alta Gerencia",
+    "description": "CV profesional de Teresina Parissi Reyes, Licenciada en Administración con Maestría en Alta Gerencia e Inteligencia Estratégica. Especialista en control financiero, Aspel SAE/NOI y gestión operativa en Cancún.",
     "shareUrl": "https://sparissiasap.github.io/cv/Teresina/"
   },
   "profile": {
     "name": "Teresina Parissi Reyes",
-    "title": "Lic. Administración · Maestra en Alta Gerencia",
+    "title": "Lic. en Administración de Empresas · Maestra en Alta Gerencia e Inteligencia Estratégica",
     "photo": "perfil.png",
     "photoPosition": "center 12%",
-    "chips": ["⚡ Alta Gerencia", "⚡ Administración", "Maestría · IEU", "Aspel SAE · NOI", "10+ años experiencia"],
+    "chips": ["⚡ Alta Gerencia", "⚡ Control Administrativo", "Maestría IEU · 2024", "Aspel SAE · NOI", "Cancún, Q. Roo"],
     "contact": [
       { "icon": "📞", "text": "998 152 8045", "href": "tel:9981528045" },
       { "icon": "✉️", "text": "tparissi@hotmail.com", "href": "mailto:tparissi@hotmail.com" },
       { "icon": "📍", "text": "Cancún, Q. Roo" }
     ],
     "stats": [
-      { "number": "10+",  "label": "Años exp." },
-      { "number": "3",    "label": "Empresas" },
-      { "number": "Mtra.", "label": "Alta Gerencia" }
+      { "number": "10+", "label": "Años de exp." },
+      { "number": "3",   "label": "Empresas" },
+      { "number": "2024", "label": "Mtra. IEU" }
     ]
   },
   "summary": {
     "label": "Sobre mí",
     "paragraphs": [
-      "Licenciada en Administración de Empresas con <strong>Maestría en Alta Gerencia e Inteligencia Estratégica</strong>. Más de 10 años de experiencia en gestión administrativa, control financiero y manejo de personal en empresas del sector privado en Cancún, Q. Roo.",
-      "Amplio dominio en <strong>Aspel SAE y NOI</strong>, cuentas por pagar, flujos bancarios, facturación y control de inventarios. Con formación adicional en <strong>educación financiera</strong> (CONDUSEF) y participación en congresos internacionales de mercadotecnia y administración."
+      "Licenciada en Administración de Empresas con <strong>Maestría en Alta Gerencia e Inteligencia Estratégica</strong> (IEU, 2024). Más de 10 años de experiencia en gestión administrativa, control financiero y coordinación operativa en el sector privado de Cancún.",
+      "Especialista en <strong>Aspel SAE y NOI</strong> para el control de cuentas por pagar, facturación CFDI, flujos bancarios, nómina y gestión de inventarios. Perfil orientado a resultados, con sólida formación en <strong>finanzas</strong> y participación en foros internacionales de mercadotecnia y administración."
     ]
   },
   "experience": {
     "label": "Experiencia",
     "jobs": [
       {
-        "title": "Asistente Administrativo",
+        "title": "Asistente Administrativa",
         "company": "JAX Uniformes",
         "dateRange": "Sep 2019 – Actualidad",
         "location": "Cancún, Q. Roo",
         "current": true,
         "bullets": [
-          "Manejo y organización de agenda ejecutiva.",
-          "Gestión de compras y cotizaciones con proveedores.",
-          "Control y registro de cuentas por pagar.",
-          "Recepción e inspección de mercancía.",
-          "Control y administración de archivo."
+          "Coordinación de agenda ejecutiva y gestión de comunicaciones con proveedores estratégicos.",
+          "Gestión integral de compras: cotización, evaluación comparativa y seguimiento de órdenes.",
+          "Control y conciliación de cuentas por pagar con registro en <strong>Aspel SAE</strong>.",
+          "Recepción, inspección de calidad y resguardo de mercancía entrante.",
+          "Organización y mantenimiento de archivo físico y digital de la empresa."
         ]
       },
       {
-        "title": "Analista Administrativo",
+        "title": "Analista Administrativa",
         "company": "Pendulum S.A. de C.V.",
         "dateRange": "Feb 2018 – Jul 2019",
         "location": "Cancún, Q. Roo",
         "current": false,
         "bullets": [
-          "Manejo y coordinación de agenda.",
-          "Control de inventarios y almacén.",
-          "Registro y seguimiento de cuentas por pagar.",
-          "Elaboración de cotizaciones.",
-          "Manejo de personal y control de archivo."
+          "Coordinación de agenda y administración de comunicaciones del área.",
+          "Control de inventarios, entradas y salidas de almacén.",
+          "Seguimiento y liquidación de cuentas por pagar a proveedores.",
+          "Elaboración de cotizaciones y comparativas de precios.",
+          "Supervisión de personal operativo y gestión documental."
         ]
       },
       {
-        "title": "Administración",
+        "title": "Encargada Administrativa",
         "company": "Prisaire S.A. de C.V.",
         "dateRange": "Abr 2015 – Oct 2017",
         "location": "Cancún, Q. Roo",
         "current": false,
         "bullets": [
-          "Registro y análisis de movimientos bancarios (flujos bancarios).",
-          "Control integral de cuentas por pagar.",
-          "Facturación y manejo de banca en línea.",
-          "Gestión de compras y control de almacén.",
-          "Pago a proveedores, contratistas y nómina de personal.",
-          "Control y supervisión de personal."
+          "Análisis y conciliación de movimientos bancarios y flujos de caja.",
+          "Control integral de cuentas por pagar a proveedores y contratistas.",
+          "Emisión de facturas <strong>CFDI</strong> y operación de banca en línea.",
+          "Gestión de compras y control de inventario en almacén.",
+          "Procesamiento de nómina en <strong>Aspel NOI</strong> y pago a personal.",
+          "Supervisión y control de asistencia del equipo de trabajo."
         ]
       }
     ]
@@ -83,38 +83,38 @@
       "type": "expertise",
       "label": "Expertise",
       "bars": [
-        { "name": "Gestión administrativa", "tag": "90%", "pct": 90 },
-        { "name": "Cuentas por pagar",      "tag": "88%", "pct": 88 },
-        { "name": "Control financiero",     "tag": "85%", "pct": 85 },
-        { "name": "Manejo de personal",     "tag": "82%", "pct": 82 },
-        { "name": "Aspel SAE / NOI",        "tag": "80%", "pct": 80 }
+        { "name": "Gestión administrativa", "tag": "Avanzado", "pct": 90 },
+        { "name": "Cuentas por pagar / CxC", "tag": "Avanzado", "pct": 88 },
+        { "name": "Control financiero",      "tag": "Avanzado", "pct": 85 },
+        { "name": "Manejo de personal",      "tag": "Sólido",   "pct": 82 },
+        { "name": "Aspel SAE / NOI",         "tag": "Avanzado", "pct": 82 }
       ],
       "skillGroups": [
         {
           "label": "Software",
           "skills": [
-            { "text": "Excel",     "primary": true },
-            { "text": "Aspel SAE", "primary": true },
-            { "text": "Aspel NOI", "primary": true },
+            { "text": "Excel avanzado", "primary": true },
+            { "text": "Aspel SAE",      "primary": true },
+            { "text": "Aspel NOI",      "primary": true },
             { "text": "Word" },
-            { "text": "Power Point" },
+            { "text": "PowerPoint" },
             { "text": "Outlook" },
             { "text": "Publisher" },
-            { "text": "Adobe Reader" },
-            { "text": "Prezi" },
             { "text": "Gmail" }
           ]
         },
         {
           "label": "Gestión",
           "skills": [
+            { "text": "CFDI · SAT",      "primary": true },
+            { "text": "Banca en línea",  "primary": true },
             { "text": "Agenda ejecutiva" },
             { "text": "Compras" },
             { "text": "Cotizaciones" },
             { "text": "Inventarios" },
-            { "text": "CxP" },
+            { "text": "CxP / CxC" },
+            { "text": "Nómina" },
             { "text": "Facturación" },
-            { "text": "Banca en línea" },
             { "text": "Control de archivo" }
           ]
         }
@@ -131,7 +131,7 @@
           "dateRange": "2019 – 2024"
         },
         {
-          "degree": "Lic. Administración",
+          "degree": "Lic. Administración de Empresas",
           "school": "Instituto Tecnológico de Cancún (ITC)",
           "dateRange": "2010 – 2014"
         }
@@ -141,13 +141,13 @@
       "type": "training",
       "label": "Formaciones",
       "items": [
-        { "name": "Diplomado en Educación Financiera",                "meta": "CONDUSEF · Feb – Mar 2019",              "dot": "gold" },
-        { "name": "Residencia profesional — Depto. RH",               "meta": "ITC Cancún · Ago – Dic 2014",            "dot": "default" },
-        { "name": "Prácticas profesionales — Hotel Blue Bay",         "meta": "Playa del Carmen · May 2014",            "dot": "default" },
-        { "name": "Curso técnico-científico de inglés",               "meta": "Para estudiantes de Administración · Jul-Ago 2014", "dot": "default" },
-        { "name": "Congreso Mundial de Estudiantes de Mercadotecnia", "meta": "Jun – Jul 2012",                          "dot": "gold" },
-        { "name": "Curso de Finanzas Bancomer",                       "meta": "Nov 2012",                               "dot": "default" },
-        { "name": "Simposium Ciencias Económico-Administrativas",     "meta": "Nov 2011",                               "dot": "default" }
+        { "name": "Diplomado en Educación Financiera",                "meta": "CONDUSEF · Feb – Mar 2019",                  "dot": "gold" },
+        { "name": "Residencia profesional — Depto. de Recursos Humanos", "meta": "ITC Cancún · Ago – Dic 2014",             "dot": "default" },
+        { "name": "Prácticas profesionales — Hotel Blue Bay",         "meta": "Playa del Carmen · May 2014",                "dot": "default" },
+        { "name": "Curso técnico-científico de inglés",               "meta": "Estudiantes de Administración · Jul – Ago 2014", "dot": "default" },
+        { "name": "Congreso Mundial de Estudiantes de Mercadotecnia", "meta": "Jun – Jul 2012",                              "dot": "gold" },
+        { "name": "Curso de Finanzas",                                "meta": "BBVA Bancomer · Nov 2012",                   "dot": "default" },
+        { "name": "Simposium de Ciencias Económico-Administrativas",  "meta": "ITC Cancún · Nov 2011",                      "dot": "default" }
       ]
     },
     {

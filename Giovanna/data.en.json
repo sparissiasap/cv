@@ -2,16 +2,16 @@
   "meta": {
     "lang": "en",
     "availableLangs": ["es", "en"],
-    "pageTitle": "Giovanna Parissi Reyes — Civil Engineer",
-    "description": "Professional CV of Giovanna Parissi Reyes, Civil Engineer with 6+ years of experience in construction supervision for large-scale hotel projects in Cancún.",
+    "pageTitle": "Giovanna Parissi Reyes — Civil Engineer · Construction Supervisor",
+    "description": "Professional CV of Giovanna Parissi Reyes, Civil Engineer with 6+ years in construction supervision and site residency for large-scale luxury hotel projects in Cancún. Grand Hyatt, Emporio, ZIVALAM.",
     "shareUrl": "https://sparissiasap.github.io/cv/Giovanna/"
   },
   "profile": {
     "name": "Giovanna Parissi Reyes",
-    "title": "Civil Engineer",
+    "title": "Civil Engineer · Construction Supervisor & Site Resident Engineer",
     "photo": "perfil.png",
     "photoPosition": "center 15%",
-    "chips": ["⚡ Construction Supervisor", "⚡ Site Resident Engineer", "Civil Engineering · ITC", "AutoCAD · Neodata", "6+ years experience"],
+    "chips": ["⚡ Construction Supervisor", "⚡ Site Resident Engineer", "Civil Engineering · ITC Cancún", "AutoCAD · Neodata", "Hotel Zone · Cancún"],
     "contact": [
       { "icon": "📞", "text": "998 937 4514", "href": "tel:9989374514" },
       { "icon": "✉️", "text": "gioparissi@hotmail.com", "href": "mailto:gioparissi@hotmail.com" },
@@ -19,60 +19,60 @@
     ],
     "stats": [
       { "number": "6+", "label": "Years exp." },
-      { "number": "4",  "label": "Projects" },
-      { "number": "3",  "label": "Companies" }
+      { "number": "5+", "label": "Projects" },
+      { "number": "4★", "label": "5-star Hotels" }
     ]
   },
   "summary": {
     "label": "About Me",
     "paragraphs": [
-      "Civil Engineer with over <strong>6 years of experience</strong> in construction supervision and site residency for large-scale hotel projects along the Mexican Caribbean coast. Comprehensive expertise ranging from blueprint interpretation to estimation control, payroll management, and construction auditing.",
-      "Currently serving as site resident engineer for the <strong>Grand Hyatt Puerto Cancún</strong> hotel project, with technical expertise in finishes, drywall, pools, hydro-sanitary installations, and black iron piping. Proficient in <strong>AutoCAD</strong> and <strong>Neodata</strong> for progress tracking and quantity take-offs."
+      "Civil Engineer with over <strong>6 years of experience</strong> in construction supervision and site residency for large-scale luxury hotel projects along the Mexican Caribbean coast. Involved in the construction and completion of internationally branded hotels such as <strong>Grand Hyatt</strong> and <strong>Emporio</strong> in Puerto Cancún.",
+      "Full technical command: from structural, architectural, and hydro-sanitary blueprint interpretation to estimation control, quantity surveys, subcontractor payroll management, and material auditing. Proficient in <strong>AutoCAD</strong> and <strong>Neodata</strong> for progress tracking and budget control."
     ]
   },
   "experience": {
     "label": "Experience",
     "jobs": [
       {
-        "title": "Supervisor / Site Resident / Quantity Surveyor",
+        "title": "Site Resident & Construction Supervisor",
         "company": "Grupo Constructor Cantepec S.A. de C.V.",
         "dateRange": "Sep 2021 – Present",
-        "location": "Cancún · Puerto Cancún",
+        "location": "Puerto Cancún, Q. Roo",
         "current": true,
         "bullets": [
-          "<strong>Grand Hyatt Puerto Cancún Hotel</strong> (Sep 2022 – present) — Full site residency in finishes, restaurant, and pool areas.",
+          "<strong>Grand Hyatt Puerto Cancún Hotel</strong> (Sep 2022 – present) — Full site residency in premium finishes, restaurants, pool areas, and public spaces of a 5-star international hotel.",
           "<strong>Hotel Emporio KM.16</strong>, buildings B, C, and D — Supervision of masonry, drywall, finishes, pools, and restaurant areas.",
-          "Interpretation of structural, architectural, and hydro-sanitary blueprints.",
-          "Preparation of progress estimates and quantity take-offs.",
-          "Subcontractor payroll control and on-site material auditing.",
-          "Material quantity takeoffs and warehouse requisitions."
+          "Reading and interpretation of structural, architectural, and hydro-sanitary blueprints.",
+          "Preparation of progress estimates and quantity surveys for physical progress control.",
+          "Subcontractor payroll review and on-site material consumption auditing.",
+          "Material quantity takeoffs and warehouse requisition preparation."
         ]
       },
       {
-        "title": "AA Supervisor / Security / Site Resident / Quantity Surveyor",
+        "title": "Construction Supervisor · Security & Site Resident",
         "company": "Comercial Verite S.A. de C.V.",
         "dateRange": "Aug 2020 – Sep 2021",
-        "location": "Cancún",
+        "location": "Cancún, Q. Roo",
         "current": false,
         "bullets": [
-          "<strong>Hotel Emporio Torre A</strong> — Supervision and site residency for hotel building construction.",
-          "Blueprint interpretation and technical specification verification.",
-          "Supervision of air conditioning (AC) and security system installations.",
-          "Supervision of black iron piping and fire suppression system installations.",
-          "Preparation of progress estimates and quantity take-offs."
+          "<strong>Hotel Emporio Torre A</strong> — Full supervision and site residency for a high-rise hotel building.",
+          "Technical specification verification and blueprint compliance review.",
+          "Supervision of HVAC (air conditioning) and electronic security system installations.",
+          "Supervision of black iron piping and NFPA fire suppression system installations.",
+          "Preparation of progress estimates and quantity surveys for client billing."
         ]
       },
       {
         "title": "Construction Supervisor",
         "company": "Diseño y Construcción",
         "dateRange": "Jan 2020 – Aug 2020",
-        "location": "Cancún",
+        "location": "Cancún, Q. Roo",
         "current": false,
         "bullets": [
-          "<strong>ZIVALAM and KALAM Residential Complexes</strong> — Supervision of residential housing construction.",
+          "<strong>ZIVALAM and KALAM Residential Complexes</strong> — Supervision of high-end residential construction.",
           "Reading and interpretation of architectural and structural blueprints.",
-          "Material quantity takeoffs and requisition preparation.",
-          "Supervision of masonry, hydro-sanitary installations, carpentry, and finishes."
+          "Material quantity takeoffs and procurement requisition preparation.",
+          "Supervision of masonry, hydro-sanitary installations, carpentry, and interior finishes."
         ]
       }
     ]
@@ -82,36 +82,39 @@
       "type": "expertise",
       "label": "Expertise",
       "bars": [
-        { "name": "Construction Supervision",    "tag": "92%", "pct": 92 },
-        { "name": "Blueprint Interpretation",    "tag": "88%", "pct": 88 },
-        { "name": "Estimates & Quantity Take-offs", "tag": "85%", "pct": 85 },
-        { "name": "AutoCAD",                     "tag": "82%", "pct": 82 },
-        { "name": "Control & Auditing",          "tag": "78%", "pct": 78 }
+        { "name": "Construction Supervision",      "tag": "Advanced", "pct": 92 },
+        { "name": "Blueprint Interpretation",      "tag": "Advanced", "pct": 90 },
+        { "name": "Estimates & Quantity Surveys",  "tag": "Advanced", "pct": 86 },
+        { "name": "AutoCAD",                       "tag": "Advanced", "pct": 82 },
+        { "name": "Budget Control",                "tag": "Solid",    "pct": 78 }
       ],
       "skillGroups": [
         {
           "label": "Software",
           "skills": [
-            { "text": "AutoCAD", "primary": true },
-            { "text": "Neodata", "primary": true },
-            { "text": "Office",  "primary": true }
+            { "text": "AutoCAD",        "primary": true },
+            { "text": "Neodata",        "primary": true },
+            { "text": "Excel (Advanced)","primary": true },
+            { "text": "Office" }
           ]
         },
         {
           "label": "Specialties",
           "skills": [
-            { "text": "Construction Supervision" },
-            { "text": "Site Residency" },
-            { "text": "Quantity Takeoff" },
+            { "text": "Construction Supervision", "primary": true },
+            { "text": "Site Residency",           "primary": true },
+            { "text": "Quantity Takeoffs" },
             { "text": "Estimates" },
             { "text": "Quantity Surveys" },
+            { "text": "Progress Control" },
+            { "text": "Finishes" },
             { "text": "Drywall" },
             { "text": "Masonry" },
-            { "text": "Finishes" },
             { "text": "Pools" },
             { "text": "Black Iron Piping" },
-            { "text": "Payroll" },
-            { "text": "Construction Auditing" }
+            { "text": "H/S Installations" },
+            { "text": "Site Payroll" },
+            { "text": "Material Auditing" }
           ]
         }
       ]
@@ -126,8 +129,8 @@
           "dateRange": "2016 – 2020"
         },
         {
-          "degree": "Architectural Drafting",
-          "spec": "Technical Baccalaureate",
+          "degree": "Technical Baccalaureate",
+          "spec": "Architectural Drafting",
           "school": "COBACHQ",
           "dateRange": "2013 – 2016"
         }

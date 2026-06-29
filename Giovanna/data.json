@@ -2,77 +2,77 @@
   "meta": {
     "lang": "es",
     "availableLangs": ["es", "en"],
-    "pageTitle": "Giovanna Parissi Reyes — Ingeniera Civil",
-    "description": "CV profesional de Giovanna Parissi Reyes, Ingeniera Civil con más de 6 años de experiencia en supervisión de obra en proyectos hoteleros de gran escala en Cancún.",
+    "pageTitle": "Giovanna Parissi Reyes — Ingeniera Civil · Supervisora de Obra",
+    "description": "CV profesional de Giovanna Parissi Reyes, Ingeniera Civil con más de 6 años en supervisión y residencia de obras hoteleras de gran escala en Cancún. Grand Hyatt, Emporio, ZIVALAM.",
     "shareUrl": "https://sparissiasap.github.io/cv/Giovanna/"
   },
   "profile": {
     "name": "Giovanna Parissi Reyes",
-    "title": "Ingeniera Civil",
+    "title": "Ingeniera Civil · Supervisora y Residente de Obra",
     "photo": "perfil.png",
     "photoPosition": "center 15%",
-    "chips": ["⚡ Supervisora de Obra", "⚡ Residente de Obra", "Ingeniería Civil · ITC", "AutoCAD · Neodata", "6+ años de experiencia"],
+    "chips": ["⚡ Supervisora de Obra", "⚡ Residente de Obra", "Ing. Civil · ITC Cancún", "AutoCAD · Neodata", "Zona Hotelera · Cancún"],
     "contact": [
       { "icon": "📞", "text": "998 937 4514", "href": "tel:9989374514" },
       { "icon": "✉️", "text": "gioparissi@hotmail.com", "href": "mailto:gioparissi@hotmail.com" },
       { "icon": "📍", "text": "Cancún, Q. Roo" }
     ],
     "stats": [
-      { "number": "6+", "label": "Años exp." },
-      { "number": "4",  "label": "Proyectos" },
-      { "number": "3",  "label": "Empresas" }
+      { "number": "6+", "label": "Años de exp." },
+      { "number": "5+", "label": "Proyectos" },
+      { "number": "4★", "label": "Hoteles 5 estrellas" }
     ]
   },
   "summary": {
     "label": "Sobre mí",
     "paragraphs": [
-      "Ingeniera Civil con más de <strong>6 años de experiencia</strong> en supervisión y residencia de obras de gran escala, especializada en proyectos hoteleros en el Caribe mexicano. Experiencia integral desde la interpretación de planos hasta el control de estimaciones, nóminas y auditoría de obra.",
-      "Actualmente residente en el proyecto <strong>Hotel Grand Hyatt Puerto Cancún</strong>, con dominio técnico en acabados, tablaroca, albercas, instalaciones hidrosanitarias y fierro negro. Manejo de <strong>AutoCAD</strong> y <strong>Neodata</strong> para control y cómputos de avance."
+      "Ingeniera Civil con más de <strong>6 años de experiencia</strong> en supervisión y residencia de obras de gran escala, especializada en proyectos hoteleros de lujo en el Caribe mexicano. Participación en la construcción y terminación de hoteles de marca internacional como <strong>Grand Hyatt</strong> y <strong>Emporio</strong> en Puerto Cancún.",
+      "Dominio técnico integral: desde interpretación de planos arquitectónicos, estructurales e hidrosanitarios hasta control de estimaciones, generativas, nóminas de subcontratistas y auditoría de materiales. Experiencia con <strong>AutoCAD</strong> y <strong>Neodata</strong> para cómputos de avance y control presupuestal de obra."
     ]
   },
   "experience": {
     "label": "Experiencia",
     "jobs": [
       {
-        "title": "Supervisora / Residente / Generadorista",
+        "title": "Residente y Supervisora de Obra",
         "company": "Grupo Constructor Cantepec S.A. de C.V.",
         "dateRange": "Sep 2021 – Presente",
-        "location": "Cancún · Puerto Cancún",
+        "location": "Puerto Cancún, Q. Roo",
         "current": true,
         "bullets": [
-          "<strong>Hotel Grand Hyatt Puerto Cancún</strong> (Sep 2022 – actual) — Residencia integral de obra en áreas de acabados, restaurantes y albercas.",
+          "<strong>Hotel Grand Hyatt Puerto Cancún</strong> (Sep 2022 – actual) — Residencia integral en acabados finos, restaurantes, albercas y áreas públicas de hotel 5 estrellas.",
           "<strong>Hotel Emporio KM.16</strong>, edificios B, C y D — Supervisión de albañilería, tablaroca, acabados, albercas y áreas de restaurantes.",
-          "Interpretación de planos estructurales, arquitectónicos e hidrosanitarios.",
-          "Elaboración de estimaciones de obra y generativas para cómputos de avance.",
-          "Control de nóminas de subcontratistas y auditoría de materiales en obra.",
-          "Cuantificación de materiales y requisiciones de almacén."
+          "Lectura e interpretación de planos estructurales, arquitectónicos e hidrosanitarios.",
+          "Elaboración de estimaciones y generativas para cómputos de avance y control de avance físico.",
+          "Control y revisión de nóminas de subcontratistas; auditoría de entrada y consumo de materiales.",
+          "Cuantificación de materiales y elaboración de requisiciones de almacén."
         ]
       },
       {
-        "title": "Supervisor AA / Seguridad / Residente / Generadorista",
+        "title": "Supervisora de Obra · Seguridad y Residente",
         "company": "Comercial Verite S.A. de C.V.",
         "dateRange": "Ago 2020 – Sep 2021",
-        "location": "Cancún",
+        "location": "Cancún, Q. Roo",
         "current": false,
         "bullets": [
-          "<strong>Hotel Emporio Torre A</strong> — Supervisión y residencia de obra en edificio hotelero.",
-          "Interpretación de planos y verificación de especificaciones técnicas.",
-          "Supervisión de instalaciones de aire acondicionado (AA) y sistemas de seguridad.",
-          "Supervisión de instalaciones de fierro negro y sistema contra incendio.",
-          "Elaboración de estimaciones y generativas para avance de obra."
+          "<strong>Hotel Emporio Torre A</strong> — Supervisión y residencia integral de obra en edificio hotelero de gran altura.",
+          "Verificación de especificaciones técnicas y cumplimiento de planos de proyecto.",
+          "Supervisión de instalaciones de aire acondicionado (AA) y sistemas de seguridad electrónica.",
+          "Supervisión de instalaciones de fierro negro y sistema contra incendio (NFPA).",
+          "Elaboración de estimaciones y generativas para control de avance y facturación a cliente."
         ]
       },
       {
         "title": "Supervisora de Obra",
         "company": "Diseño y Construcción",
         "dateRange": "Ene 2020 – Ago 2020",
-        "location": "Cancún",
+        "location": "Cancún, Q. Roo",
         "current": false,
         "bullets": [
-          "<strong>Residenciales ZIVALAM y KALAM</strong> — Supervisión de construcción de viviendas residenciales.",
+          "<strong>Residenciales ZIVALAM y KALAM</strong> — Supervisión de construcción de viviendas residenciales de alto nivel.",
           "Lectura e interpretación de planos arquitectónicos y estructurales.",
-          "Cuantificación de materiales y elaboración de requisiciones.",
-          "Supervisión de albañilería, instalaciones hidrosanitarias, carpintería y acabados."
+          "Cuantificación de materiales y elaboración de requisiciones de compra.",
+          "Supervisión de albañilería, instalaciones hidrosanitarias, carpintería y acabados interiores."
         ]
       }
     ]
@@ -82,36 +82,39 @@
       "type": "expertise",
       "label": "Expertise",
       "bars": [
-        { "name": "Supervisión de obra",        "tag": "92%", "pct": 92 },
-        { "name": "Interpretación de planos",   "tag": "88%", "pct": 88 },
-        { "name": "Estimaciones y generativas", "tag": "85%", "pct": 85 },
-        { "name": "AutoCAD",                    "tag": "82%", "pct": 82 },
-        { "name": "Control y auditoría",        "tag": "78%", "pct": 78 }
+        { "name": "Supervisión de obra",        "tag": "Avanzado", "pct": 92 },
+        { "name": "Interpretación de planos",   "tag": "Avanzado", "pct": 90 },
+        { "name": "Estimaciones y generativas", "tag": "Avanzado", "pct": 86 },
+        { "name": "AutoCAD",                    "tag": "Avanzado", "pct": 82 },
+        { "name": "Control presupuestal",       "tag": "Sólido",   "pct": 78 }
       ],
       "skillGroups": [
         {
           "label": "Software",
           "skills": [
-            { "text": "AutoCAD", "primary": true },
-            { "text": "Neodata", "primary": true },
-            { "text": "Office",  "primary": true }
+            { "text": "AutoCAD",       "primary": true },
+            { "text": "Neodata",       "primary": true },
+            { "text": "Excel avanzado","primary": true },
+            { "text": "Office" }
           ]
         },
         {
           "label": "Especialidades",
           "skills": [
-            { "text": "Supervisión de obra" },
-            { "text": "Residencia de obra" },
-            { "text": "Cuantificación" },
+            { "text": "Supervisión de obra",  "primary": true },
+            { "text": "Residencia de obra",   "primary": true },
             { "text": "Estimaciones" },
             { "text": "Generativas" },
+            { "text": "Cómputos de avance" },
+            { "text": "Cuantificación" },
+            { "text": "Acabados" },
             { "text": "Tablaroca" },
             { "text": "Albañilería" },
-            { "text": "Acabados" },
             { "text": "Albercas" },
             { "text": "Fierro negro" },
-            { "text": "Nóminas" },
-            { "text": "Auditoría de obra" }
+            { "text": "Instalaciones H/S" },
+            { "text": "Nóminas de obra" },
+            { "text": "Auditoría de materiales" }
           ]
         }
       ]
@@ -126,8 +129,8 @@
           "dateRange": "2016 – 2020"
         },
         {
-          "degree": "Dibujo Arquitectónico",
-          "spec": "Bachillerato técnico",
+          "degree": "Bachillerato Técnico",
+          "spec": "Dibujo Arquitectónico",
           "school": "COBACHQ",
           "dateRange": "2013 – 2016"
         }
