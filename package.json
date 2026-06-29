@@ -1,0 +1,7 @@
+{
+  "name": "cv-site",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o"
+  }
+}
