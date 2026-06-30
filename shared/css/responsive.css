@@ -38,6 +38,7 @@
   .hero-title { font-size: 10pt; }
   .hero-chips span { font-size: 8pt !important; padding: 4px 10px !important; }
   .grid { grid-template-columns: 1fr; gap: 0; }
+  .main-col { margin-bottom: 20px; }
   .card { padding: 22px 22px; }
   .job-title-text { font-size: 10.5pt; }
   .certs-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
@@ -79,6 +80,7 @@
 
   /* Layout: single column */
   .grid { grid-template-columns: 1fr; gap: 0; }
+  .main-col { margin-bottom: 20px; }
 
   /* Cards */
   .card { padding: 20px 16px; border-radius: 18px; }
