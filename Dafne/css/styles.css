@@ -799,10 +799,13 @@ body.loaded .eb-fill { width: var(--w); }
 }
 .share-btn:active { transform: translateY(0); }
 .share-icon {
-  font-size: 15px;
-  line-height: 1;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
+.share-icon svg { width: 16px; height: 16px; display: block; }
 .share-divider {
   width: 1px;
   height: 20px;

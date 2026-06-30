@@ -598,7 +598,8 @@ body.loaded .eb-fill { width: var(--w); }
 }
 .share-btn:hover { background: rgba(255,255,255,0.11); color: #fff; transform: translateY(-1px); }
 .share-btn:active { transform: translateY(0); }
-.share-icon { font-size: 15px; line-height: 1; flex-shrink: 0; }
+.share-icon { width: 16px; height: 16px; display: flex; align-items: center; flex-shrink: 0; }
+.share-icon svg { width: 16px; height: 16px; display: block; }
 .share-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.12); margin: 0 4px; flex-shrink: 0; }
 @media (max-width: 600px) {
   .share-label { display: none; }
