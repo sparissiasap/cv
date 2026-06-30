@@ -366,16 +366,16 @@
         btn = el('button', { class: 'share-btn' });
         btn.addEventListener('click', function () { window.copyLink(); });
         app(btn,
-          el('span', { class: 'share-icon', text: item.icon }),
+          el('i', { class: 'bi ' + item.icon + ' share-icon' }),
           el('span', { class: 'share-label', id: 'copyLabel', text: item.label })
         );
       } else if (item.type === 'print') {
         btn = el('button', { class: 'share-btn' });
         btn.addEventListener('click', function () { window.print(); });
-        app(btn, el('span', { class: 'share-icon', text: item.icon }), el('span', { class: 'share-label', text: item.label }));
+        app(btn, el('i', { class: 'bi ' + item.icon + ' share-icon' }), el('span', { class: 'share-label', text: item.label }));
       } else if (item.type === 'link') {
         btn = el('a', { class: 'share-btn', href: item.href, target: '_blank', rel: 'noopener noreferrer' });
-        app(btn, el('span', { class: 'share-icon', text: item.icon }), el('span', { class: 'share-label', text: item.label }));
+        app(btn, el('i', { class: 'bi ' + item.icon + ' share-icon' }), el('span', { class: 'share-label', text: item.label }));
       } else { return; }
       bar.appendChild(btn);
     });
