@@ -286,12 +286,12 @@
     ]
   },
   "shareBar": [
-    { "type": "print",   "icon": "🖨️", "label": "PDF / Imprimir" },
+    { "type": "print",   "icon": "bi-printer",    "label": "PDF / Imprimir" },
     { "type": "divider" },
-    { "type": "link",    "icon": "🔗", "label": "LinkedIn",  "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
-    { "type": "link",    "icon": "𝕏",  "label": "X",         "href": "https://twitter.com/intent/tweet?text=CV%20interactivo%20%E2%80%94%20Sergio%20Parissi%20Reyes%2C%20Senior%20.NET%20%26%20Sitecore%20Developer&url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
-    { "type": "link",    "icon": "💬", "label": "WhatsApp",  "href": "https://wa.me/?text=Mi%20CV%20interactivo%3A%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
+    { "type": "link",    "icon": "bi-linkedin",   "label": "LinkedIn",  "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
+    { "type": "link",    "icon": "bi-twitter-x",  "label": "X",         "href": "https://twitter.com/intent/tweet?text=CV%20interactivo%20%E2%80%94%20Sergio%20Parissi%20Reyes%2C%20Senior%20.NET%20%26%20Sitecore%20Developer&url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
+    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp",  "href": "https://wa.me/?text=Mi%20CV%20interactivo%3A%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
     { "type": "divider" },
-    { "type": "copy",    "icon": "🔗", "label": "Copiar enlace" }
+    { "type": "copy",    "icon": "bi-link-45deg", "label": "Copiar enlace" }
   ]
 }

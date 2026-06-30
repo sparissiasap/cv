@@ -150,10 +150,10 @@
     "certs": []
   },
   "shareBar": [
-    { "type": "print",   "icon": "🖨️", "label": "Imprimir" },
+    { "type": "print",   "icon": "bi-printer",    "label": "Imprimir" },
     { "type": "divider" },
-    { "type": "link",    "icon": "💬", "label": "WhatsApp", "href": "https://wa.me/?text=CV%20de%20Giovanna%20Parissi%20Reyes%20%E2%80%94%20Ingeniera%20Civil%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FGiovanna%2F" },
+    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp", "href": "https://wa.me/?text=CV%20de%20Giovanna%20Parissi%20Reyes%20%E2%80%94%20Ingeniera%20Civil%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FGiovanna%2F" },
     { "type": "divider" },
-    { "type": "copy",    "icon": "🔗", "label": "Copiar enlace" }
+    { "type": "copy",    "icon": "bi-link-45deg", "label": "Copiar enlace" }
   ]
 }
