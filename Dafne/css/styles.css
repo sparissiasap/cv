@@ -848,7 +848,8 @@ body.loaded .eb-fill { width: var(--w); }
   .orb { animation: none !important; }
   .card, .pill, .hero-photo { transform: none !important; transition: none !important; }
 
-  .hero { overflow: visible !important; break-inside: avoid; }
+  .hero { overflow: hidden !important; break-inside: avoid; }
+  .hero::before, .hero::after { display: none !important; }
 
   .card {
     -webkit-box-decoration-break: clone;
@@ -869,6 +870,19 @@ body.loaded .eb-fill { width: var(--w); }
   .job-meta {
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  .section-label {
+    background: none !important;
+    -webkit-text-fill-color: #c96b8a !important;
+    color: #c96b8a !important;
+    animation: none !important;
+  }
+  .summary-text strong,
+  .stat-number {
+    background: none !important;
+    -webkit-text-fill-color: #c96b8a !important;
+    color: #c96b8a !important;
   }
 
   .hero-photo {

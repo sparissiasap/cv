@@ -575,10 +575,12 @@ body.loaded .eb-fill { width: var(--w); }
   .share-bar, .modal-overlay, .bg-fx { display: none !important; }
   .orb { animation: none !important; }
   .card, .pill, .hero-photo { transform: none !important; transition: none !important; }
-  .hero { overflow: visible !important; break-inside: avoid; }
+  .hero { overflow: hidden !important; break-inside: avoid; }
+  .hero::before, .hero::after { display: none !important; }
   .card { -webkit-box-decoration-break: clone; box-decoration-break: clone; margin-bottom: 14px !important; }
   .cert-item, .exp-bar, .lang-item { break-inside: avoid; page-break-inside: avoid; }
-  .section-label { break-after: avoid; page-break-after: avoid; }
+  .section-label { break-after: avoid; page-break-after: avoid; background: none !important; -webkit-text-fill-color: #1e3a5f !important; color: #1e3a5f !important; animation: none !important; }
+  .summary-text strong, .stat-number { background: none !important; -webkit-text-fill-color: #1e3a5f !important; color: #1e3a5f !important; }
   .job-meta { break-after: avoid; page-break-after: avoid; }
   .hero-photo { image-rendering: auto; max-width: 172px !important; max-height: 172px !important; }
 }

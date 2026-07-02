@@ -852,8 +852,11 @@ body.loaded .eb-fill { width: var(--w); }
   .orb { animation: none !important; }
   .card, .pill, .hero-photo { transform: none !important; transition: none !important; }
 
-  /* ── Hero: allow overflow so ::before/::after gradients render ── */
-  .hero { overflow: visible !important; break-inside: avoid; }
+  /* ── Hero: hide decorative orbs (::before/::after) — they are positioned
+     outside the hero box and bleed onto the next section when overflow:visible.
+     Revert to overflow:hidden so the border-radius clips correctly. */
+  .hero { overflow: hidden !important; break-inside: avoid; box-shadow: none !important; }
+  .hero::before, .hero::after { display: none !important; }
 
   /* ── Cards: clone background + border on every page fragment ─────
      Without this, a card that spans a page break looks "sliced" —
@@ -884,6 +887,22 @@ body.loaded .eb-fill { width: var(--w); }
   .job-meta {
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  /* ── Gradient-text trick (background-clip:text) doesn't work reliably
+     in print — browser renders the full gradient background instead of
+     clipping it to the text, producing a coloured bar. Use solid colour. */
+  .section-label {
+    background: none !important;
+    -webkit-text-fill-color: var(--blue) !important;
+    color: var(--blue) !important;
+    animation: none !important;
+  }
+  .summary-text strong,
+  .stat-number {
+    background: none !important;
+    -webkit-text-fill-color: var(--blue) !important;
+    color: var(--blue) !important;
   }
 
   /* ── Photo: cap resolution so PDF doesn't embed full 5MB source ─ */
