@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="section-label">{{ section.label }}</div>
+  @for (item of section.items; track item.school) {
+    <div class="edu-block">
+      <div class="edu-degree-text">{{ item.degree }}</div>
+      @if (item.spec) {
+        <div class="edu-spec">{{ item.spec }}</div>
+      }
+      <div class="edu-school-text">{{ item.school }}</div>
+      <div class="edu-date-text">{{ item.dateRange }}</div>
+    </div>
+  }
+</div>

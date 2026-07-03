@@ -1,0 +1,25 @@
+@for (section of sections; track section.label) {
+  @switch (section.type) {
+    @case ('expertise') {
+      <app-expertise [section]="section" />
+    }
+    @case ('certifications') {
+      <app-cert-list [section]="section" />
+    }
+    @case ('training') {
+      <app-cert-list [section]="section" />
+    }
+    @case ('education') {
+      <app-education [section]="section" />
+    }
+    @case ('languages') {
+      <app-languages [section]="section" />
+    }
+    @case ('profiles') {
+      <app-profiles [section]="section" />
+    }
+    @case ('text') {
+      <app-text-section [section]="section" />
+    }
+  }
+}

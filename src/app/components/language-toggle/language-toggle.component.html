@@ -1,0 +1,12 @@
+@if (availableLangs.length >= 2) {
+  <div class="cv-lang-toggle">
+    @for (lang of availableLangs; track lang) {
+      <button class="cv-lang-btn"
+        [class.active]="lang === currentLang"
+        [disabled]="lang === currentLang"
+        (click)="switchLang(lang)">
+        {{ lang.toUpperCase() }}
+      </button>
+    }
+  </div>
+}

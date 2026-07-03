@@ -2,3 +2,15 @@ node_modules/
 .netlify/
 *.log
 .DS_Store
+dist/
+.angular/
+check-pdf.js
+check-print.js
+check-print2.js
+check-print3.js
+debug-icons.js
+review-screenshots.js
+take-gap-screenshot.js
+screenshot-*.png
+test-print.pdf
+UsersSergio_ParissiDesktop/

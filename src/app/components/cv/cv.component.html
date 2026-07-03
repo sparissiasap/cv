@@ -1,0 +1,57 @@
+<div class="bg-fx" aria-hidden="true">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+  <div class="orb o4"></div>
+</div>
+
+@if (loading) {
+  <div class="cv-loader">
+    <div class="cv-spin-ring"></div>
+    <div class="cv-load-text">{{ currentLang === 'en' ? 'Loading' : 'Cargando' }}</div>
+  </div>
+}
+
+@if (cvData) {
+  <div class="page">
+    <app-hero [profile]="cvData.profile" [assetsBase]="assetsBase" />
+
+    <div class="grid">
+      <div class="main-col">
+        <div class="card">
+          <div class="section-label">{{ cvData.summary.label }}</div>
+          @for (para of cvData.summary.paragraphs; track $index) {
+            <p class="summary-text" [innerHTML]="para" [style.marginTop]="$index > 0 ? '14px' : null"></p>
+          }
+        </div>
+        <app-experience [experience]="cvData.experience" />
+      </div>
+
+      <div class="sidebar-col">
+        <app-sidebar [sections]="cvData.sidebar" />
+      </div>
+    </div>
+
+    @if (cvData.certGallery?.certs?.length) {
+      <app-cert-gallery
+        [gallery]="cvData.certGallery!"
+        [assetsBase]="assetsBase"
+        (openModal)="openModal($event)" />
+    }
+  </div>
+
+  @if (cvData.shareBar?.length) {
+    <app-share-bar [items]="cvData.shareBar!" [shareUrl]="shareUrl" />
+  }
+
+  <app-language-toggle
+    [availableLangs]="cvData.meta.availableLangs"
+    [currentLang]="currentLang || cvData.meta.lang" />
+}
+
+<app-pdf-modal
+  [isOpen]="modalOpen"
+  [src]="modalSrc"
+  [title]="modalTitle"
+  [subtitle]="modalSubtitle"
+  (closed)="closeModal()" />

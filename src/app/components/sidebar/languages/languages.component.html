@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="section-label">{{ section.label }}</div>
+  @for (item of section.items; track item.name) {
+    <div class="lang-item">
+      <div class="lang-top">
+        <span class="lang-name-text">{{ item.name }}</span>
+        <span class="lang-level-text">{{ item.level }}</span>
+      </div>
+      <div class="lang-track">
+        <div class="lang-fill" [style.width]="item.pct + '%'"></div>
+      </div>
+    </div>
+  }
+</div>

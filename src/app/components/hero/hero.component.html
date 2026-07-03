@@ -1,0 +1,45 @@
+<div class="hero">
+  <img class="hero-photo"
+    [src]="assetsBase + profile.photo"
+    [alt]="'Foto de ' + profile.name"
+    [style.objectPosition]="profile.photoPosition || 'center top'" />
+
+  <div class="hero-info">
+    <div class="hero-name">{{ profile.name }}</div>
+    <div class="hero-title">{{ profile.title }}</div>
+
+    <div class="hero-chips">
+      @for (chip of profile.chips; track chip) {
+        <span>{{ chip }}</span>
+      }
+    </div>
+
+    <nav class="hero-contact">
+      @for (item of profile.contact; track item.text) {
+        @if (item.href) {
+          <a class="contact-chip"
+            [href]="item.href"
+            [attr.target]="isExternal(item.href) ? '_blank' : null"
+            [attr.rel]="isExternal(item.href) ? 'noopener noreferrer' : null">
+            <span class="icon">{{ item.icon }}</span>
+            <span>{{ item.text }}</span>
+          </a>
+        } @else {
+          <span class="contact-chip">
+            <span class="icon">{{ item.icon }}</span>
+            <span>{{ item.text }}</span>
+          </span>
+        }
+      }
+    </nav>
+
+    <div class="hero-stats">
+      @for (stat of profile.stats; track stat.label) {
+        <div class="stat-item">
+          <div class="stat-number">{{ stat.number }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

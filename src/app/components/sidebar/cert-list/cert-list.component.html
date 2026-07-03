@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="section-label">{{ section.label }}</div>
+
+  @if (section.inProgressNote) {
+    <div class="cert-in-progress">{{ section.inProgressNote }}</div>
+  }
+
+  @for (item of section.items; track item.name) {
+    <div class="cert-item">
+      <div [class]="item.dot === 'gold' ? 'cert-dot gold' : 'cert-dot'"></div>
+      <div class="cert-body">
+        <div class="cert-name-text">
+          {{ item.name }}
+          @if (item.badge) {
+            <span class="cert-badge">{{ item.badge }}</span>
+          }
+        </div>
+        <div class="cert-meta">
+          {{ item.meta }}
+          @if (item.verifyUrl) {
+            &nbsp;·&nbsp;<a [href]="item.verifyUrl" target="_blank" rel="noopener noreferrer">Verify ↗</a>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>

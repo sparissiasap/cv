@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="section-label">{{ section.label }}</div>
+
+  @if (section.bars?.length) {
+    <div class="exp-bars">
+      @for (bar of section.bars; track bar.name) {
+        <div class="exp-bar">
+          <div class="eb-meta">
+            <span class="eb-name">{{ bar.name }}</span>
+            <span class="eb-tag">{{ bar.tag }}</span>
+          </div>
+          <div class="eb-track">
+            <div class="eb-fill" [style.--w]="bar.pct + '%'"></div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  @for (group of section.skillGroups; track group.label; let first = $first) {
+    <div class="skill-group" [style.marginTop]="first && section.bars?.length ? '22px' : (!first ? '14px' : null)">
+      <div class="skill-group-label">{{ group.label }}</div>
+      <div class="skill-pills">
+        @for (skill of group.skills; track skill.text) {
+          <span [class]="skill.primary ? 'pill primary' : 'pill'">{{ skill.text }}</span>
+        }
+      </div>
+    </div>
+  }
+</div>

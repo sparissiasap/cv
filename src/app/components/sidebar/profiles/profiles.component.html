@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="section-label">{{ section.label }}</div>
+  <div class="link-row">
+    @for (item of section.items; track item.text) {
+      <a class="profile-link"
+        [href]="item.href"
+        target="_blank"
+        rel="noopener noreferrer">
+        {{ item.icon }} {{ item.text }}
+      </a>
+    }
+  </div>
+</div>

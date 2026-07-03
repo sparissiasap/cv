@@ -1,0 +1,25 @@
+<div class="bg-fx menu-bg-fx" aria-hidden="true">
+  <div class="orb m-o1"></div>
+  <div class="orb m-o2"></div>
+  <div class="orb m-o3"></div>
+</div>
+
+<main class="menu-page">
+  <header class="menu-header">
+    <h1>Parissi CVs</h1>
+    <p>Selecciona un perfil para ver el CV interactivo</p>
+  </header>
+
+  <div class="menu-grid">
+    @for (p of profiles; track p.route; let i = $index) {
+      <a class="menu-card" [routerLink]="p.route">
+        <div class="menu-card-accent" [attr.data-index]="i"></div>
+        <div class="menu-card-name">{{ p.name }}</div>
+        <div class="menu-card-title">{{ p.title }}</div>
+        <span class="menu-card-btn">Ver CV →</span>
+      </a>
+    }
+  </div>
+
+  <footer class="menu-footer">sparissiasap.github.io/cv</footer>
+</main>

@@ -1,0 +1,22 @@
+<div class="share-bar">
+  @for (item of items; track $index) {
+    @if (item.type === 'divider') {
+      <div class="share-divider"></div>
+    } @else if (item.type === 'print') {
+      <button class="share-btn" (click)="print()">
+        <span class="share-icon" [innerHTML]="getIcon(item.icon)"></span>
+        <span class="share-label">{{ item.label }}</span>
+      </button>
+    } @else if (item.type === 'copy') {
+      <button class="share-btn" (click)="copyLink()">
+        <span class="share-icon" [innerHTML]="getIcon(item.icon)"></span>
+        <span class="share-label">{{ copyLabel }}</span>
+      </button>
+    } @else if (item.type === 'link') {
+      <a class="share-btn" [href]="item.href" target="_blank" rel="noopener noreferrer">
+        <span class="share-icon" [innerHTML]="getIcon(item.icon)"></span>
+        <span class="share-label">{{ item.label }}</span>
+      </a>
+    }
+  }
+</div>

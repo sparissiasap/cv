@@ -1,0 +1,17 @@
+<div [class]="isOpen ? 'modal-overlay open' : 'modal-overlay'"
+     (click)="onOverlayClick($event)">
+  <div class="modal-box" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">{{ title }}</div>
+        <div class="modal-subtitle">{{ subtitle }}</div>
+      </div>
+      <button class="modal-close" (click)="closed.emit()">✕</button>
+    </div>
+    <div class="modal-body">
+      @if (isOpen && safeSrc) {
+        <iframe [src]="safeSrc" title="Visor de certificado"></iframe>
+      }
+    </div>
+  </div>
+</div>
