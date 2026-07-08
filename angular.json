@@ -39,33 +39,12 @@
                 "input": "src",
                 "output": "/"
               },
-              {
-                "glob": "_redirects",
-                "input": "src",
-                "output": "/"
-              }
             ],
             "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
-              "baseHref": "/",
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "github-pages": {
               "baseHref": "/cv/",
               "budgets": [
                 {
@@ -79,13 +58,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all",
-              "fileReplacements": [
-                {
-                  "replace": "src/app/app.config.ts",
-                  "with": "src/app/app.config.github-pages.ts"
-                }
-              ]
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
