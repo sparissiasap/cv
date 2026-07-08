@@ -207,6 +207,7 @@
         { "name": "Sitecore 10 .NET Developer Certification", "meta": "Sitecore · Mar 2024", "verifyUrl": "https://www.credly.com/badges/f31a40f7-b427-495f-ae20-4a91f231585c/public_url", "dot": "default" },
         { "name": "AWS Partner: Technical Accredited",        "meta": "Amazon Web Services · Feb 2026", "verifyUrl": "https://www.credly.com/badges/7006324f-9fdc-4761-891a-0b5d67d18dcc/public_url", "dot": "default" },
         { "name": "Deploy Gemini Enterprise with Workspace Data Sources and Model Armor", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/b7112cd2-b124-4c29-a9ff-48690d623dfa/public_url", "dot": "default" },
+        { "name": "Accelerate Development with Antigravity", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/895219df-9ad6-4981-864a-a84936ecfc51/public_url", "dot": "default" },
         { "name": "Professional Scrum Developer I (PSD I)",   "meta": "Scrum.org · Jan 2019", "verifyUrl": "https://www.credly.com/badges/88d2a88d-fabb-4a1d-9b16-eb41d81236e1/public_url", "dot": "default" }
       ]
     },
