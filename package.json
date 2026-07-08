@@ -4,7 +4,8 @@
   "scripts": {
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production"
+    "build:prod": "ng build --configuration production",
+    "add-badge": "node scripts/add-badge.mjs"
   },
   "dependencies": {
     "@angular/animations": "^18.2.0",
@@ -23,6 +24,7 @@
     "@angular-devkit/build-angular": "^18.2.0",
     "@angular/cli": "^18.2.0",
     "@angular/compiler-cli": "^18.2.0",
+    "playwright": "^1.61.1",
     "typescript": "~5.5.0"
   }
 }
