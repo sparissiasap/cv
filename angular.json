@@ -28,6 +28,21 @@
                 "glob": "google3e959d3339ffa2fa.html",
                 "input": "src",
                 "output": "/"
+              },
+              {
+                "glob": "404.html",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "src",
+                "output": "/"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": ["src/styles.scss"],

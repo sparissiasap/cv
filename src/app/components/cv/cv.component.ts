@@ -1,7 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
+import { Title, Meta } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { CvDataService } from '../../services/cv-data.service';
 import { CvData } from '../../models/cv-data.model';
 import { ModalData } from '../cert-gallery/cert-gallery.component';
@@ -40,6 +42,9 @@ export class CvComponent implements OnInit, OnDestroy {
   modalSubtitle = '';
 
   private sub?: Subscription;
+  private titleService = inject(Title);
+  private metaService = inject(Meta);
+  private doc = inject(DOCUMENT);
 
   constructor(private route: ActivatedRoute, private cvDataService: CvDataService) {}
 
@@ -59,7 +64,7 @@ export class CvComponent implements OnInit, OnDestroy {
         this.cvData = data;
         this.currentLang = this.currentLang || data.meta?.lang || '';
         this.loading = false;
-        if (data.meta?.pageTitle) document.title = data.meta.pageTitle;
+        this.updateSeoTags(data);
         setTimeout(() => document.body.classList.add('loaded'), 200);
       },
       error: () => {
@@ -73,6 +78,33 @@ export class CvComponent implements OnInit, OnDestroy {
     document.body.classList.remove('loaded');
     document.body.classList.remove(`theme-${this.profile.toLowerCase()}`);
     document.documentElement.style.opacity = '1';
+  }
+
+  private updateSeoTags(data: CvData): void {
+    const m = data.meta;
+    if (m?.pageTitle) this.titleService.setTitle(m.pageTitle);
+    if (m?.description) this.metaService.updateTag({ name: 'description', content: m.description });
+    const shareUrl = this.currentLang ? `${m.shareUrl}?lang=${this.currentLang}` : m.shareUrl;
+    if (shareUrl) {
+      this.metaService.updateTag({ property: 'og:url', content: shareUrl });
+      this.metaService.updateTag({ property: 'og:title', content: m.pageTitle });
+      this.metaService.updateTag({ property: 'og:description', content: m.description });
+      this.setCanonical(shareUrl);
+    }
+    const ogImage = m?.ogImage
+      ? `https://sparissiasap.github.io/cv/assets/${this.profile}/${m.ogImage}`
+      : `https://sparissiasap.github.io/cv/assets/${this.profile}/perfil.jpg`;
+    this.metaService.updateTag({ property: 'og:image', content: ogImage });
+  }
+
+  private setCanonical(url: string): void {
+    let link = this.doc.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!link) {
+      link = this.doc.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      this.doc.head.appendChild(link);
+    }
+    link.setAttribute('href', url);
   }
 
   openModal(data: ModalData): void {

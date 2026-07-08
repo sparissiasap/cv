@@ -4,7 +4,8 @@
     "availableLangs": ["en", "es"],
     "pageTitle": "Sergio Parissi Reyes — Senior .NET & Sitecore Specialist",
     "description": "10+ years in .NET & C#, 7+ in Sitecore. Azure cloud, AI-assisted development. Senior Software Developer at EPAM Systems.",
-    "shareUrl": "https://sparissiasap.github.io/cv/#/sergio"
+    "shareUrl": "https://sparissiasap.github.io/cv/sergio",
+    "ogImage": "og-image.png"
   },
   "profile": {
     "name": "Sergio Parissi Reyes",

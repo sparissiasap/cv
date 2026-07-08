@@ -4,6 +4,7 @@ export interface CvMeta {
   pageTitle: string;
   description: string;
   shareUrl: string;
+  ogImage?: string;
 }
 
 export interface ContactItem {
