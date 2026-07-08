@@ -2,11 +2,11 @@
  * add-badge.mjs — Scrapes a Credly badge page and inserts it into the CV data files.
  *
  * Usage:
- *   npm run add-badge -- <credly-badge-url> [--commit]
+ *   npm run add-badge-credly -- <credly-badge-url> --profile <name> [--commit]
  *
  * Examples:
- *   npm run add-badge -- https://www.credly.com/badges/b7112cd2-b124-4c29-a9ff-48690d623dfa/public_url
- *   npm run add-badge -- https://www.credly.com/badges/b7112cd2-b124-4c29-a9ff-48690d623dfa/public_url --commit
+ *   npm run add-badge-credly -- https://www.credly.com/badges/b7112cd2-b124-4c29-a9ff-48690d623dfa/public_url --profile Sergio
+ *   npm run add-badge-credly -- https://www.credly.com/badges/b7112cd2-b124-4c29-a9ff-48690d623dfa/public_url --profile Sergio --commit
  */
 
 import { chromium } from 'playwright';
@@ -21,9 +21,11 @@ const ROOT = resolve(__dirname, '..');
 const argv = process.argv.slice(2);
 const rawUrl = argv.find(a => a.includes('credly.com/badges'));
 const shouldCommit = argv.includes('--commit');
+const profileIdx = argv.indexOf('--profile');
+const profile = profileIdx !== -1 ? argv[profileIdx + 1] : 'Sergio';
 
 if (!rawUrl) {
-  console.error('Usage: npm run add-badge -- <credly-badge-url> [--commit]');
+  console.error('Usage: npm run add-badge-credly -- <credly-badge-url> --profile <name> [--commit]');
   process.exit(1);
 }
 
@@ -100,8 +102,12 @@ function insertBadge(filePath, newLine) {
   return true;
 }
 
-const dataPath   = resolve(ROOT, 'src/assets/Sergio/data.json');
-const dataEsPath = resolve(ROOT, 'src/assets/Sergio/data.es.json');
+const dataRelEn = `src/assets/${profile}/data.json`;
+const dataRelEs = `src/assets/${profile}/data.es.json`;
+const dataPath   = resolve(ROOT, dataRelEn);
+const dataEsPath = resolve(ROOT, dataRelEs);
+
+console.log(`  Profile: ${profile}\n`);
 
 insertBadge(dataPath, lineEn);
 insertBadge(dataEsPath, lineEs);
@@ -113,7 +119,7 @@ console.log(`  Date:   ${metaEn.split(' · ')[1]}`);
 console.log(`  URL:    ${verifyUrl}\n`);
 
 if (shouldCommit) {
-  execSync('git add src/assets/Sergio/data.json src/assets/Sergio/data.es.json', { cwd: ROOT, stdio: 'inherit' });
+  execSync(`git add "${dataRelEn}" "${dataRelEs}"`, { cwd: ROOT, stdio: 'inherit' });
   execSync(`git commit -m "Add Credly badge: ${name}"`, { cwd: ROOT, stdio: 'inherit' });
   console.log('Committed!');
 }
