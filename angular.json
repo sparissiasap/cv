@@ -23,6 +23,11 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
+              },
+              {
+                "glob": "google3e959d3339ffa2fa.html",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": ["src/styles.scss"],
@@ -67,5 +72,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c839536f-d2ce-4582-aec6-a77860cc5c91"
   }
 }

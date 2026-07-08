@@ -34,6 +34,23 @@ export class ShareBarComponent {
   }
 
   print(): void {
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const viewport = document.querySelector('meta[name="viewport"]') as HTMLMetaElement | null;
+
+    if (isIOS && viewport) {
+      const original = viewport.content;
+      viewport.content = 'width=900';
+
+      const restore = () => {
+        viewport.content = original;
+        window.removeEventListener('afterprint', restore);
+      };
+      window.addEventListener('afterprint', restore);
+
+      setTimeout(() => window.print(), 100);
+      return;
+    }
+
     window.print();
   }
 
