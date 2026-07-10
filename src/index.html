@@ -21,8 +21,7 @@
         window.history.replaceState(null, null,
           l.pathname.slice(0, -1) + decoded);
       } else if (l.hash && l.hash.charAt(1) === '/') {
-        window.history.replaceState(null, null,
-          l.pathname.replace(/\/$/, '') + l.hash.slice(1));
+        location.replace(l.pathname + '?/' + l.hash.slice(1).replace(/^\//, ''));
       }
     }(window.location));
   </script>
