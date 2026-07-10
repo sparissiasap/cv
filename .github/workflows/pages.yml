@@ -34,12 +34,8 @@ jobs:
       - name: Build Angular app
         run: npx ng build --configuration production
 
-      - name: Copy index.html for each route (SEO - 200 OK per route)
-        run: |
-          for route in sergio dafne giovanna teresina menu; do
-            mkdir -p dist/cv-site/browser/$route
-            cp dist/cv-site/browser/index.html dist/cv-site/browser/$route/index.html
-          done
+      - name: Generate per-profile pages with correct OG tags
+        run: node scripts/generate-og-pages.mjs
 
       - uses: actions/configure-pages@v4
 

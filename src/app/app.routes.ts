@@ -26,5 +26,9 @@ export const routes: Routes = [
     loadComponent: () => import('./components/cv/cv.component').then(m => m.CvComponent),
     data: { profile: 'Teresina' }
   },
+  { path: 'Sergio', redirectTo: 'sergio', pathMatch: 'full' },
+  { path: 'Dafne', redirectTo: 'dafne', pathMatch: 'full' },
+  { path: 'Giovanna', redirectTo: 'giovanna', pathMatch: 'full' },
+  { path: 'Teresina', redirectTo: 'teresina', pathMatch: 'full' },
   { path: '**', redirectTo: 'menu' }
 ];
