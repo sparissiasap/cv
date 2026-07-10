@@ -109,8 +109,10 @@ const dataEsPath = resolve(ROOT, dataRelEs);
 
 console.log(`  Profile: ${profile}\n`);
 
-insertBadge(dataPath, lineEn);
-insertBadge(dataEsPath, lineEs);
+const changed = [
+  insertBadge(dataPath, lineEn),
+  insertBadge(dataEsPath, lineEs),
+].some(Boolean);
 
 console.log('\nBadge added:');
 console.log(`  Name:   ${name}`);
@@ -119,8 +121,12 @@ console.log(`  Date:   ${metaEn.split(' · ')[1]}`);
 console.log(`  URL:    ${verifyUrl}\n`);
 
 if (shouldCommit) {
-  execSync(`git add "${dataRelEn}" "${dataRelEs}"`, { cwd: ROOT, stdio: 'inherit' });
-  execSync(`git commit -m "Add Credly badge: ${name}"`, { cwd: ROOT, stdio: 'inherit' });
-  execSync(`git push`, { cwd: ROOT, stdio: 'inherit' });
-  console.log('Committed and pushed! GitHub Pages deploy triggered.');
+  if (!changed) {
+    console.log('Nothing to commit (badge already present in all files).');
+  } else {
+    execSync(`git add "${dataRelEn}" "${dataRelEs}"`, { cwd: ROOT, stdio: 'inherit' });
+    execSync(`git commit -m "Add Credly badge: ${name}"`, { cwd: ROOT, stdio: 'inherit' });
+    execSync(`git push`, { cwd: ROOT, stdio: 'inherit' });
+    console.log('Committed and pushed! GitHub Pages deploy triggered.');
+  }
 }
