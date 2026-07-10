@@ -610,17 +610,38 @@ body.loaded .eb-fill { width: var(--w); }
 /* ════════════════════════════
    CERTIFICATES GALLERY
 ════════════════════════════ */
-.certs-section { margin-top: 20px; }
+.certs-section {
+  margin-top: 20px;
+  background: var(--glass);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid var(--glass-b);
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.88);
+  position: relative;
+  overflow: hidden;
+}
+.certs-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--grad-wide);
+  background-size: 250% auto;
+  animation: label-shimmer 5s ease-in-out infinite;
+}
+.certs-section-label { padding-bottom: 20px; }
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
   gap: 14px;
 }
 .cert-card {
-  background: var(--glass);
+  background: rgba(255,255,255,0.55);
   backdrop-filter: blur(28px) saturate(200%);
   -webkit-backdrop-filter: blur(28px) saturate(200%);
-  border: 1px solid var(--glass-b);
+  border: 1px solid rgba(0,113,227,0.10);
   border-radius: 18px; padding: 24px 22px 20px;
   box-shadow: 0 4px 22px rgba(0,0,0,0.07);
   display: flex; flex-direction: column; gap: 10px;
@@ -628,13 +649,14 @@ body.loaded .eb-fill { width: var(--w); }
 }
 .cert-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 44px rgba(0,0,0,0.13);
-  border-color: rgba(0,113,227,0.20);
+  box-shadow: 0 16px 44px rgba(0,0,0,0.13), 0 0 0 1px rgba(0,113,227,0.14);
+  border-color: rgba(0,113,227,0.28);
 }
 .cert-card-icon {
-  width: 44px; height: 44px; border-radius: 12px;
+  width: 48px; height: 48px; border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 22px; flex-shrink: 0;
+  font-size: 24px; flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
 }
 .cert-card-icon.anthropic { background: linear-gradient(135deg, #f0f0f0, #e4e4e4); }
 .cert-card-icon.sitecore  { background: linear-gradient(135deg, #fff0e8, #ffe0cc); }
@@ -839,6 +861,7 @@ body.loaded .eb-fill { width: var(--w); }
   .hero-chips span { font-size: 8pt !important; padding: 4px 11px !important; }
   .grid { grid-template-columns: 1fr 262px; gap: 16px; }
   .card { padding: 26px 26px; }
+  .certs-section { padding: 30px 32px; }
   .certs-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 }
 
@@ -853,6 +876,7 @@ body.loaded .eb-fill { width: var(--w); }
   .main-col { margin-bottom: 20px; }
   .card { padding: 22px 22px; }
   .job-title-text { font-size: 10.5pt; }
+  .certs-section { padding: 26px 26px; }
   .certs-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 }
 
@@ -891,6 +915,7 @@ body.loaded .eb-fill { width: var(--w); }
   .eb-meta { flex-wrap: wrap; gap: 2px; }
   .eb-name { font-size: 9pt; }
   .eb-tag { font-size: 7pt; }
+  .certs-section { padding: 20px 16px; border-radius: 18px; }
   .certs-grid { grid-template-columns: 1fr; }
   .cert-card { padding: 18px 16px 16px; }
   .modal-overlay { padding: 10px; }
