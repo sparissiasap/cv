@@ -16,24 +16,60 @@ const profiles = [
     title: 'Sergio Parissi Reyes — Senior .NET & Sitecore Specialist',
     description: '10+ years in .NET & C#, 7+ in Sitecore. Azure cloud, AI-assisted development. Senior Software Developer at EPAM Systems.',
     image: `${BASE_URL}/assets/Sergio/og-image.png`,
+    jsonld: {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Sergio Parissi Reyes',
+      jobTitle: 'Senior Software Developer',
+      description: '10+ years in .NET & C#, 7+ in Sitecore. Azure cloud, AI-assisted development.',
+      url: `${BASE_URL}/sergio`,
+      image: `${BASE_URL}/assets/Sergio/og-image.png`,
+    },
   },
   {
     slug: 'dafne',
     title: 'Dafne Cuevas — Coordinadora de Operaciones & Logística',
     description: 'Profesional con 9+ años en administración, logística operativa y manejo de personal. Liderazgo de equipos hasta 35 personas · Grupo Xcaret · Cancún, MX.',
     image: `${BASE_URL}/assets/Dafne/perfil.jpg`,
+    jsonld: {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Dafne Cuevas',
+      jobTitle: 'Coordinadora de Operaciones',
+      description: 'Profesional con 9+ años en administración, logística operativa y manejo de personal.',
+      url: `${BASE_URL}/dafne`,
+      image: `${BASE_URL}/assets/Dafne/perfil.jpg`,
+    },
   },
   {
     slug: 'giovanna',
     title: 'Giovanna Parissi Reyes — Ingeniera Civil · Supervisora de Obra',
     description: 'Ingeniera Civil con más de 6 años en supervisión y residencia de obras hoteleras de gran escala en Cancún. Grand Hyatt, Emporio, ZIVALAM.',
     image: `${BASE_URL}/assets/Giovanna/perfil.png`,
+    jsonld: {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Giovanna Parissi Reyes',
+      jobTitle: 'Ingeniera Civil',
+      description: 'Ingeniera Civil con más de 6 años en supervisión y residencia de obras hoteleras de gran escala.',
+      url: `${BASE_URL}/giovanna`,
+      image: `${BASE_URL}/assets/Giovanna/perfil.png`,
+    },
   },
   {
     slug: 'teresina',
     title: 'Teresina Parissi Reyes — Administración · Alta Gerencia',
     description: 'Licenciada en Administración con Maestría en Alta Gerencia e Inteligencia Estratégica. Especialista en control financiero, Aspel SAE/NOI y gestión operativa en Cancún.',
     image: `${BASE_URL}/assets/Teresina/perfil.png`,
+    jsonld: {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Teresina Parissi Reyes',
+      jobTitle: 'Administradora',
+      description: 'Licenciada en Administración con Maestría en Alta Gerencia e Inteligencia Estratégica.',
+      url: `${BASE_URL}/teresina`,
+      image: `${BASE_URL}/assets/Teresina/perfil.png`,
+    },
   },
 ];
 
@@ -50,7 +86,9 @@ for (const p of profiles) {
     .replace(/(<meta property="og:title" content=")[^"]*"/, `$1${title}"`)
     .replace(/(<meta property="og:description" content=")[^"]*"/, `$1${desc}"`)
     .replace(/(<meta property="og:url" content=")[^"]*"/, `$1${url}"`)
-    .replace(/(<meta property="og:image" content=")[^"]*"/, `$1${p.image}"`);
+    .replace(/(<meta property="og:image" content=")[^"]*"/, `$1${p.image}"`)
+    .replace(/(<link rel="canonical" href=")[^"]*"/, `$1${url}"`)
+    .replace('</head>', `  <script type="application/ld+json">${JSON.stringify(p.jsonld)}</script>\n</head>`);
 
   // Write lowercase and capitalized variants (GitHub Pages is case-sensitive)
   const variants = [p.slug, p.slug[0].toUpperCase() + p.slug.slice(1)];
