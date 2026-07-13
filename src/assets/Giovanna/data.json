@@ -4,12 +4,13 @@
     "availableLangs": ["es", "en"],
     "pageTitle": "Giovanna Parissi Reyes — Ingeniera Civil · Supervisora de Obra",
     "description": "CV profesional de Giovanna Parissi Reyes, Ingeniera Civil con más de 6 años en supervisión y residencia de obras hoteleras de gran escala en Cancún. Grand Hyatt, Emporio, ZIVALAM.",
-    "shareUrl": "https://sergioparissi.is-a.dev/giovanna"
+    "shareUrl": "https://sergioparissi.is-a.dev/giovanna",
+    "ogImage": "perfil.webp"
   },
   "profile": {
     "name": "Giovanna Parissi Reyes",
     "title": "Ingeniera Civil · Supervisora y Residente de Obra",
-    "photo": "perfil.png",
+    "photo": "perfil.webp",
     "photoPosition": "center 15%",
     "chips": ["⚡ Supervisora de Obra", "⚡ Residente de Obra", "Ing. Civil · ITC Cancún", "AutoCAD · Neodata", "Zona Hotelera · Cancún"],
     "contact": [

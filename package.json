@@ -5,6 +5,7 @@
     "start": "ng serve",
     "build": "ng build && node scripts/generate-og-pages.mjs && node scripts/prerender.mjs",
     "build:prod": "ng build --configuration production && node scripts/generate-og-pages.mjs",
+    "optimize-images": "node scripts/optimize-images.mjs",
     "add-badge-credly": "node scripts/add-badge.mjs",
     "test": "jest"
   },
@@ -30,6 +31,7 @@
     "jest-environment-jsdom": "^30.4.1",
     "jest-preset-angular": "^17.0.0",
     "playwright": "^1.61.1",
+    "sharp": "^0.35.3",
     "typescript": "~5.5.0"
   }
 }

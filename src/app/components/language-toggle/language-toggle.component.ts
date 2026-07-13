@@ -17,6 +17,7 @@ export class LanguageToggleComponent {
     document.documentElement.style.transition = 'opacity 0.2s ease';
     document.documentElement.style.opacity = '0';
     setTimeout(() => {
+      document.documentElement.lang = lang;
       this.router.navigate([], {
         relativeTo: this.route,
         queryParams: { lang },

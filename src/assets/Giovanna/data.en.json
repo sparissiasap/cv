@@ -4,12 +4,13 @@
     "availableLangs": ["es", "en"],
     "pageTitle": "Giovanna Parissi Reyes — Civil Engineer · Construction Supervisor",
     "description": "Professional CV of Giovanna Parissi Reyes, Civil Engineer with 6+ years in construction supervision and site residency for large-scale luxury hotel projects in Cancún. Grand Hyatt, Emporio, ZIVALAM.",
-    "shareUrl": "https://sergioparissi.is-a.dev/giovanna"
+    "shareUrl": "https://sergioparissi.is-a.dev/giovanna",
+    "ogImage": "perfil.webp"
   },
   "profile": {
     "name": "Giovanna Parissi Reyes",
     "title": "Civil Engineer · Construction Supervisor & Site Resident Engineer",
-    "photo": "perfil.png",
+    "photo": "perfil.webp",
     "photoPosition": "center 15%",
     "chips": ["⚡ Construction Supervisor", "⚡ Site Resident Engineer", "Civil Engineering · ITC Cancún", "AutoCAD · Neodata", "Hotel Zone · Cancún"],
     "contact": [

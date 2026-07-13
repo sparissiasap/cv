@@ -4,12 +4,13 @@
     "availableLangs": ["es", "en"],
     "pageTitle": "Dafne Cuevas — Coordinadora de Operaciones & Logística",
     "description": "Profesional con 9+ años en administración, logística operativa y manejo de personal. Liderazgo de equipos hasta 35 personas · Grupo Xcaret · Cancún, MX.",
-    "shareUrl": "https://sergioparissi.is-a.dev/dafne"
+    "shareUrl": "https://sergioparissi.is-a.dev/dafne",
+    "ogImage": "perfil.webp"
   },
   "profile": {
     "name": "Dafne Cuevas",
     "title": "Coordinadora de Operaciones · Logística & Administración · Lic. Comunicación",
-    "photo": "perfil.jpg",
+    "photo": "perfil.webp",
     "photoPosition": "center 20%",
     "chips": ["⚡ Liderazgo Operativo", "⚡ Gestión de Equipos", "Xcaret Group · 5 yrs", "Logística", "9+ yrs de experiencia"],
     "contact": [

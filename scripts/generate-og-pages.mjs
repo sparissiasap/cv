@@ -15,7 +15,7 @@ const profiles = [
     slug: 'sergio',
     title: 'Sergio Parissi Reyes — Senior .NET & Sitecore Specialist',
     description: '10+ years in .NET & C#, 7+ in Sitecore. Azure cloud, AI-assisted development. Senior Software Developer at EPAM Systems.',
-    image: `${BASE_URL}/assets/Sergio/og-image.png`,
+    image: `${BASE_URL}/assets/Sergio/og-image.webp`,
     hreflangs: [
       { lang: 'es',        href: `${BASE_URL}/sergio` },
       { lang: 'en',        href: `${BASE_URL}/sergio?lang=en` },
@@ -28,14 +28,14 @@ const profiles = [
       jobTitle: 'Senior Software Developer',
       description: '10+ years in .NET & C#, 7+ in Sitecore. Azure cloud, AI-assisted development.',
       url: `${BASE_URL}/sergio`,
-      image: `${BASE_URL}/assets/Sergio/og-image.png`,
+      image: `${BASE_URL}/assets/Sergio/og-image.webp`,
     },
   },
   {
     slug: 'dafne',
     title: 'Dafne Cuevas — Coordinadora de Operaciones & Logística',
     description: 'Profesional con 9+ años en administración, logística operativa y manejo de personal. Liderazgo de equipos hasta 35 personas · Grupo Xcaret · Cancún, MX.',
-    image: `${BASE_URL}/assets/Dafne/perfil.jpg`,
+    image: `${BASE_URL}/assets/Dafne/perfil.webp`,
     hreflangs: [
       { lang: 'es',        href: `${BASE_URL}/dafne` },
       { lang: 'en',        href: `${BASE_URL}/dafne?lang=en` },
@@ -48,14 +48,14 @@ const profiles = [
       jobTitle: 'Coordinadora de Operaciones',
       description: 'Profesional con 9+ años en administración, logística operativa y manejo de personal.',
       url: `${BASE_URL}/dafne`,
-      image: `${BASE_URL}/assets/Dafne/perfil.jpg`,
+      image: `${BASE_URL}/assets/Dafne/perfil.webp`,
     },
   },
   {
     slug: 'giovanna',
     title: 'Giovanna Parissi Reyes — Ingeniera Civil · Supervisora de Obra',
     description: 'Ingeniera Civil con más de 6 años en supervisión y residencia de obras hoteleras de gran escala en Cancún. Grand Hyatt, Emporio, ZIVALAM.',
-    image: `${BASE_URL}/assets/Giovanna/perfil.png`,
+    image: `${BASE_URL}/assets/Giovanna/perfil.webp`,
     hreflangs: [
       { lang: 'es',        href: `${BASE_URL}/giovanna` },
       { lang: 'en',        href: `${BASE_URL}/giovanna?lang=en` },
@@ -68,14 +68,14 @@ const profiles = [
       jobTitle: 'Ingeniera Civil',
       description: 'Ingeniera Civil con más de 6 años en supervisión y residencia de obras hoteleras de gran escala.',
       url: `${BASE_URL}/giovanna`,
-      image: `${BASE_URL}/assets/Giovanna/perfil.png`,
+      image: `${BASE_URL}/assets/Giovanna/perfil.webp`,
     },
   },
   {
     slug: 'teresina',
     title: 'Teresina Parissi Reyes — Administración · Alta Gerencia',
     description: 'Licenciada en Administración con Maestría en Alta Gerencia e Inteligencia Estratégica. Especialista en control financiero, Aspel SAE/NOI y gestión operativa en Cancún.',
-    image: `${BASE_URL}/assets/Teresina/perfil.png`,
+    image: `${BASE_URL}/assets/Teresina/perfil.webp`,
     hreflangs: [
       { lang: 'es',        href: `${BASE_URL}/teresina` },
       { lang: 'en',        href: `${BASE_URL}/teresina?lang=en` },
@@ -88,7 +88,7 @@ const profiles = [
       jobTitle: 'Administradora',
       description: 'Licenciada en Administración con Maestría en Alta Gerencia e Inteligencia Estratégica.',
       url: `${BASE_URL}/teresina`,
-      image: `${BASE_URL}/assets/Teresina/perfil.png`,
+      image: `${BASE_URL}/assets/Teresina/perfil.webp`,
     },
   },
 ];

@@ -65,6 +65,7 @@ export class CvComponent implements OnInit, OnDestroy {
       next: (data) => {
         this.cvData = data;
         this.currentLang = this.urlLang || data.meta?.lang || '';
+        this.doc.documentElement.lang = this.currentLang || 'es';
         this.loading = false;
         this.updateSeoTags(data);
         setTimeout(() => document.body.classList.add('loaded'), 200);
@@ -95,7 +96,7 @@ export class CvComponent implements OnInit, OnDestroy {
     }
     const ogImage = m?.ogImage
       ? `https://sergioparissi.is-a.dev/assets/${this.profile}/${m.ogImage}`
-      : `https://sergioparissi.is-a.dev/assets/${this.profile}/perfil.jpg`;
+      : `https://sergioparissi.is-a.dev/assets/${this.profile}/perfil.webp`;
     this.metaService.updateTag({ property: 'og:image', content: ogImage });
     this.updateHreflang(this.profile.toLowerCase());
   }
