@@ -92,9 +92,26 @@ export class CvComponent implements OnInit, OnDestroy {
       this.setCanonical(shareUrl);
     }
     const ogImage = m?.ogImage
-      ? `https://sparissiasap.github.io/cv/assets/${this.profile}/${m.ogImage}`
-      : `https://sparissiasap.github.io/cv/assets/${this.profile}/perfil.jpg`;
+      ? `https://sergioparissi.is-a.dev/assets/${this.profile}/${m.ogImage}`
+      : `https://sergioparissi.is-a.dev/assets/${this.profile}/perfil.jpg`;
     this.metaService.updateTag({ property: 'og:image', content: ogImage });
+    this.updateHreflang(this.profile.toLowerCase());
+  }
+
+  private updateHreflang(slug: string): void {
+    this.doc.querySelectorAll('link[hreflang]').forEach(el => el.remove());
+    const BASE = 'https://sergioparissi.is-a.dev';
+    [
+      { lang: 'es',        href: `${BASE}/${slug}` },
+      { lang: 'en',        href: `${BASE}/${slug}?lang=en` },
+      { lang: 'x-default', href: `${BASE}/${slug}` },
+    ].forEach(({ lang, href }) => {
+      const link = this.doc.createElement('link');
+      link.rel = 'alternate';
+      link.setAttribute('hreflang', lang);
+      link.href = href;
+      this.doc.head.appendChild(link);
+    });
   }
 
   private setCanonical(url: string): void {

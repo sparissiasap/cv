@@ -4,7 +4,7 @@
     "availableLangs": ["es", "en"],
     "pageTitle": "Teresina Parissi Reyes — Business Administration · Senior Management",
     "description": "Professional CV of Teresina Parissi Reyes, B.A. Business Administration with a Master's in Senior Management and Strategic Intelligence. Specialist in financial control, Aspel SAE/NOI and operations management in Cancún.",
-    "shareUrl": "https://sparissiasap.github.io/cv/teresina"
+    "shareUrl": "https://sergioparissi.is-a.dev/teresina"
   },
   "profile": {
     "name": "Teresina Parissi Reyes",
@@ -168,7 +168,7 @@
   "shareBar": [
     { "type": "print",   "icon": "bi-printer",    "label": "Print" },
     { "type": "divider" },
-    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp", "href": "https://wa.me/?text=CV%20of%20Teresina%20Parissi%20Reyes%20%E2%80%94%20Business%20Administration%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FTeresina%2F" },
+    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp", "href": "https://wa.me/?text=CV%20of%20Teresina%20Parissi%20Reyes%20%E2%80%94%20Business%20Administration%20https%3A%2F%2Fsergioparissi.is-a.dev%2Fteresina" },
     { "type": "divider" },
     { "type": "copy",    "icon": "bi-link-45deg", "label": "Copy link" }
   ]

@@ -4,7 +4,7 @@
     "availableLangs": ["es", "en"],
     "pageTitle": "Dafne Cuevas — Operations Coordinator & Logistics",
     "description": "Professional with 9+ years in administration, operational logistics, and personnel management. Team leadership up to 35 people · Grupo Xcaret · Cancún, MX.",
-    "shareUrl": "https://sparissiasap.github.io/cv/dafne"
+    "shareUrl": "https://sergioparissi.is-a.dev/dafne"
   },
   "profile": {
     "name": "Dafne Cuevas",
@@ -162,8 +162,8 @@
   "shareBar": [
     { "type": "print",   "icon": "bi-printer",    "label": "Print" },
     { "type": "divider" },
-    { "type": "link",    "icon": "bi-linkedin",   "label": "LinkedIn", "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FDafne%2F" },
-    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp", "href": "https://wa.me/?text=My%20CV%3A%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FDafne%2F" },
+    { "type": "link",    "icon": "bi-linkedin",   "label": "LinkedIn", "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsergioparissi.is-a.dev%2Fdafne" },
+    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp", "href": "https://wa.me/?text=My%20CV%3A%20https%3A%2F%2Fsergioparissi.is-a.dev%2Fdafne" },
     { "type": "divider" },
     { "type": "copy",    "icon": "bi-link-45deg", "label": "Copy link" }
   ]

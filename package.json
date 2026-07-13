@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build && node scripts/generate-og-pages.mjs",
+    "build": "ng build && node scripts/generate-og-pages.mjs && node scripts/prerender.mjs",
     "build:prod": "ng build --configuration production && node scripts/generate-og-pages.mjs",
     "add-badge-credly": "node scripts/add-badge.mjs",
     "test": "jest"

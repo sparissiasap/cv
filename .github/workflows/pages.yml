@@ -37,6 +37,12 @@ jobs:
       - name: Generate per-profile pages with correct OG tags
         run: node scripts/generate-og-pages.mjs
 
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Prerender routes
+        run: node scripts/prerender.mjs
+
       - uses: actions/configure-pages@v4
 
       - uses: actions/upload-pages-artifact@v3

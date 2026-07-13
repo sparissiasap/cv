@@ -4,7 +4,7 @@
     "availableLangs": ["en", "es"],
     "pageTitle": "Sergio Parissi Reyes — Desarrollador .NET Senior & Especialista Sitecore",
     "description": "Más de 10 años en .NET y C#, 7+ en Sitecore. Cloud en Azure, desarrollo asistido por IA. Desarrollador Senior en EPAM Systems.",
-    "shareUrl": "https://sparissiasap.github.io/cv/sergio",
+    "shareUrl": "https://sergioparissi.is-a.dev/sergio",
     "ogImage": "og-image.png"
   },
   "profile": {
@@ -295,9 +295,9 @@
   "shareBar": [
     { "type": "print",   "icon": "bi-printer",    "label": "PDF / Imprimir" },
     { "type": "divider" },
-    { "type": "link",    "icon": "bi-linkedin",   "label": "LinkedIn",  "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
-    { "type": "link",    "icon": "bi-twitter-x",  "label": "X",         "href": "https://twitter.com/intent/tweet?text=CV%20interactivo%20%E2%80%94%20Sergio%20Parissi%20Reyes%2C%20Desarrollador%20.NET%20Senior&url=https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
-    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp",  "href": "https://wa.me/?text=Mi%20CV%20interactivo%3A%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2F" },
+    { "type": "link",    "icon": "bi-linkedin",   "label": "LinkedIn",  "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsergioparissi.is-a.dev%2Fsergio" },
+    { "type": "link",    "icon": "bi-twitter-x",  "label": "X",         "href": "https://twitter.com/intent/tweet?text=CV%20interactivo%20%E2%80%94%20Sergio%20Parissi%20Reyes%2C%20Desarrollador%20.NET%20Senior&url=https%3A%2F%2Fsergioparissi.is-a.dev%2Fsergio" },
+    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp",  "href": "https://wa.me/?text=Mi%20CV%20interactivo%3A%20https%3A%2F%2Fsergioparissi.is-a.dev%2Fsergio" },
     { "type": "divider" },
     { "type": "copy",    "icon": "bi-link-45deg", "label": "Copiar enlace" }
   ]

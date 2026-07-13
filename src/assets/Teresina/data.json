@@ -4,7 +4,7 @@
     "availableLangs": ["es", "en"],
     "pageTitle": "Teresina Parissi Reyes — Administración · Alta Gerencia",
     "description": "CV profesional de Teresina Parissi Reyes, Licenciada en Administración con Maestría en Alta Gerencia e Inteligencia Estratégica. Especialista en control financiero, Aspel SAE/NOI y gestión operativa en Cancún.",
-    "shareUrl": "https://sparissiasap.github.io/cv/teresina"
+    "shareUrl": "https://sergioparissi.is-a.dev/teresina"
   },
   "profile": {
     "name": "Teresina Parissi Reyes",
@@ -168,7 +168,7 @@
   "shareBar": [
     { "type": "print",   "icon": "bi-printer",    "label": "Imprimir" },
     { "type": "divider" },
-    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp", "href": "https://wa.me/?text=CV%20de%20Teresina%20Parissi%20Reyes%20%E2%80%94%20Lic.%20Administraci%C3%B3n%20https%3A%2F%2Fsparissiasap.github.io%2Fcv%2FTeresina%2F" },
+    { "type": "link",    "icon": "bi-whatsapp",   "label": "WhatsApp", "href": "https://wa.me/?text=CV%20de%20Teresina%20Parissi%20Reyes%20%E2%80%94%20Lic.%20Administraci%C3%B3n%20https%3A%2F%2Fsergioparissi.is-a.dev%2Fteresina" },
     { "type": "divider" },
     { "type": "copy",    "icon": "bi-link-45deg", "label": "Copiar enlace" }
   ]
