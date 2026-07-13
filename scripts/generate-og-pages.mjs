@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'dist', 'cv-site', 'browser');
-const BASE_URL = 'https://sparissiasap.github.io/cv';
+const BASE_URL = 'https://sergioparissi.is-a.dev';
 
 function esc(str) {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;');

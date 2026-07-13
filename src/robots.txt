@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sparissiasap.github.io/cv/sitemap.xml
+Sitemap: https://sergioparissi.is-a.dev/sitemap.xml
