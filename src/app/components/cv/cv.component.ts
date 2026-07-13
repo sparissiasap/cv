@@ -36,6 +36,12 @@ export class CvComponent implements OnInit, OnDestroy {
   assetsBase = '';
   currentLang = '';
   private urlLang = '';
+  private readonly ogImageDims: Record<string, [number, number]> = {
+    Sergio:   [1200, 627],
+    Dafne:    [739,  1600],
+    Giovanna: [389,  533],
+    Teresina: [275,  291],
+  };
 
   modalOpen = false;
   modalSrc = '';
@@ -98,6 +104,14 @@ export class CvComponent implements OnInit, OnDestroy {
       ? `https://sergioparissi.is-a.dev/assets/${this.profile}/${m.ogImage}`
       : `https://sergioparissi.is-a.dev/assets/${this.profile}/perfil.webp`;
     this.metaService.updateTag({ property: 'og:image', content: ogImage });
+    const [imgW, imgH] = this.ogImageDims[this.profile] ?? [1200, 627];
+    this.metaService.updateTag({ property: 'og:image:width',  content: String(imgW) });
+    this.metaService.updateTag({ property: 'og:image:height', content: String(imgH) });
+    const locale = this.currentLang === 'en' ? 'en_US' : 'es_ES';
+    this.metaService.updateTag({ property: 'og:locale', content: locale });
+    this.metaService.updateTag({ name: 'twitter:title',       content: m.pageTitle });
+    this.metaService.updateTag({ name: 'twitter:description', content: m.description });
+    this.metaService.updateTag({ name: 'twitter:image',       content: ogImage });
     this.updateHreflang(this.profile.toLowerCase());
   }
 
