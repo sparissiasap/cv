@@ -35,6 +35,7 @@ export class CvComponent implements OnInit, OnDestroy {
   profile = '';
   assetsBase = '';
   currentLang = '';
+  private urlLang = '';
 
   modalOpen = false;
   modalSrc = '';
@@ -56,13 +57,14 @@ export class CvComponent implements OnInit, OnDestroy {
     this.sub = this.route.queryParams.pipe(
       switchMap(params => {
         this.loading = true;
-        this.currentLang = params['lang'] || '';
+        this.urlLang = params['lang'] || '';
+        this.currentLang = this.urlLang;
         return this.cvDataService.loadProfile(this.profile, params['lang']);
       })
     ).subscribe({
       next: (data) => {
         this.cvData = data;
-        this.currentLang = this.currentLang || data.meta?.lang || '';
+        this.currentLang = this.urlLang || data.meta?.lang || '';
         this.loading = false;
         this.updateSeoTags(data);
         setTimeout(() => document.body.classList.add('loaded'), 200);
@@ -84,7 +86,7 @@ export class CvComponent implements OnInit, OnDestroy {
     const m = data.meta;
     if (m?.pageTitle) this.titleService.setTitle(m.pageTitle);
     if (m?.description) this.metaService.updateTag({ name: 'description', content: m.description });
-    const shareUrl = this.currentLang ? `${m.shareUrl}?lang=${this.currentLang}` : m.shareUrl;
+    const shareUrl = this.urlLang ? `${m.shareUrl}?lang=${this.urlLang}` : m.shareUrl;
     if (shareUrl) {
       this.metaService.updateTag({ property: 'og:url', content: shareUrl });
       this.metaService.updateTag({ property: 'og:title', content: m.pageTitle });
