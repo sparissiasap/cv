@@ -212,6 +212,7 @@
         { "name": "Govern Agent Access with Gemini Enterprise Agent Platform", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/d298785a-87f7-418f-a1e5-6cbce4a024bd/public_url", "dot": "default" },
         { "name": "Certified Partner Specialist Gemini Enterprise Deployment", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/cfda7bbb-993f-45ab-ba68-1133fc45e1f6/public_url", "dot": "default" },
         { "name": "Deploy an Agent with Agent Development Kit (ADK)", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/80b27c4d-fe9e-4719-939b-21fa14f29991/public_url", "dot": "default" },
+        { "name": "Evaluate and Improve Agent Development Kit Agents", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/7f957c66-6fad-4ec5-b7c1-97107f30a25f/public_url", "dot": "default" },
         { "name": "Professional Scrum Developer I (PSD I)",   "meta": "Scrum.org · Ene 2019", "verifyUrl": "https://www.credly.com/badges/88d2a88d-fabb-4a1d-9b16-eb41d81236e1/public_url", "dot": "default" }
       ]
     },
