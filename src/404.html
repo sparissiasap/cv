@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>CVs Parissi</title>
   <script>
-    var segmentCount = 1;
+    var segmentCount = window.location.hostname.indexOf('github.io') !== -1 ? 1 : 0;
     var l = window.location;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
