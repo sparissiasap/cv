@@ -101,12 +101,23 @@ const profiles = [
   },
 ];
 
+const root = join(__dirname, '..');
 const template = readFileSync(join(distDir, 'index.html'), 'utf8');
 
 for (const p of profiles) {
   const url = `${BASE_URL}/${p.slug}`;
   const title = esc(p.title);
   const desc = esc(p.description);
+
+  const folderName = p.slug.charAt(0).toUpperCase() + p.slug.slice(1);
+  const jsonPath = join(root, 'src', 'assets', folderName, 'data.json');
+  let inlineScript = '';
+  try {
+    const jsonData = JSON.parse(readFileSync(jsonPath, 'utf8'));
+    inlineScript = `  <script id="cv-data" type="application/json">${JSON.stringify(jsonData)}</script>`;
+  } catch (e) {
+    console.error(`Error loading data.json for ${folderName}:`, e);
+  }
 
   const html = template
     .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
@@ -125,8 +136,9 @@ for (const p of profiles) {
     .replace('</head>', [
       p.hreflangs.map(h => `  <link rel="alternate" hreflang="${h.lang}" href="${h.href}">`).join('\n'),
       `  <script type="application/ld+json">${JSON.stringify(p.jsonld)}</script>`,
+      inlineScript,
       '</head>',
-    ].join('\n'));
+    ].filter(Boolean).join('\n'));
 
   // Write lowercase and capitalized variants (GitHub Pages is case-sensitive)
   const variants = [p.slug, p.slug[0].toUpperCase() + p.slug.slice(1)];

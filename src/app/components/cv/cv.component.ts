@@ -62,9 +62,12 @@ export class CvComponent implements OnInit, OnDestroy {
 
     this.sub = this.route.queryParams.pipe(
       switchMap(params => {
-        this.loading = true;
         this.urlLang = params['lang'] || '';
         this.currentLang = this.urlLang;
+        const hasInline = this.cvDataService.getInlineData(this.profile, this.urlLang);
+        if (!hasInline) {
+          this.loading = true;
+        }
         return this.cvDataService.loadProfile(this.profile, params['lang']);
       })
     ).subscribe({

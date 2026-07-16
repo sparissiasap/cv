@@ -22,6 +22,11 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
+                "ignore": [
+                  "**/perfil.png",
+                  "**/perfil.jpg",
+                  "**/og-image.png"
+                ],
                 "output": "assets"
               },
               {
