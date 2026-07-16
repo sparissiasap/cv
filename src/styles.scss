@@ -1018,3 +1018,23 @@ body.theme-teresina {
   --orb1-bg: rgba(30,58,95,0.22); --orb2-bg: rgba(201,168,76,0.20);
   --orb3-bg: rgba(30,58,95,0.14); --orb4-bg: rgba(201,168,76,0.12);
 }
+
+.cert-thumb-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  line-height: 0;          /* evita “espacios raros” alrededor de la imagen */
+  margin-top: 1px;         /* alinea mejor con el dot */
+}
+
+.cert-thumb {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;     /* no deforma el badge */
+  flex-shrink: 0;
+  border-radius: 6px;      /* suave; si la quieres circular: 50% */
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+//.cert-thumb { border-radius: 50%; }

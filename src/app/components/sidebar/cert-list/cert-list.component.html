@@ -8,6 +8,19 @@
   @for (item of section.items; track item.name) {
     <div class="cert-item">
       <div [class]="item.dot === 'gold' ? 'cert-dot gold' : 'cert-dot'"></div>
+
+      @if (item.imageUrl) {
+        <a class="cert-thumb-link"
+           [href]="item.verifyUrl || item.imageUrl"
+           target="_blank"
+           rel="noopener noreferrer">
+          <img class="cert-thumb"
+               [src]="item.imageUrl"
+               [alt]="item.name + ' badge'"
+               loading="lazy" />
+        </a>
+      }
+      
       <div class="cert-body">
         <div class="cert-name-text">
           {{ item.name }}

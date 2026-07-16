@@ -76,6 +76,7 @@ export interface CertItem {
   verifyUrl?: string;
   dot?: 'default' | 'gold';
   badge?: string;
+  imageUrl?: string;
 }
 
 export interface CertListSection {

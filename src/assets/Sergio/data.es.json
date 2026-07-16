@@ -202,19 +202,19 @@
     },
     {
       "type": "certifications",
-      "label": "Certificaciones",
+      "id": "credly",
+      "label": "credly",
       "items": [
-        { "name": "Sitecore 10 .NET Developer Certification", "meta": "Sitecore · Mar 2024", "verifyUrl": "https://www.credly.com/badges/f31a40f7-b427-495f-ae20-4a91f231585c/public_url", "dot": "default" },
-        { "name": "AWS Partner: Technical Accredited",        "meta": "Amazon Web Services · Feb 2026", "verifyUrl": "https://www.credly.com/badges/7006324f-9fdc-4761-891a-0b5d67d18dcc/public_url", "dot": "default" },
-        { "name": "Deploy Gemini Enterprise with Workspace Data Sources and Model Armor", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/b7112cd2-b124-4c29-a9ff-48690d623dfa/public_url", "dot": "default" },
-        { "name": "Accelerate Development with Antigravity", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/895219df-9ad6-4981-864a-a84936ecfc51/public_url", "dot": "default" },
-        { "name": "Add Agents to Gemini Enterprise", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/3744f413-ba90-460a-9eea-1f6ed874578d/public_url", "dot": "default" },
-        { "name": "Govern Agent Access with Gemini Enterprise Agent Platform", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/d298785a-87f7-418f-a1e5-6cbce4a024bd/public_url", "dot": "default" },
-        { "name": "Certified Partner Specialist Gemini Enterprise Deployment", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/cfda7bbb-993f-45ab-ba68-1133fc45e1f6/public_url", "dot": "default" },
-        { "name": "Deploy an Agent with Agent Development Kit (ADK)", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/80b27c4d-fe9e-4719-939b-21fa14f29991/public_url", "dot": "default" },
-        { "name": "Evaluate and Improve Agent Development Kit Agents", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/7f957c66-6fad-4ec5-b7c1-97107f30a25f/public_url", "dot": "default" },
-        { "name": "Certified Partner Specialist Gemini Enterprise Agent Development", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/d04bd78e-3535-4923-a26e-5c53d26ff8c4/public_url", "dot": "default" },
-        { "name": "Professional Scrum Developer I (PSD I)",   "meta": "Scrum.org · Ene 2019", "verifyUrl": "https://www.credly.com/badges/88d2a88d-fabb-4a1d-9b16-eb41d81236e1/public_url", "dot": "default" }
+        { "name": "Certified Partner Specialist Gemini Enterprise Agent Development", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/d04bd78e-3535-4923-a26e-5c53d26ff8c4/public_url", "imageUrl": "https://images.credly.com/images/73e93208-0df3-435d-b58c-07c8ee6019d9/linkedin_thumb_blob", "dot": "gold" },
+        { "name": "Certified Partner Specialist Gemini Enterprise Deployment", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/cfda7bbb-993f-45ab-ba68-1133fc45e1f6/public_url", "imageUrl": "https://images.credly.com/images/f874c419-9e95-4db2-85f9-4e45b89833f5/linkedin_thumb_blob", "dot": "gold" },
+        { "name": "Sitecore 10 .NET Developer Certification (2021)", "meta": "Sitecore · Mar 2024", "verifyUrl": "https://www.credly.com/badges/f31a40f7-b427-495f-ae20-4a91f231585c/public_url", "imageUrl": "https://images.credly.com/images/e3ddb257-6156-4d4e-bad9-04c221d7a0c1/linkedin_thumb_image.png", "dot": "default" },
+        { "name": "AWS Partner: Technical Accredited - Training Badge", "meta": "Amazon Web Services Training and Certification · Feb 2026", "verifyUrl": "https://www.credly.com/badges/7006324f-9fdc-4761-891a-0b5d67d18dcc/public_url", "imageUrl": "https://images.credly.com/images/8f006312-3154-45bf-a845-4a043641e83c/linkedin_thumb_blob", "dot": "default" },
+        { "name": "Deploy Gemini Enterprise with Workspace Data Sources and Model Armor", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/b7112cd2-b124-4c29-a9ff-48690d623dfa/public_url", "imageUrl": "https://images.credly.com/images/d82b7124-5d8a-4bb9-a3c0-7220e172f948/linkedin_thumb_blob", "dot": "default" },
+        { "name": "Accelerate Development with Antigravity", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/895219df-9ad6-4981-864a-a84936ecfc51/public_url", "imageUrl": "https://images.credly.com/images/9a9bd5ca-b41b-41ed-82ad-43968d960f62/linkedin_thumb_blob", "dot": "default" },
+        { "name": "Add Agents to Gemini Enterprise", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/3744f413-ba90-460a-9eea-1f6ed874578d/public_url", "imageUrl": "https://images.credly.com/images/c386f11b-05fd-4755-b091-611d9bb96113/linkedin_thumb_blob", "dot": "default" },
+        { "name": "Govern Agent Access with Gemini Enterprise Agent Platform", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/d298785a-87f7-418f-a1e5-6cbce4a024bd/public_url", "imageUrl": "https://images.credly.com/images/39c0ab96-e088-4d83-baaf-395633aa1810/linkedin_thumb_blob", "dot": "default" },
+        { "name": "Evaluate and Improve Agent Development Kit Agents", "meta": "Google Cloud · Jul 2026", "verifyUrl": "https://www.credly.com/badges/7f957c66-6fad-4ec5-b7c1-97107f30a25f/public_url", "imageUrl": "https://images.credly.com/images/b1800059-b7de-4065-851d-678287ea0720/linkedin_thumb_blob", "dot": "default" },
+        { "name": "Professional Scrum Developer™ I (PSD I)", "meta": "Scrum.org · Ene 2019", "verifyUrl": "https://www.credly.com/badges/88d2a88d-fabb-4a1d-9b16-eb41d81236e1/public_url", "imageUrl": "https://images.credly.com/images/d2298e82-b671-434a-876b-21a0ebc3af0e/linkedin_thumb_image.png", "dot": "default" }
       ]
     },
     {
