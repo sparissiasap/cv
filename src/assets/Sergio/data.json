@@ -291,9 +291,7 @@
       { "title": "Introduction to Claude Cowork", "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-km7a7esp3ke7-1775755349.pdf", "icon": "🤖", "type": "anthropic" },
       { "title": "Claude Code 101", "issuer": "Anthropic Academy", "date": "Apr 2026", "file": "pdf/certificate-y3a89fbpadwk-1775756321.pdf", "icon": "🤖", "type": "anthropic" },
       { "title": "Sitecore 10 .NET Developer Certification", "issuer": "Sitecore", "date": "Mar 2024", "file": "pdf/Sitecore.pdf", "icon": "🏗️", "type": "sitecore" },
-      { "title": "Professional Scrum Developer I (PSD I)", "issuer": "Scrum.org", "date": "Jan 2019", "file": "pdf/Professional Scrum Developer I.pdf", "icon": "📋", "type": "scrum" },
-      { "title": "Integrating Generative AI into Business Strategy", "issuer": "Linked In", "date": "Jul 2026", "file": "pdf/CertificateOfCompletion_Integrating Generative AI into Business Strategy.pdf", "icon": "📄", "type": "other" }
-    
+      { "title": "Professional Scrum Developer I (PSD I)", "issuer": "Scrum.org", "date": "Jan 2019", "file": "pdf/Professional Scrum Developer I.pdf", "icon": "📋", "type": "scrum" }
     ]
   },
   "shareBar": [

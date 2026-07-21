@@ -32,11 +32,27 @@ if (!pdfPathRaw) {
   process.exit(1);
 }
 
+const type = getArg('--type', 'other');
+
+const ICON_BY_TYPE = {
+  anthropic: '🤖',
+  sitecore: '🏗️',
+  scrum: '📋',
+  credly: '🏅',
+  linkedin: '🧑‍🏫',
+  azure: '🟦',
+  aws: '🟧',
+  gcp: '🟩',
+  devops: '⚙️',
+  security: '🔐',
+  other: '📄',
+};
+
+const icon = ICON_BY_TYPE[type] ?? ICON_BY_TYPE.other;
+
 const title = getArg('--title');
 const issuer = getArg('--issuer');
 const date = getArg('--date');
-const type = getArg('--type', 'other');
-const icon = getArg('--icon', '📄');
 const badge = getArg('--badge', null);
 
 if (!title || !issuer || !date) {
@@ -62,6 +78,12 @@ const destFileName = basename(srcPdfAbs); // keep original name
 const destPdfAbs = resolve(assetsPdfAbsDir, destFileName);
 const destPdfRel = `pdf/${destFileName}`; // how certGallery uses it
 
+const allowedTypes = new Set(Object.keys(ICON_BY_TYPE));
+if (!allowedTypes.has(type)) {
+  console.error(`Invalid --type: ${type}. Allowed: ${Array.from(allowedTypes).join(', ')}`);
+  process.exit(1);
+}
+
 if (!existsSync(destPdfAbs)) {
   copyFileSync(srcPdfAbs, destPdfAbs);
   console.log(`Copied PDF -> ${assetsPdfRelDir}/${destFileName}`);
@@ -78,7 +100,6 @@ const dataEsPath = resolve(ROOT, dataRelEs);
 function insertIntoCertGallery(filePath) {
   let content = readFileSync(filePath, 'utf-8');
 
-  // Skip if same file already registered
   if (content.includes(`"file": "${destPdfRel}"`)) {
     console.log(`  Already registered in ${filePath.split('\\').pop()}, skipping.`);
     return false;
@@ -96,30 +117,42 @@ function insertIntoCertGallery(filePath) {
 
   const newObj = `{ ${objParts.join(', ')} }`;
 
-  // Capture certGallery.certs array interior
-  const re = /("certGallery"\s*:\s*\{[\s\S]*?"certs"\s*:\s*\[)([\s\S]*?)(\n?\s*\][\s\S]*?\})/m;
-  const m = content.match(re);
+  // 1) Encuentra el array certGallery.certs: [...]
+  const arrRe = /("certGallery"\s*:\s*\{[\s\S]*?"certs"\s*:\s*\[)([\s\S]*?)(\]\s*)/m;
+  const m = content.match(arrRe);
   if (!m) throw new Error(`Could not find certGallery.certs in ${filePath}`);
 
   const before = m[1];
-  const inner = m[2];
+  let inner = m[2];
   const after = m[3];
 
+  // Detecta indentación tomando la línea donde está "certs": [
   const certsIndent = (before.match(/\n([ \t]*)"certs"\s*:\s*\[$/m)?.[1]) ?? '  ';
   const itemIndent = certsIndent + '  ';
 
-  const oneLine = (s) =>
-    String(s).replace(/\r?\n/g, ' ').replace(/\s+/g, ' ').trim().replace(/,\s*$/, '');
+  const hasAnyObject = /\{[\s\S]*\}/m.test(inner);
 
-  const existing = (inner.match(/\{[\s\S]*?\}/g) ?? []).map(oneLine).filter(Boolean);
+  if (!hasAnyObject) {
+    // Array vacío: inserta un único elemento sin coma
+    // Respeta estilo multilínea: abre, item, cierra
+    inner = `\n${itemIndent}${newObj}\n${certsIndent}`;
+  } else {
+    // Asegura que el último objeto existente termine con coma
+    // (solo si no la tiene ya)
+    inner = inner.replace(/}\s*$/m, (match) => {
+      // si ya hay coma al final (caso raro), no duplicar
+      if (/,(\s*)$/.test(match)) return match;
+      return match.replace(/}\s*$/, '},');
+    });
 
-  // Add at END (append)
-  const all = [...existing, oneLine(newObj)];
+    // Inserta el nuevo al final SIN coma
+    // Evita añadir líneas vacías: agrega exactamente 1 newline antes y alinea el cierre
+    // Quita trailing spaces para insertar limpio
+    inner = inner.replace(/\s*$/m, '');
+    inner = `${inner}\n${itemIndent}${newObj}\n${certsIndent}`;
+  }
 
-  const lines = all.map((o, idx) => `${itemIndent}${o}${idx < all.length - 1 ? ',' : ''}`);
-  const rebuilt = `\n${lines.join('\n')}\n${certsIndent}`;
-
-  content = content.replace(re, `${before}${rebuilt}${after}`);
+  content = content.replace(arrRe, `${before}${inner}${after}`);
   writeFileSync(filePath, content, 'utf-8');
   return true;
 }
