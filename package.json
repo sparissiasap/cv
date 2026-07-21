@@ -7,6 +7,7 @@
     "build:prod": "ng build --configuration production && node scripts/generate-og-pages.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
     "add-badge-credly": "node scripts/add-badge.mjs",
+	"add-pdf-cert": "node scripts/add-pdf-cert.mjs",
     "test": "jest"
   },
   "dependencies": {
