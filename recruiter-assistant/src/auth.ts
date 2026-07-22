@@ -23,6 +23,20 @@ export async function authorize() {
         process.env.GOOGLE_TOKEN
     ) {
 
+        console.log("CLIENT ID:");
+        console.log(process.env.GOOGLE_CLIENT_ID);
+
+        console.log(
+            "CLIENT SECRET LENGTH:",
+            process.env.GOOGLE_CLIENT_SECRET.length
+        );
+
+        console.log(
+            "TOKEN LENGTH:",
+            process.env.GOOGLE_TOKEN.length
+        );
+
+
         console.log("Using GitHub Actions OAuth credentials");
 
         const oAuth2Client =
@@ -101,8 +115,7 @@ export async function authorize() {
     const code = await askCode();
 
 
-    const { tokens } =
-        await oAuth2Client.getToken(code);
+    const { tokens } = await oAuth2Client.getToken(code);
 
 
     oAuth2Client.setCredentials(tokens);
