@@ -24,13 +24,11 @@ jobs:
 
     - name: Verify secrets
       run: |
-        echo "CLIENT_ID length: ${#GOOGLE_CLIENT_ID}"
-        echo "CLIENT_SECRET length: ${#GOOGLE_CLIENT_SECRET}"
-        echo "TOKEN length: ${#GOOGLE_TOKEN}"
+        echo "CLIENT JSON: ${#GOOGLE_CLIENT_SECRET_JSON}"
+        echo "TOKEN JSON: ${#GOOGLE_TOKEN_JSON}"
       env:
-        GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
-        GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
-        GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
+        GOOGLE_CLIENT_SECRET_JSON: ${{ secrets.GOOGLE_CLIENT_SECRET_JSON }}
+        GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
 
 
     - name: Setup Node
