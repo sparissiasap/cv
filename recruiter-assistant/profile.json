@@ -1,0 +1,28 @@
+﻿{
+  "name": "Sergio Parissi",
+  "title": "Senior .NET / Sitecore Developer",
+  "website": "https://sergioparissi.is-a.dev/sergio",
+  "skills": [
+    "Sitecore",
+    ".NET",
+    "C#",
+    "ASP.NET",
+    "SXA",
+    "Helix",
+    "Solr",
+    "Azure",
+    "React",
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ],
+  "preferred": [
+    "Remote",
+    "Long Term Contract",
+    "Senior Developer"
+  ],
+  "avoid": [
+    "Onsite",
+    "Relocation"
+  ]
+}

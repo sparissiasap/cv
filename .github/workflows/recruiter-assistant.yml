@@ -1,0 +1,42 @@
+﻿name: Recruiter Assistant
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+
+jobs:
+  analyze:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+
+
+    - name: Create Google OAuth files
+      working-directory: recruiter-assistant
+      run: |
+        echo '${{ secrets.GOOGLE_CLIENT_SECRET }}' > client_secret.json
+        echo '${{ secrets.GOOGLE_TOKEN }}' > token.json
+
+
+    - name: Install dependencies
+      working-directory: recruiter-assistant
+      run: npm install
+
+
+    - name: Run recruiter assistant
+      working-directory: recruiter-assistant
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: npm start

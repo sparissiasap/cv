@@ -14,3 +14,12 @@ take-gap-screenshot.js
 screenshot-*.png
 test-print.pdf
 UsersSergio_ParissiDesktop/
+credentials/
+.env
+.env.*
+client_secret.json
+token.json
+
+# Ignore all data except processed state
+recruiter-assistant/data/*
+!recruiter-assistant/data/processed.json
