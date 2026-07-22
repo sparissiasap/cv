@@ -46,13 +46,16 @@ jobs:
           GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
 
       - name: Commit processed emails
-        working-directory: .
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
+              
           git add recruiter-assistant/data/processed.json
-
-          git diff --cached --quiet || git commit -m "Update recruiter processed emails"
-
-          git push
+              
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update recruiter processed emails"
+            git push origin HEAD:${{ github.ref }}
+          fi
+        working-directory: .
