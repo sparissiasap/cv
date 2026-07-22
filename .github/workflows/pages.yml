@@ -1,54 +1,54 @@
-# name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
-# on:
-#   push:
-#     branches: [master]
-#   workflow_dispatch:
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
 
-# permissions:
-#   contents: read
-#   pages: write
-#   id-token: write
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-# concurrency:
-#   group: pages
-#   cancel-in-progress: true
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#     environment:
-#       name: github-pages
-#       url: ${{ steps.deployment.outputs.page_url }}
-#     steps:
-#       - uses: actions/checkout@v4
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
 
-#       - uses: actions/setup-node@v4
-#         with:
-#           node-version: '20'
-#           cache: 'npm'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
-#       - name: Install dependencies
-#         run: npm ci --legacy-peer-deps
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
 
-#       - name: Build Angular app
-#         run: npx ng build --configuration production
+      - name: Build Angular app
+        run: npx ng build --configuration production
 
-#       - name: Generate per-profile pages with correct OG tags
-#         run: node scripts/generate-og-pages.mjs
+      - name: Generate per-profile pages with correct OG tags
+        run: node scripts/generate-og-pages.mjs
 
-#       - name: Install Playwright browsers
-#         run: npx playwright install --with-deps chromium
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
 
-#       - name: Prerender routes
-#         run: node scripts/prerender.mjs
+      - name: Prerender routes
+        run: node scripts/prerender.mjs
 
-#       - uses: actions/configure-pages@v4
+      - uses: actions/configure-pages@v4
 
-#       - uses: actions/upload-pages-artifact@v3
-#         with:
-#           path: dist/cv-site/browser
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/cv-site/browser
 
-#       - name: Deploy to GitHub Pages
-#         id: deployment
-#         uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
