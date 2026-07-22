@@ -11,6 +11,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
+
+    defaults:
+      run:
+        working-directory: recruiter-assistant
+
+
     steps:
 
     - name: Checkout repository
@@ -21,22 +27,33 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 22
-
-
-    - name: Create Google OAuth files
-      working-directory: recruiter-assistant
-      run: |
-        echo '${{ secrets.GOOGLE_CLIENT_SECRET }}' > client_secret.json
-        echo '${{ secrets.GOOGLE_TOKEN }}' > token.json
+        cache: npm
+        cache-dependency-path: recruiter-assistant/package-lock.json
 
 
     - name: Install dependencies
-      working-directory: recruiter-assistant
-      run: npm install
+      run: npm ci
 
 
-    - name: Run recruiter assistant
-      working-directory: recruiter-assistant
-      env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    - name: Run Recruiter Assistant
       run: npm start
+      env:
+
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+        GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+        GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+        GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
+
+
+    - name: Commit processed emails
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+        git add recruiter-assistant/data/processed.json
+
+        git diff --cached --quiet || git commit -m "Update recruiter processed emails"
+
+        git push
+      working-directory: .
