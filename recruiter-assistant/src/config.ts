@@ -1,5 +1,5 @@
 export const config = {
     createDrafts:true,
-    autoSend:false,
+    autoSend:true,
     minimumScore:90
 }
