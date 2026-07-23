@@ -1,8 +1,9 @@
-﻿import { authorize } from "./auth.js";
+import { authorize } from "./auth.js";
 import { getRecentEmails } from "./gmail.js";
 import { isRecruiterEmail } from "./filter.js";
 import { analyzeJob } from "./analyzer.js";
 import { createDraft } from "./drafts.js";
+import { sendEmail } from "./send.js";
 import {
     getProcessedIds,
     markProcessed
@@ -23,7 +24,9 @@ console.log(
 const processed = getProcessedIds();
 
 for (const email of emails) {
+
     try {
+
         if (!email.id) {
             continue;
         }
@@ -47,6 +50,7 @@ for (const email of emails) {
                 email.subject
             );
 
+            markProcessed(email.id);
             continue;
         }
 
@@ -75,10 +79,36 @@ for (const email of emails) {
             analysis.score >= config.minimumScore &&
             analysis.response
         ) {
+
             const recruiterEmail =
                 email.from.match(/<(.+)>/)?.[1];
 
-            if (recruiterEmail) {
+            if (!recruiterEmail) {
+
+                console.log(
+                    "Could not extract recruiter email."
+                );
+
+                continue;
+            }
+
+            if (config.autoSend) {
+
+                await sendEmail(
+                    auth,
+                    recruiterEmail,
+                    `Re: ${email.subject}`,
+                    analysis.response
+                );
+
+                console.log(
+                    "EMAIL SENT:",
+                    recruiterEmail
+                );
+
+            }
+            else {
+
                 await createDraft(
                     auth,
                     recruiterEmail,
@@ -86,22 +116,28 @@ for (const email of emails) {
                     analysis.response
                 );
 
-                logRecruiter({
-                    from: email.from,
-                    subject: email.subject,
-                    score: analysis.score,
-                    decision: analysis.decision,
-                    draftCreated:
-                    analysis.decision === "RESPOND"
-                });
-
                 console.log(
                     "DRAFT CREATED:",
                     recruiterEmail
                 );
+
             }
+
+            logRecruiter({
+                from: email.from,
+                subject: email.subject,
+                score: analysis.score,
+                decision: analysis.decision,
+                draftCreated: !config.autoSend,
+                emailSent: config.autoSend
+            });
+
+            // Solo si todo salió bien
+            markProcessed(email.id);
+
         }
         else {
+
             console.log(
                 "NO DRAFT CREATED:",
                 analysis.decision
@@ -114,13 +150,34 @@ for (const email of emails) {
             auth,
             email.id
         );
+                "NO ACTION:",
+                {
+                    decision: analysis.decision,
+                    firstContact: analysis.isFirstContact,
+                    score: analysis.score,
+                    minimumScore: config.minimumScore,
+                    hasResponse: !!analysis.response
+                }
+            );
+
+            // Ya analizamos este correo y decidimos no actuar
+            markProcessed(email.id);
+
+        }
+
     }
-    catch(error) {
+    catch (error) {
+
         console.error(
             "Error processing email:",
             email.subject
         );
 
         console.error(error);
+
+        // No marcar como procesado.
+        // Se volverá a intentar en la siguiente ejecución.
+
     }
+
 }
