@@ -10,6 +10,7 @@ import {
 import { config } from "./config.js";
 import { logRecruiter } from "./logger.js";
 import { sendEmail } from "./send.js";
+import { markAsRead } from "./gmail-actions.js";
 
 const auth = await authorize();
 const emails = await getRecentEmails(auth);
@@ -108,6 +109,11 @@ for (const email of emails) {
         }
 
         markProcessed(email.id);
+
+        await markAsRead(
+            auth,
+            email.id
+        );
     }
     catch(error) {
         console.error(
@@ -118,4 +124,3 @@ for (const email of emails) {
         console.error(error);
     }
 }
-
