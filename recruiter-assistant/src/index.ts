@@ -78,27 +78,46 @@ for (const email of emails) {
                 email.from.match(/<(.+)>/)?.[1];
 
             if (recruiterEmail) {
-                await createDraft(
-                    auth,
-                    recruiterEmail,
-                    `Re: ${email.subject}`,
-                    analysis.response
-                );
 
-                logRecruiter({
-                    from: email.from,
-                    subject: email.subject,
-                    score: analysis.score,
-                    decision: analysis.decision,
-                    draftCreated:
-                    analysis.decision === "RESPOND"
-                });
+    if (config.autoSend) {
 
-                console.log(
-                    "DRAFT CREATED:",
-                    recruiterEmail
-                );
-            }
+        await sendEmail(
+            auth,
+            recruiterEmail,
+            `Re: ${email.subject}`,
+            analysis.response
+        );
+
+        console.log(
+            "EMAIL SENT:",
+            recruiterEmail
+        );
+
+    } else {
+
+        await createDraft(
+            auth,
+            recruiterEmail,
+            `Re: ${email.subject}`,
+            analysis.response
+        );
+
+        console.log(
+            "DRAFT CREATED:",
+            recruiterEmail
+        );
+    }
+
+    logRecruiter({
+        from: email.from,
+        subject: email.subject,
+        score: analysis.score,
+        decision: analysis.decision,
+        draftCreated: !config.autoSend,
+        emailSent: config.autoSend
+    });
+}
+}
         }
         else {
             console.log(
