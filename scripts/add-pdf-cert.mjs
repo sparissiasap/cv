@@ -2,8 +2,7 @@
  * add-pdf-cert.mjs — Adds a local PDF certificate to the repo and registers it in certGallery.certs
  *
  * Usage:
- *   npm run add-pdf-cert -- <pdf-path> --profile <name> --title "<title>" --issuer "<issuer>" --date "Mon YYYY"
- *                        [--type <type>] [--icon <icon>] [--badge <badge>] [--commit]
+ *   npm run add-pdf-cert -- <pdf-path> --profile <name> --title "<title>" --issuer "<issuer>" --date "Mon YYYY" [--type <type>] [--badge <badge>] [--commit]
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from 'fs';
