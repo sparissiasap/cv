@@ -10,7 +10,6 @@ import {
 } from "./storage.js";
 import { config } from "./config.js";
 import { logRecruiter } from "./logger.js";
-import { sendEmail } from "./send.js";
 import { markAsRead } from "./gmail-actions.js";
 
 const auth = await authorize();
@@ -45,12 +44,21 @@ for (const email of emails) {
                 .toLowerCase()
                 .startsWith("re:")
         ) {
+
             console.log(
                 "Skipping reply:",
                 email.subject
             );
 
             markProcessed(email.id);
+
+            try {
+                await markAsRead(auth, email.id);
+            }
+            catch {
+                console.warn("Could not mark email as read.");
+            }
+
             continue;
         }
 
@@ -80,8 +88,7 @@ for (const email of emails) {
             analysis.response
         ) {
 
-            const recruiterEmail =
-                email.from.match(/<(.+)>/)?.[1];
+            const recruiterEmail = email.from.match(/<(.+)>/)?.[1];
 
             if (!recruiterEmail) {
 
@@ -93,7 +100,6 @@ for (const email of emails) {
             }
 
             if (config.autoSend) {
-
                 await sendEmail(
                     auth,
                     recruiterEmail,
@@ -105,10 +111,8 @@ for (const email of emails) {
                     "EMAIL SENT:",
                     recruiterEmail
                 );
-
             }
             else {
-
                 await createDraft(
                     auth,
                     recruiterEmail,
@@ -120,7 +124,6 @@ for (const email of emails) {
                     "DRAFT CREATED:",
                     recruiterEmail
                 );
-
             }
 
             logRecruiter({
@@ -132,24 +135,17 @@ for (const email of emails) {
                 emailSent: config.autoSend
             });
 
-            // Solo si todo salió bien
             markProcessed(email.id);
 
+            try {
+                await markAsRead(auth, email.id);
+            }
+            catch {
+                console.warn("Could not mark email as read.");
+            }
         }
         else {
-
             console.log(
-                "NO DRAFT CREATED:",
-                analysis.decision
-            );
-        }
-
-        markProcessed(email.id);
-
-        await markAsRead(
-            auth,
-            email.id
-        );
                 "NO ACTION:",
                 {
                     decision: analysis.decision,
@@ -160,24 +156,22 @@ for (const email of emails) {
                 }
             );
 
-            // Ya analizamos este correo y decidimos no actuar
             markProcessed(email.id);
 
+            try {
+                await markAsRead(auth, email.id);
+            }
+            catch {
+                console.warn("Could not mark email as read.");
+            }
         }
-
     }
     catch (error) {
-
         console.error(
             "Error processing email:",
             email.subject
         );
 
         console.error(error);
-
-        // No marcar como procesado.
-        // Se volverá a intentar en la siguiente ejecución.
-
     }
-
 }
