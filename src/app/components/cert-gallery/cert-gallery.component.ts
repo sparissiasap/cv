@@ -9,10 +9,9 @@ export interface ModalData {
 }
 
 @Component({
-  selector: 'app-cert-gallery',
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: './cert-gallery.component.html'
+    selector: 'app-cert-gallery',
+    imports: [NgClass],
+    templateUrl: './cert-gallery.component.html'
 })
 export class CertGalleryComponent {
   @Input() gallery!: CertGallery;

@@ -3,10 +3,9 @@ import { NgClass } from '@angular/common';
 import { CvProfile } from '../../models/cv-data.model';
 
 @Component({
-  selector: 'app-hero',
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: './hero.component.html'
+    selector: 'app-hero',
+    imports: [NgClass],
+    templateUrl: './hero.component.html'
 })
 export class HeroComponent {
   @Input() profile!: CvProfile;

@@ -8,17 +8,16 @@ import { ProfilesComponent } from './profiles/profiles.component';
 import { TextSectionComponent } from './text-section/text-section.component';
 
 @Component({
-  selector: 'app-sidebar',
-  standalone: true,
-  imports: [
-    ExpertiseComponent,
-    CertListComponent,
-    EducationComponent,
-    LanguagesComponent,
-    ProfilesComponent,
-    TextSectionComponent
-  ],
-  templateUrl: './sidebar.component.html'
+    selector: 'app-sidebar',
+    imports: [
+        ExpertiseComponent,
+        CertListComponent,
+        EducationComponent,
+        LanguagesComponent,
+        ProfilesComponent,
+        TextSectionComponent
+    ],
+    templateUrl: './sidebar.component.html'
 })
 export class SidebarComponent {
   @Input() sections: SidebarSection[] = [];

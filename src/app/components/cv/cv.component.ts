@@ -16,18 +16,17 @@ import { ShareBarComponent } from '../share-bar/share-bar.component';
 import { LanguageToggleComponent } from '../language-toggle/language-toggle.component';
 
 @Component({
-  selector: 'app-cv',
-  standalone: true,
-  imports: [
-    HeroComponent,
-    ExperienceComponent,
-    SidebarComponent,
-    CertGalleryComponent,
-    PdfModalComponent,
-    ShareBarComponent,
-    LanguageToggleComponent
-  ],
-  templateUrl: './cv.component.html'
+    selector: 'app-cv',
+    imports: [
+        HeroComponent,
+        ExperienceComponent,
+        SidebarComponent,
+        CertGalleryComponent,
+        PdfModalComponent,
+        ShareBarComponent,
+        LanguageToggleComponent
+    ],
+    templateUrl: './cv.component.html'
 })
 export class CvComponent implements OnInit, OnDestroy {
   cvData: CvData | null = null;

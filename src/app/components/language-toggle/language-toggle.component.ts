@@ -2,10 +2,9 @@ import { Component, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-language-toggle',
-  standalone: true,
-  imports: [],
-  templateUrl: './language-toggle.component.html'
+    selector: 'app-language-toggle',
+    imports: [],
+    templateUrl: './language-toggle.component.html'
 })
 export class LanguageToggleComponent {
   @Input() availableLangs: string[] = [];

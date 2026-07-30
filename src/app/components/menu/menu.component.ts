@@ -8,10 +8,9 @@ interface ProfileCard {
 }
 
 @Component({
-  selector: 'app-menu',
-  standalone: true,
-  imports: [RouterLink],
-  templateUrl: './menu.component.html'
+    selector: 'app-menu',
+    imports: [RouterLink],
+    templateUrl: './menu.component.html'
 })
 export class MenuComponent implements OnInit, OnDestroy {
   profiles: ProfileCard[] = [

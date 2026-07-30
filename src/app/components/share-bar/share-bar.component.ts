@@ -11,10 +11,9 @@ const SHARE_ICONS: Record<string, string> = {
 };
 
 @Component({
-  selector: 'app-share-bar',
-  standalone: true,
-  imports: [],
-  templateUrl: './share-bar.component.html'
+    selector: 'app-share-bar',
+    imports: [],
+    templateUrl: './share-bar.component.html'
 })
 export class ShareBarComponent {
   @Input() items: ShareBarItem[] = [];

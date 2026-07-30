@@ -2,10 +2,9 @@ import { Component, Input, Output, EventEmitter, HostListener } from '@angular/c
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-pdf-modal',
-  standalone: true,
-  imports: [],
-  templateUrl: './pdf-modal.component.html'
+    selector: 'app-pdf-modal',
+    imports: [],
+    templateUrl: './pdf-modal.component.html'
 })
 export class PdfModalComponent {
   @Input() isOpen = false;
