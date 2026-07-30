@@ -1,9 +1,9 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, DOCUMENT } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { CvData } from '../models/cv-data.model';
-import { DOCUMENT } from '@angular/common';
+
 
 @Injectable({ providedIn: 'root' })
 export class CvDataService {
