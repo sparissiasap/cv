@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { TextSection } from '../../../models/cv-data.model';
 
 @Component({
     selector: 'app-text-section',
     imports: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <div class="card">
       <div class="section-label">{{ section.label }}</div>

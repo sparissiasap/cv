@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { SidebarSection } from '../../models/cv-data.model';
 import { ExpertiseComponent } from './expertise/expertise.component';
 import { CertListComponent } from './cert-list/cert-list.component';
@@ -17,6 +17,7 @@ import { TextSectionComponent } from './text-section/text-section.component';
         ProfilesComponent,
         TextSectionComponent
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './sidebar.component.html'
 })
 export class SidebarComponent {

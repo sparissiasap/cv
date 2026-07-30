@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, inject, DOCUMENT } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, DOCUMENT, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
@@ -26,6 +26,7 @@ import { LanguageToggleComponent } from '../language-toggle/language-toggle.comp
         ShareBarComponent,
         LanguageToggleComponent
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './cv.component.html'
 })
 export class CvComponent implements OnInit, OnDestroy {

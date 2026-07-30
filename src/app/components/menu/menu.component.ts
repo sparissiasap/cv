@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 interface ProfileCard {
@@ -10,6 +10,7 @@ interface ProfileCard {
 @Component({
     selector: 'app-menu',
     imports: [RouterLink],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './menu.component.html'
 })
 export class MenuComponent implements OnInit, OnDestroy {

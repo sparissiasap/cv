@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-language-toggle',
     imports: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './language-toggle.component.html'
 })
 export class LanguageToggleComponent {

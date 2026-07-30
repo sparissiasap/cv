@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { EducationSection } from '../../../models/cv-data.model';
 
 @Component({
     selector: 'app-education',
     imports: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './education.component.html'
 })
 export class EducationComponent {

@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { NgClass, NgStyle } from '@angular/common';
 import { ExpertiseSection } from '../../../models/cv-data.model';
 
 @Component({
     selector: 'app-expertise',
     imports: [NgClass, NgStyle],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './expertise.component.html'
 })
 export class ExpertiseComponent {

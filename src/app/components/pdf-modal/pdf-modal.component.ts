@@ -1,9 +1,10 @@
-import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-pdf-modal',
     imports: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './pdf-modal.component.html'
 })
 export class PdfModalComponent {

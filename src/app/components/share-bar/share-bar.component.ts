@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ShareBarItem } from '../../models/cv-data.model';
 
@@ -13,6 +13,7 @@ const SHARE_ICONS: Record<string, string> = {
 @Component({
     selector: 'app-share-bar',
     imports: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './share-bar.component.html'
 })
 export class ShareBarComponent {

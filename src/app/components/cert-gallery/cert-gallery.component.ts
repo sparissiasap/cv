@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { CertGallery, CertGalleryItem } from '../../models/cv-data.model';
 
@@ -11,6 +11,7 @@ export interface ModalData {
 @Component({
     selector: 'app-cert-gallery',
     imports: [NgClass],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './cert-gallery.component.html'
 })
 export class CertGalleryComponent {
