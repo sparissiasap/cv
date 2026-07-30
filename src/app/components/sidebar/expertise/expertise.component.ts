@@ -4,7 +4,7 @@ import { ExpertiseSection } from '../../../models/cv-data.model';
 
 @Component({
     selector: 'app-expertise',
-    imports: [NgClass, NgStyle],
+    imports: [],
     changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './expertise.component.html'
 })

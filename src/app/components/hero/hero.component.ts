@@ -4,7 +4,7 @@ import { CvProfile } from '../../models/cv-data.model';
 
 @Component({
     selector: 'app-hero',
-    imports: [NgClass],
+    imports: [],
     changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './hero.component.html'
 })

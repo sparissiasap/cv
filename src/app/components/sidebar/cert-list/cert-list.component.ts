@@ -4,7 +4,7 @@ import { CertListSection } from '../../../models/cv-data.model';
 
 @Component({
     selector: 'app-cert-list',
-    imports: [NgClass],
+    imports: [],
     changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './cert-list.component.html'
 })

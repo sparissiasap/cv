@@ -4,7 +4,7 @@ import { CvExperience } from '../../models/cv-data.model';
 
 @Component({
     selector: 'app-experience',
-    imports: [NgClass],
+    imports: [],
     changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './experience.component.html'
 })

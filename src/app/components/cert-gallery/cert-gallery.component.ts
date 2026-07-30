@@ -10,7 +10,7 @@ export interface ModalData {
 
 @Component({
     selector: 'app-cert-gallery',
-    imports: [NgClass],
+    imports: [],
     changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './cert-gallery.component.html'
 })
