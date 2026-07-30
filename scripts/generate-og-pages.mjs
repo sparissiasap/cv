@@ -18,11 +18,6 @@ const profiles = [
     image: `${BASE_URL}/assets/Sergio/og-image.webp`,
     imageWidth: 1200,
     imageHeight: 627,
-    hreflangs: [
-      { lang: 'es',        href: `${BASE_URL}/sergio` },
-      { lang: 'en',        href: `${BASE_URL}/sergio?lang=en` },
-      { lang: 'x-default', href: `${BASE_URL}/sergio` },
-    ],
     jsonld: {
       '@context': 'https://schema.org',
       '@type': 'Person',
@@ -40,11 +35,6 @@ const profiles = [
     image: `${BASE_URL}/assets/Dafne/perfil.webp`,
     imageWidth: 739,
     imageHeight: 1600,
-    hreflangs: [
-      { lang: 'es',        href: `${BASE_URL}/dafne` },
-      { lang: 'en',        href: `${BASE_URL}/dafne?lang=en` },
-      { lang: 'x-default', href: `${BASE_URL}/dafne` },
-    ],
     jsonld: {
       '@context': 'https://schema.org',
       '@type': 'Person',
@@ -62,11 +52,6 @@ const profiles = [
     image: `${BASE_URL}/assets/Giovanna/perfil.webp`,
     imageWidth: 389,
     imageHeight: 533,
-    hreflangs: [
-      { lang: 'es',        href: `${BASE_URL}/giovanna` },
-      { lang: 'en',        href: `${BASE_URL}/giovanna?lang=en` },
-      { lang: 'x-default', href: `${BASE_URL}/giovanna` },
-    ],
     jsonld: {
       '@context': 'https://schema.org',
       '@type': 'Person',
@@ -84,11 +69,6 @@ const profiles = [
     image: `${BASE_URL}/assets/Teresina/perfil.webp`,
     imageWidth: 275,
     imageHeight: 291,
-    hreflangs: [
-      { lang: 'es',        href: `${BASE_URL}/teresina` },
-      { lang: 'en',        href: `${BASE_URL}/teresina?lang=en` },
-      { lang: 'x-default', href: `${BASE_URL}/teresina` },
-    ],
     jsonld: {
       '@context': 'https://schema.org',
       '@type': 'Person',
@@ -134,7 +114,6 @@ for (const p of profiles) {
     .replace(/(<meta name="twitter:image" content=")[^"]*"/, `$1${p.image}"`)
     .replace(/(<link rel="canonical" href=")[^"]*"/, `$1${url}"`)
     .replace('</head>', [
-      p.hreflangs.map(h => `  <link rel="alternate" hreflang="${h.lang}" href="${h.href}">`).join('\n'),
       `  <script type="application/ld+json">${JSON.stringify(p.jsonld)}</script>`,
       inlineScript,
       '</head>',
