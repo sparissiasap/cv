@@ -7,6 +7,11 @@
         <span class="share-icon" [innerHTML]="getIcon(item.icon)" aria-hidden="true"></span>
         <span class="share-label">{{ item.label }}</span>
       </button>
+    } @else if (item.type === 'pdf') {
+      <button class="share-btn" (click)="downloadPDF()" [attr.aria-label]="item.label">
+        <span class="share-icon" [innerHTML]="getIcon(item.icon)" aria-hidden="true"></span>
+        <span class="share-label">{{ item.label }}</span>
+      </button>
     } @else if (item.type === 'copy') {
       <button class="share-btn" (click)="copyLink()" [attr.aria-label]="copyLabel">
         <span class="share-icon" [innerHTML]="getIcon(item.icon)" aria-hidden="true"></span>

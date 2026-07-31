@@ -2,7 +2,7 @@
   "meta": {
     "lang": "en",
     "availableLangs": ["en", "es"],
-    "pageTitle": "Sergio Parissi Reyes — Senior .NET & Sitecore Specialist",
+    "pageTitle": "Sergio Parissi Reyes — Senior .NET Developer & Sitecore Specialist",
     "description": "10+ years in .NET & C#, 7+ in Sitecore. Azure cloud, AI-assisted development. Senior Software Developer at EPAM Systems.",
     "shareUrl": "https://sergioparissi.is-a.dev/sergio",
     "ogImage": "og-image.webp"
@@ -17,7 +17,7 @@
       { "icon": "📞", "text": "+52 998 200 2898", "href": "tel:+529982002898" },
 	  { "icon": "✉️", "text": "spr_123@hotmail.com", "href": "mailto:spr_123@hotmail.com" },
       { "icon": "✉️", "text": "sergioparissireyes@gmail.com", "href": "mailto:sergioparissireyes@gmail.com" },
-      { "icon": "🔗", "text": "LinkedIn", "href": "https://www.linkedin.com/in/sergioparissi" },
+      { "icon": "🔗", "text": "LinkedIn", "href": "https://www.linkedin.com/in/sergio-parissi-reyes-3ab327b8/" },
       { "icon": "💻", "text": "GitHub", "href": "https://github.com/sparissiasap" }
     ],
     "stats": [
@@ -296,7 +296,8 @@
     ]
   },
   "shareBar": [
-    { "type": "print",   "icon": "bi-printer",    "label": "PDF / Imprimir" },
+    { "type": "pdf",     "icon": "bi-file-pdf",   "label": "PDF", "action": "downloadPDF" },
+    { "type": "print",   "icon": "bi-printer",    "label": "Imprimir" },
     { "type": "divider" },
     { "type": "link",    "icon": "bi-linkedin",   "label": "LinkedIn",  "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsergioparissi.is-a.dev%2Fsergio" },
     { "type": "link",    "icon": "bi-twitter-x",  "label": "X",         "href": "https://twitter.com/intent/tweet?text=CV%20interactivo%20%E2%80%94%20Sergio%20Parissi%20Reyes%2C%20Senior%20.NET%20%26%20Sitecore%20Developer&url=https%3A%2F%2Fsergioparissi.is-a.dev%2Fsergio" },

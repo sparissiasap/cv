@@ -157,7 +157,7 @@ export interface ShareBarDivider {
 }
 
 export interface ShareBarButton {
-  type: 'print' | 'copy' | 'link';
+  type: 'divider' | 'print' | 'pdf' | 'copy' | 'link';
   icon: string;
   label: string;
   href?: string;

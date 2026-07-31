@@ -13,7 +13,8 @@
 }
 
 @if (cvData) {
-  <main class="page">
+  <!-- Se añade la referencia local #cvContext aquí -->
+  <main class="page" #cvContext>
     <app-hero [profile]="cvData.profile" [assetsBase]="assetsBase" />
 
     <div class="grid">
@@ -41,7 +42,7 @@
   </main>
 
   @if (cvData.shareBar?.length) {
-    <app-share-bar [items]="cvData.shareBar!" [shareUrl]="shareUrl" />
+    <app-share-bar [items]="cvData.shareBar!" [shareUrl]="shareUrl" [targetElement]="cvContext" />
   }
 
   <app-language-toggle
