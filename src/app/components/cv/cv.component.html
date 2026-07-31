@@ -13,7 +13,7 @@
 }
 
 @if (cvData) {
-  <div class="page">
+  <main class="page">
     <app-hero [profile]="cvData.profile" [assetsBase]="assetsBase" />
 
     <div class="grid">
@@ -38,7 +38,7 @@
         [assetsBase]="assetsBase"
         (openModal)="openModal($event)" />
     }
-  </div>
+  </main>
 
   @if (cvData.shareBar?.length) {
     <app-share-bar [items]="cvData.shareBar!" [shareUrl]="shareUrl" />

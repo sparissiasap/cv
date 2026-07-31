@@ -21,13 +21,14 @@
           <a class="contact-chip"
             [href]="item.href"
             [attr.target]="isExternal(item.href) ? '_blank' : null"
-            [attr.rel]="isExternal(item.href) ? 'noopener noreferrer' : null">
-            <span class="icon">{{ item.icon }}</span>
+            [attr.rel]="isExternal(item.href) ? 'noopener noreferrer' : null"
+            [attr.aria-label]="item.text">
+            <span class="icon" aria-hidden="true">{{ item.icon }}</span>
             <span>{{ item.text }}</span>
           </a>
         } @else {
           <span class="contact-chip">
-            <span class="icon">{{ item.icon }}</span>
+            <span class="icon" aria-hidden="true">{{ item.icon }}</span>
             <span>{{ item.text }}</span>
           </span>
         }

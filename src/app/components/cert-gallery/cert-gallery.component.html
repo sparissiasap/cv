@@ -13,7 +13,7 @@
           }
         </div>
         <div class="cert-card-meta">{{ cert.issuer }} · {{ cert.date }}</div>
-        <button class="cert-card-btn" (click)="open(cert)">View Certificate ↗</button>
+        <button class="cert-card-btn" (click)="open(cert)" [attr.aria-label]="'Ver certificado: ' + cert.title">View Certificate ↗</button>
       </div>
     }
   </div>

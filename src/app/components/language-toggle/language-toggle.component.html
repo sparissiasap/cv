@@ -4,7 +4,8 @@
       <button class="cv-lang-btn"
         [class.active]="lang === currentLang"
         [disabled]="lang === currentLang"
-        (click)="switchLang(lang)">
+        (click)="switchLang(lang)"
+        [attr.aria-label]="'Cambiar idioma a ' + lang.toUpperCase()">
         {{ lang.toUpperCase() }}
       </button>
     }
