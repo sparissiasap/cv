@@ -3,7 +3,8 @@
     [src]="assetsBase + profile.photo"
     [alt]="'Foto de ' + profile.name"
     [style.objectPosition]="profile.photoPosition || 'center top'"
-    fetchpriority="high" />
+    fetchpriority="high" 
+    loading="lazy"/>
 
   <div class="hero-info">
     <div class="hero-name">{{ profile.name }}</div>
