@@ -1,9 +1,21 @@
-import { Component, Input, Output, EventEmitter, HostListener, ChangeDetectionStrategy } from '@angular/core';
+import { 
+  Component, 
+  Input, 
+  Output, 
+  EventEmitter, 
+  HostListener, 
+  ChangeDetectionStrategy,
+  ElementRef,
+  ViewChild
+} from '@angular/core';
+
+import { A11yModule } from '@angular/cdk/a11y';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
 
 @Component({
     selector: 'app-pdf-modal',
-    imports: [],
+    imports: [A11yModule],
     changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './pdf-modal.component.html'
 })
@@ -12,6 +24,9 @@ export class PdfModalComponent {
   @Input() title = '';
   @Input() subtitle = '';
   @Output() closed = new EventEmitter<void>();
+
+  @ViewChild('modalBox')
+  modalBox?: ElementRef<HTMLElement>;
 
   safeSrc: SafeResourceUrl = '';
 
@@ -24,7 +39,7 @@ export class PdfModalComponent {
 
   constructor(private sanitizer: DomSanitizer) {}
 
-  @HostListener('document:keydown.escape')
+  //@HostListener('document:keydown.escape')
   close(): void {
     this.closed.emit();
   }

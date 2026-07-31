@@ -36,7 +36,7 @@
       <app-cert-gallery
         [gallery]="cvData.certGallery!"
         [assetsBase]="assetsBase"
-        (openModal)="openModal($event)" />
+        (openModal)="openModal($event.data, $event.trigger)" />
     }
   </main>
 

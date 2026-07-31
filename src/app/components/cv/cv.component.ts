@@ -1,4 +1,10 @@
-import { Component, OnInit, OnDestroy, inject, DOCUMENT, ChangeDetectionStrategy } from '@angular/core';
+import { Component, 
+  OnInit, 
+  OnDestroy,
+  inject, 
+  DOCUMENT, 
+  ChangeDetectionStrategy 
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
@@ -48,6 +54,7 @@ export class CvComponent implements OnInit, OnDestroy {
   modalTitle = '';
   modalSubtitle = '';
 
+  private modalTrigger: HTMLElement | null = null;
   private sub?: Subscription;
   private titleService = inject(Title);
   private metaService = inject(Meta);
@@ -144,7 +151,9 @@ export class CvComponent implements OnInit, OnDestroy {
     link.setAttribute('href', url);
   }
 
-  openModal(data: ModalData): void {
+  openModal(data: ModalData, trigger: HTMLElement): void {
+    this.modalTrigger = trigger;
+
     this.modalSrc = data.src;
     this.modalTitle = data.title;
     this.modalSubtitle = data.subtitle;
@@ -154,6 +163,11 @@ export class CvComponent implements OnInit, OnDestroy {
   closeModal(): void {
     this.modalOpen = false;
     this.modalSrc = '';
+
+    setTimeout(() => {
+      this.modalTrigger?.focus();
+      this.modalTrigger = null;
+    });
   }
 
   get shareUrl(): string {

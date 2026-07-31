@@ -1,19 +1,43 @@
-<div [class]="isOpen ? 'modal-overlay open' : 'modal-overlay'"
-     (click)="onOverlayClick($event)"
-     role="dialog"
-     aria-modal="true"
-     [attr.aria-label]="title">
-  <div class="modal-box" (click)="$event.stopPropagation()">
+<div
+  [class]="isOpen ? 'modal-overlay open' : 'modal-overlay'"
+  (click)="onOverlayClick($event)"
+  role="dialog"
+  aria-modal="true"
+  [attr.aria-label]="title"
+  (keydown.escape)="close()">
+
+  <div
+    #modalBox
+    class="modal-box"
+    cdkTrapFocus
+    [cdkTrapFocusAutoCapture]="isOpen"
+    (click)="$event.stopPropagation()">
+
     <div class="modal-header">
       <div>
-        <div class="modal-title">{{ title }}</div>
+        <div
+          id="certificate-modal-title"
+          class="modal-title">
+          {{ title }}
+        </div>
         <div class="modal-subtitle">{{ subtitle }}</div>
       </div>
-      <button class="modal-close" (click)="closed.emit()" aria-label="Cerrar">✕</button>
+
+      <button
+        type="button"
+        class="modal-close"
+        (click)="close()"
+        aria-label="Cerrar certificado">
+        ✕
+      </button>
     </div>
+
     <div class="modal-body">
       @if (isOpen && safeSrc) {
-        <iframe [src]="safeSrc" title="Visor de certificado"></iframe>
+        <iframe
+          [src]="safeSrc"
+          title="Visor de certificado">
+        </iframe>
       }
     </div>
   </div>
