@@ -1,9 +1,11 @@
 <div class="hero">
   <img class="hero-photo"
+    fetchpriority="high"
     [src]="assetsBase + profile.photo"
     [alt]="'Foto de ' + profile.name"
     [style.objectPosition]="profile.photoPosition || 'center top'"
-    fetchpriority="high" 
+    width="175" 
+    height="175"
     loading="lazy"/>
 
   <div class="hero-info">

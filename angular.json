@@ -66,6 +66,7 @@
           "configurations": {
             "production": {
               "baseHref": "/",
+              "optimization": true,
               "budgets": [
                 {
                   "type": "initial",

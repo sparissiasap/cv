@@ -15,7 +15,7 @@
     "contact": [
       { "icon": "📍", "text": "Cancún, Mexico" },
       { "icon": "📞", "text": "+52 998 200 2898", "href": "tel:+529982002898" },
-	  { "icon": "✉️", "text": "spr_123@hotmail.com", "href": "mailto:spr_123@hotmail.com" },
+	    { "icon": "✉️", "text": "spr_123@hotmail.com", "href": "mailto:spr_123@hotmail.com" },
       { "icon": "✉️", "text": "sergioparissireyes@gmail.com", "href": "mailto:sergioparissireyes@gmail.com" },
       { "icon": "🔗", "text": "LinkedIn", "href": "https://www.linkedin.com/in/sergio-parissi-reyes-3ab327b8/" },
       { "icon": "💻", "text": "GitHub", "href": "https://github.com/sparissiasap" }

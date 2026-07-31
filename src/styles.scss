@@ -596,7 +596,7 @@ body.loaded .eb-fill { width: var(--w); }
 .link-row { display: flex; flex-direction: column; gap: 7px; }
 .profile-link {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: 9pt; font-weight: 600; color: var(--blue);
+  font-size: 9pt; font-weight: 600; color: var(--text-primary, #1d1d1f);
   text-decoration: none; padding: 8px 13px;
   border-radius: 13px; background: rgba(0,113,227,0.08);
   border: 1px solid rgba(0,113,227,0.16);
@@ -605,6 +605,7 @@ body.loaded .eb-fill { width: var(--w); }
 .profile-link:hover {
   background: rgba(0,113,227,0.16); border-color: rgba(0,113,227,0.32);
   transform: translateX(4px); box-shadow: 0 4px 16px rgba(0,113,227,0.18);
+  color: var(--blue-hover, #0051a8);
 }
 
 /* ════════════════════════════
