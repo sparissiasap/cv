@@ -7,10 +7,14 @@ const root = join(__dirname, '..');
 
 const images = [
   { src: 'src/assets/Sergio/perfil.png',   out: 'src/assets/Sergio/perfil.webp',   quality: 85, width: 350 },
+  { src: 'src/assets/Sergio/perfil.png',   out: 'src/assets/Sergio/perfil-1x.webp', quality: 85, width: 175 },
   { src: 'src/assets/Sergio/og-image.png', out: 'src/assets/Sergio/og-image.webp', quality: 85, width: 1200 },
   { src: 'src/assets/Dafne/perfil.jpg',    out: 'src/assets/Dafne/perfil.webp',    quality: 85, width: 350 },
+  { src: 'src/assets/Dafne/perfil.jpg',    out: 'src/assets/Dafne/perfil-1x.webp', quality: 85, width: 175 },
   { src: 'src/assets/Giovanna/perfil.png', out: 'src/assets/Giovanna/perfil.webp', quality: 85, width: 350 },
+  { src: 'src/assets/Giovanna/perfil.png', out: 'src/assets/Giovanna/perfil-1x.webp', quality: 85, width: 175 },
   { src: 'src/assets/Teresina/perfil.png', out: 'src/assets/Teresina/perfil.webp', quality: 85, width: 350 },
+  { src: 'src/assets/Teresina/perfil.png', out: 'src/assets/Teresina/perfil-1x.webp', quality: 85, width: 175 },
 ];
 
 for (const { src, out, quality, width } of images) {

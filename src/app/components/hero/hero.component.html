@@ -2,6 +2,7 @@
   <img class="hero-photo"
     fetchpriority="high"
     [src]="assetsBase + profile.photo"
+    [srcset]="assetsBase + profile.photo.replace('.webp', '-1x.webp') + ' 1x, ' + assetsBase + profile.photo + ' 2x'"
     [alt]="'Foto de ' + profile.name"
     [style.objectPosition]="profile.photoPosition || 'center top'"
     width="175" 
