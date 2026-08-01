@@ -35,6 +35,9 @@ jobs:
       - name: Optimize images
         run: node scripts/optimize-images.mjs
 
+      - name: Backfill badges
+        run: node scripts/backfill-badges.mjs
+
       - name: Build Angular app
         run: npx ng build --configuration production
 

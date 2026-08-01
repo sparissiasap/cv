@@ -14,6 +14,7 @@ import { readFileSync, writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
+import { downloadAndOptimizeBadge } from './badge-image-utils.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -117,6 +118,10 @@ if (!name || !issuer || !imageUrl) {
   process.exit(1);
 }
 
+console.log('Downloading and optimizing badge image...');
+const localImageUrl = await downloadAndOptimizeBadge(imageUrl, profile, ROOT);
+console.log(`  Saved: ${localImageUrl}\n`);
+
 let metaEn = `${issuer} · ???`;
 let metaEs = metaEn;
 
@@ -130,8 +135,8 @@ if (dateIssued) {
 
 const esc = (s) => String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 
-const badgeObjEn = `{ "name": "${esc(name)}", "meta": "${esc(metaEn)}", "verifyUrl": "${esc(verifyUrl)}", "imageUrl": "${esc(imageUrl)}", "dot": "${dot}" }`;
-const badgeObjEs = `{ "name": "${esc(name)}", "meta": "${esc(metaEs)}", "verifyUrl": "${esc(verifyUrl)}", "imageUrl": "${esc(imageUrl)}", "dot": "${dot}" }`;
+const badgeObjEn = `{ "name": "${esc(name)}", "meta": "${esc(metaEn)}", "verifyUrl": "${esc(verifyUrl)}", "imageUrl": "${esc(localImageUrl)}", "dot": "${dot}" }`;
+const badgeObjEs = `{ "name": "${esc(name)}", "meta": "${esc(metaEs)}", "verifyUrl": "${esc(verifyUrl)}", "imageUrl": "${esc(localImageUrl)}", "dot": "${dot}" }`;
 
 function insertBadge(filePath, newObjLine) {
   let content = readFileSync(filePath, 'utf-8');
