@@ -160,7 +160,7 @@ Find the `<!-- CERTIFICATIONS -->` card in `index.html`:
     <div class="cert-name-text">Cert Title Here</div>
     <div class="cert-meta">
       Issuer &nbsp;·&nbsp; Month Year &nbsp;·&nbsp;
-      <a href="https://credly.com/..." target="_blank">Verify ↗</a>
+      <a href="https://credly.com/..." target="_blank">Verify↗</a>
     </div>
   </div>
 </div>
