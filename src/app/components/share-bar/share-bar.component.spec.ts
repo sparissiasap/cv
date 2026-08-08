@@ -1,14 +1,16 @@
 import { DomSanitizer } from '@angular/platform-browser';
 import { ShareBarComponent } from './share-bar.component';
 import { ShareBarItem } from '../../models/cv-data.model';
+import { PdfGeneratorService } from '../../services/pdf-generator.service';
 
 const mockSanitizer = { bypassSecurityTrustHtml: jest.fn((v: string) => v) } as unknown as DomSanitizer;
+const mockPdfService = { generatePDF: jest.fn() } as unknown as PdfGeneratorService;
 
 describe('ShareBarComponent', () => {
   let component: ShareBarComponent;
 
   beforeEach(() => {
-    component = new ShareBarComponent(mockSanitizer);
+    component = new ShareBarComponent(mockSanitizer, mockPdfService);
   });
 
   it('isButton con item tipo "print" → retorna true', () => {

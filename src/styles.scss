@@ -658,6 +658,7 @@ body.loaded .eb-fill { width: var(--w); }
   width: 48px; height: 48px; border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
   font-size: 24px; flex-shrink: 0;
+  background: rgba(0,0,0,0.05);
   box-shadow: 0 4px 14px rgba(0,0,0,0.10);
 }
 .cert-card-icon.anthropic { background: linear-gradient(135deg, #eaeaea, #d8d8d8); }
@@ -742,8 +743,16 @@ body.loaded .eb-fill { width: var(--w); }
 }
 .share-btn:hover { background: rgba(255,255,255,0.18); color: #fff; transform: translateY(-1px); }
 .share-btn:active { transform: translateY(0); }
+.share-btn:disabled { opacity: 0.7; cursor: default; transform: none; }
 .share-icon { width: 16px; height: 16px; display: flex; align-items: center; flex-shrink: 0; }
 .share-icon svg { width: 16px; height: 16px; display: block; }
+.share-icon-spinner {
+  width: 16px; height: 16px; flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-top-color: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  animation: cv-spin 0.75s linear infinite;
+}
 .share-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.20); margin: 0 4px; flex-shrink: 0; }
 
 /* ════════════════════════════
@@ -929,44 +938,6 @@ body.loaded .eb-fill { width: var(--w); }
   .share-bar { gap: 2px; padding: 8px 10px; }
 }
 
-/* ─── PRINT ─── */
-@page { margin: 0; size: A4 portrait; }
-
-@media print {
-  *, *::before, *::after {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-  body { margin: 0 !important; padding: 0 !important; min-height: 0 !important; background: white !important; }
-  .page { margin: 0 !important; padding: 14mm 16mm !important; max-width: 210mm !important; width: 100% !important; box-sizing: border-box !important; }
-  * { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
-  .share-bar, .modal-overlay, .certs-section, .bg-fx, .cv-lang-toggle { display: none !important; }
-  .orb { animation: none !important; }
-  .card, .pill, .hero-photo { transform: none !important; transition: none !important; }
-  .hero { overflow: hidden !important; break-inside: avoid; box-shadow: none !important; }
-  .hero::before, .hero::after { display: none !important; }
-  .card {
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    margin-bottom: 14px !important;
-  }
-  .cert-item, .exp-bar, .lang-item { break-inside: avoid; page-break-inside: avoid; }
-  .section-label { break-after: avoid; page-break-after: avoid; }
-  .job-meta { break-after: avoid; page-break-after: avoid; }
-  .section-label {
-    background: none !important;
-    -webkit-text-fill-color: var(--blue) !important;
-    color: var(--blue) !important;
-    animation: none !important;
-  }
-  .summary-text strong, .stat-number {
-    background: none !important;
-    -webkit-text-fill-color: var(--blue) !important;
-    color: var(--blue) !important;
-  }
-  .hero-photo { image-rendering: auto; max-width: 172px !important; max-height: 172px !important; }
-}
-
 /* ════════════════════════════
    PROFILE THEMES
 ════════════════════════════ */
@@ -1081,4 +1052,59 @@ body.theme-teresina {
     color: var(--blue) !important;
   }
   .hero-photo { image-rendering: auto; max-width: 172px !important; max-height: 172px !important; }
+}
+
+/* ─── PDF CAPTURE (html2canvas snapshot for the "Descargar PDF" button) ───
+   html2canvas can't render backdrop-filter or background-clip:text gradients,
+   and it captures whatever animation frame is on-screen at that instant.
+   This class is toggled on <body> right before the snapshot is taken so the
+   captured image degrades the same way @media print already does above. */
+body.pdf-capture-mode {
+  * {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .card, .pill, .hero-photo, .cert-card { transform: none !important; }
+  .hero { box-shadow: none !important; }
+  .hero::before, .hero::after { display: none !important; }
+
+  .hero-name,
+  .section-label,
+  .job-company-text,
+  .edu-school-text,
+  .summary-text strong,
+  .stat-number {
+    background: none !important;
+    -webkit-text-fill-color: var(--blue) !important;
+    color: var(--blue) !important;
+  }
+
+  /* html2canvas's text renderer mismeasures the available width for these
+     blocks and wraps them one line too early, overlapping the sibling right
+     below. Forcing an explicit width (instead of the ambiguous shrink-to-fit
+     sizing they get from their flex/block context) gives it an unambiguous
+     width to wrap against — this only helps when the real site doesn't wrap
+     the text either, which is true for both of these. (`.edu-school-text` and
+     `.cert-card-title` used to be here too, but those *do* legitimately wrap
+     on the real site for some data, so they're height-locked from JS instead
+     — see pdf-generator.service.ts — rather than forced onto one line here.) */
+  .job-meta > div:first-child { flex: 1 1 0% !important; min-width: 0 !important; }
+  .lang-level-text { width: max-content !important; }
+
+  /* Pills/chips are shrink-to-fit flex-wrap items with short multi-word labels
+     ("Helix / Habitat", "JSS Headless"...). When html2canvas wraps one to a
+     2nd line, it sizes the pill's rounded background for just the 1st line,
+     leaving the wrapped word floating below with no background at all. Since
+     these labels are short, forcing them to a single line sidesteps the bug
+     entirely instead of trying to get the wrapped-box height right — a wider
+     single-line pill (or one pushed to its own row by the flex-wrap parent)
+     looks correct either way. */
+  .pill, .eb-tag, .hero-chips span, .contact-chip { white-space: nowrap !important; }
+  /* Forcing .eb-tag to a single line (above) makes it wider, which — in the
+     space-between flex row it shares with .eb-name — leaves .eb-name less
+     room than before and pushes IT into the same wrap bug instead. Same fix
+     as the job-meta title: let it grow into the row's spare space. */
+  .eb-name { flex: 1 1 0% !important; min-width: 0 !important; }
 }

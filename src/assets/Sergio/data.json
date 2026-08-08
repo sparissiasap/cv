@@ -296,8 +296,7 @@
     ]
   },
   "shareBar": [
-    { "type": "pdf",     "icon": "bi-file-pdf",   "label": "PDF", "action": "downloadPDF" },
-    { "type": "print",   "icon": "bi-printer",    "label": "Imprimir" },
+    { "type": "print",   "icon": "bi-printer",    "label": "PDF / Print" },
     { "type": "divider" },
     { "type": "link",    "icon": "bi-linkedin",   "label": "LinkedIn",  "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsergioparissi.is-a.dev%2Fsergio" },
     { "type": "link",    "icon": "bi-twitter-x",  "label": "X",         "href": "https://twitter.com/intent/tweet?text=CV%20interactivo%20%E2%80%94%20Sergio%20Parissi%20Reyes%2C%20Senior%20.NET%20%26%20Sitecore%20Developer&url=https%3A%2F%2Fsergioparissi.is-a.dev%2Fsergio" },

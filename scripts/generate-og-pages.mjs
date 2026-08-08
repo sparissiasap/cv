@@ -24,7 +24,7 @@ const profiles = [
       name: 'Sergio Parissi Reyes',
       jobTitle: 'Senior Software Developer',
       description: '10+ years in .NET & C#, 7+ in Sitecore. Azure cloud, AI-assisted development.',
-      url: `${BASE_URL}/sergio`,
+      url: `${BASE_URL}/sergio/`,
       image: `${BASE_URL}/assets/Sergio/og-image.webp`,
     },
   },
@@ -41,7 +41,7 @@ const profiles = [
       name: 'Dafne Cuevas',
       jobTitle: 'Coordinadora de Operaciones',
       description: 'Profesional con 9+ años en administración, logística operativa y manejo de personal.',
-      url: `${BASE_URL}/dafne`,
+      url: `${BASE_URL}/dafne/`,
       image: `${BASE_URL}/assets/Dafne/perfil.webp`,
     },
   },
@@ -58,7 +58,7 @@ const profiles = [
       name: 'Giovanna Parissi Reyes',
       jobTitle: 'Ingeniera Civil',
       description: 'Ingeniera Civil con más de 6 años en supervisión y residencia de obras hoteleras de gran escala.',
-      url: `${BASE_URL}/giovanna`,
+      url: `${BASE_URL}/giovanna/`,
       image: `${BASE_URL}/assets/Giovanna/perfil.webp`,
     },
   },
@@ -75,7 +75,7 @@ const profiles = [
       name: 'Teresina Parissi Reyes',
       jobTitle: 'Administradora',
       description: 'Licenciada en Administración con Maestría en Alta Gerencia e Inteligencia Estratégica.',
-      url: `${BASE_URL}/teresina`,
+      url: `${BASE_URL}/teresina/`,
       image: `${BASE_URL}/assets/Teresina/perfil.webp`,
     },
   },
@@ -85,7 +85,10 @@ const root = join(__dirname, '..');
 const template = readFileSync(join(distDir, 'index.html'), 'utf8');
 
 for (const p of profiles) {
-  const url = `${BASE_URL}/${p.slug}`;
+  // Barra final obligatoria: es la URL que GitHub Pages sirve realmente.
+  // Sin ella el canonical apunta a /sergio, que hace 301 a /sergio/, y Google
+  // lo reporta como "Error de redirección".
+  const url = `${BASE_URL}/${p.slug}/`;
   const title = esc(p.title);
   const desc = esc(p.description);
 
@@ -119,7 +122,9 @@ for (const p of profiles) {
       '</head>',
     ].filter(Boolean).join('\n'));
 
-  // Write lowercase and capitalized variants (GitHub Pages is case-sensitive)
+  // Write lowercase and capitalized variants (GitHub Pages is case-sensitive).
+  // Ambas comparten el mismo canonical en minúsculas, así que Google trata
+  // /Sergio/ como alternativa correctamente canonicalizada, no como duplicado.
   const variants = [p.slug, p.slug[0].toUpperCase() + p.slug.slice(1)];
   for (const dir of variants) {
     const out = join(distDir, dir);
@@ -129,8 +134,24 @@ for (const p of profiles) {
   }
 }
 
-// menu route — copy default index.html
+// menu route — necesita sus propios meta.
+// Copiar la plantilla tal cual heredaba el canonical de la raíz, lo que le
+// decía a Google "no me indexes", y /menu nunca podía posicionar.
+const menuUrl = `${BASE_URL}/menu/`;
+const menuTitle = esc('CVs Parissi — Selecciona un perfil');
+const menuDesc = esc('Índice de currículums de la familia Parissi: Sergio, Dafne, Giovanna y Teresina.');
+
+const menuHtml = template
+  .replace(/<title>[^<]*<\/title>/, `<title>${menuTitle}</title>`)
+  .replace(/(<meta name="description" content=")[^"]*"/, `$1${menuDesc}"`)
+  .replace(/(<meta property="og:title" content=")[^"]*"/, `$1${menuTitle}"`)
+  .replace(/(<meta property="og:description" content=")[^"]*"/, `$1${menuDesc}"`)
+  .replace(/(<meta property="og:url" content=")[^"]*"/, `$1${menuUrl}"`)
+  .replace(/(<meta name="twitter:title" content=")[^"]*"/, `$1${menuTitle}"`)
+  .replace(/(<meta name="twitter:description" content=")[^"]*"/, `$1${menuDesc}"`)
+  .replace(/(<link rel="canonical" href=")[^"]*"/, `$1${menuUrl}"`);
+
 const menuDir = join(distDir, 'menu');
 mkdirSync(menuDir, { recursive: true });
-writeFileSync(join(menuDir, 'index.html'), template);
+writeFileSync(join(menuDir, 'index.html'), menuHtml);
 console.log('✓ menu/index.html');

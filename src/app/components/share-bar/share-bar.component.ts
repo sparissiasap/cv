@@ -21,9 +21,10 @@ const SHARE_ICONS: Record<string, string> = {
 export class ShareBarComponent {
   @Input() items: ShareBarItem[] = [];
   @Input() shareUrl = '';
-  @Input() targetElement!: HTMLElement; // <- Recibe el elemento del CV
+  @Input() targetElement!: HTMLElement;
 
   copyLabel = 'Copiar enlace';
+  pdfLoading = false;
   private copyTimeout?: ReturnType<typeof setTimeout>;
 
   constructor(private sanitizer: DomSanitizer, private pdfService: PdfGeneratorService) {}
@@ -68,10 +69,13 @@ export class ShareBarComponent {
     });
   }
 
-  // <- Método disparado por el botón PDF en share-bar.component.html
-  downloadPDF(): void {
-    if (this.targetElement) {
-      this.pdfService.generatePDF(this.targetElement);
+  async downloadPDF(): Promise<void> {
+    if (!this.targetElement || this.pdfLoading) return;
+    this.pdfLoading = true;
+    try {
+      await this.pdfService.generatePDF(this.targetElement);
+    } finally {
+      this.pdfLoading = false;
     }
   }
 }
