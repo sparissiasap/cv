@@ -26,11 +26,6 @@ export const routes: Routes = [
     loadComponent: () => import('./components/cv/cv.component').then(m => m.CvComponent),
     data: { profile: 'Teresina' }
   },
-  {
-    path: 'memorama-privacidad',
-    loadComponent: () => import('./components/memorama-privacy/memorama-privacy.component').then(m => m.MemoramaPrivacyComponent)
-  },
-  { path: 'memorama-privacy', redirectTo: 'memorama-privacidad', pathMatch: 'full' },
   { path: 'Sergio', redirectTo: 'sergio', pathMatch: 'full' },
   { path: 'Dafne', redirectTo: 'dafne', pathMatch: 'full' },
   { path: 'Giovanna', redirectTo: 'giovanna', pathMatch: 'full' },

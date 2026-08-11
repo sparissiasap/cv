@@ -39,7 +39,7 @@ function startServer() {
   });
 }
 
-const ROUTES = ['sergio', 'dafne', 'giovanna', 'teresina', 'menu', 'memorama-privacidad'];
+const ROUTES = ['sergio', 'dafne', 'giovanna', 'teresina', 'menu'];
 
 const server = await startServer();
 console.log(`Static server ready on port ${PORT}`);

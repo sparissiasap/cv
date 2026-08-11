@@ -785,49 +785,6 @@ body.loaded .eb-fill { width: var(--w); }
 }
 
 /* ════════════════════════════
-   LEGAL PAGE (PRIVACY POLICY)
-════════════════════════════ */
-body.legal-theme { background: var(--body-bg); }
-.legal-page {
-  position: relative; z-index: 1;
-  max-width: 760px;
-  margin: 56px auto 100px;
-  padding: 0 24px;
-  display: flex; flex-direction: column; gap: 20px;
-}
-.legal-header { text-align: center; margin-bottom: 12px; }
-.legal-header h1 {
-  font-size: clamp(1.5rem, 3.6vw, 2.2rem);
-  font-weight: 800; letter-spacing: -0.5px;
-  color: var(--t1);
-}
-.legal-updated { margin-top: 8px; font-size: 0.85rem; color: var(--t2); font-weight: 500; }
-.legal-card {
-  background: var(--glass);
-  backdrop-filter: blur(28px) saturate(200%);
-  -webkit-backdrop-filter: blur(28px) saturate(200%);
-  border: 1px solid var(--glass-b);
-  border-radius: var(--radius);
-  padding: 28px 32px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.88);
-}
-.legal-card h2 { font-size: 1.05rem; font-weight: 700; color: var(--t1); margin-bottom: 10px; }
-.legal-card h3 { font-size: 0.92rem; font-weight: 700; color: var(--t1); margin: 16px 0 6px; }
-.legal-card h3:first-child { margin-top: 0; }
-.legal-card p { font-size: 0.9rem; line-height: 1.7; color: #2c2c2e; margin-bottom: 4px; }
-.legal-card ul { margin: 6px 0 6px 20px; }
-.legal-card li { font-size: 0.9rem; line-height: 1.7; color: #2c2c2e; margin-bottom: 4px; }
-.legal-card a { color: var(--blue-dk); text-decoration: underline; font-weight: 600; }
-.legal-card code { background: rgba(0,0,0,0.06); border-radius: 6px; padding: 2px 6px; font-size: 0.85em; }
-.legal-contact { font-size: 0.95rem; font-weight: 600; }
-.legal-footer { text-align: center; font-size: 0.78rem; color: var(--t2); margin-top: 8px; }
-
-@media screen and (max-width: 599px) {
-  .legal-page { margin: 32px auto 80px; padding: 0 16px; gap: 16px; }
-  .legal-card { padding: 22px 20px; }
-}
-
-/* ════════════════════════════
    MENU PAGE
 ════════════════════════════ */
 .menu-page {

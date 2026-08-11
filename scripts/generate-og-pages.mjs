@@ -155,23 +155,3 @@ const menuDir = join(distDir, 'menu');
 mkdirSync(menuDir, { recursive: true });
 writeFileSync(join(menuDir, 'index.html'), menuHtml);
 console.log('✓ menu/index.html');
-
-// memorama-privacidad — política de privacidad de la app Memorama (Google Play).
-const privacyUrl = `${BASE_URL}/memorama-privacidad/`;
-const privacyTitle = esc('Política de Privacidad — Memorama');
-const privacyDesc = esc('Política de privacidad de la app Memorama de Sergio Parissi Reyes: qué datos recopila, cómo los usa y cómo contactarnos.');
-
-const privacyHtml = template
-  .replace(/<title>[^<]*<\/title>/, `<title>${privacyTitle}</title>`)
-  .replace(/(<meta name="description" content=")[^"]*"/, `$1${privacyDesc}"`)
-  .replace(/(<meta property="og:title" content=")[^"]*"/, `$1${privacyTitle}"`)
-  .replace(/(<meta property="og:description" content=")[^"]*"/, `$1${privacyDesc}"`)
-  .replace(/(<meta property="og:url" content=")[^"]*"/, `$1${privacyUrl}"`)
-  .replace(/(<meta name="twitter:title" content=")[^"]*"/, `$1${privacyTitle}"`)
-  .replace(/(<meta name="twitter:description" content=")[^"]*"/, `$1${privacyDesc}"`)
-  .replace(/(<link rel="canonical" href=")[^"]*"/, `$1${privacyUrl}"`);
-
-const privacyDir = join(distDir, 'memorama-privacidad');
-mkdirSync(privacyDir, { recursive: true });
-writeFileSync(join(privacyDir, 'index.html'), privacyHtml);
-console.log('✓ memorama-privacidad/index.html');
