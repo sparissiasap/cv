@@ -3,7 +3,7 @@ name: Recruiter Assistant
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: '0 */4 * * *'
 
 permissions:
   contents: write
