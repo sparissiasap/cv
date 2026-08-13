@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [master] # Cubre ambas opciones por si acaso
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -18,16 +18,17 @@ jobs:
   deploy:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: '22.23.1'
-          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
@@ -50,15 +51,13 @@ jobs:
       - name: Prerender routes
         run: node scripts/prerender.mjs
 
-      # 1. Configurar GitHub Pages antes de empaquetar
       - uses: actions/configure-pages@v4
 
-      # 2. Subir el directorio de compilación (Asegúrate de que coincida con angular.json)
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/cv-site/browser' # Valida que esta ruta sea exacta según tu angular.json
+          path: 'dist/cv-site/browser'
+          retention-days: 1
 
-      # 3. Desplegar artefacto
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
