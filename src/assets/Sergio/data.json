@@ -140,6 +140,7 @@
             { "text": "Helix / Habitat", "primary": true },
             { "text": "SXA" },
             { "text": "JSS Headless" },
+            { "text": "Sitecore XM" },
             { "text": "Commerce" },
             { "text": "Personalization" },
             { "text": "Redis Cache" },
