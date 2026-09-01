@@ -134,6 +134,54 @@ for (const p of profiles) {
   }
 }
 
+// misfinanzas — no es un perfil de persona sino un proyecto propio (app de
+// Android), así que usa su propio og:type y jsonld SoftwareApplication en
+// vez de Person.
+{
+  const url = `${BASE_URL}/misfinanzas/`;
+  const title = esc('MisFinanzas — App de Control de Gastos y Ahorro | Sergio Parissi');
+  const desc = esc('Escanea tickets, controla tus gastos, ahorra y paga tus deudas sin complicarte. App gratuita para Android, sin hojas de cálculo.');
+  const image = `${BASE_URL}/assets/MisFinanzas/og-image.webp`;
+
+  const jsonld = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'MisFinanzas',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Android',
+    author: { '@type': 'Person', name: 'Sergio Parissi Reyes', url: `${BASE_URL}/sergio/` },
+    description: 'Escanea tickets, controla tus gastos, ahorra y paga tus deudas sin complicarte.',
+    url,
+    image,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  };
+
+  const html = template
+    .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
+    .replace(/(<meta name="description" content=")[^"]*"/, `$1${desc}"`)
+    .replace(/(<meta property="og:type" content=")[^"]*"/, `$1website"`)
+    .replace(/(<meta property="og:title" content=")[^"]*"/, `$1${title}"`)
+    .replace(/(<meta property="og:description" content=")[^"]*"/, `$1${desc}"`)
+    .replace(/(<meta property="og:url" content=")[^"]*"/, `$1${url}"`)
+    .replace(/(<meta property="og:image" content=")[^"]*"/, `$1${image}"`)
+    .replace(/(<meta property="og:image:width" content=")[^"]*"/, `$11200"`)
+    .replace(/(<meta property="og:image:height" content=")[^"]*"/, `$1630"`)
+    .replace(/(<meta property="og:locale" content=")[^"]*"/, `$1es_ES"`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*"/, `$1${title}"`)
+    .replace(/(<meta name="twitter:description" content=")[^"]*"/, `$1${desc}"`)
+    .replace(/(<meta name="twitter:image" content=")[^"]*"/, `$1${image}"`)
+    .replace(/(<link rel="canonical" href=")[^"]*"/, `$1${url}"`)
+    .replace('</head>', [
+      `  <script type="application/ld+json">${JSON.stringify(jsonld)}</script>`,
+      '</head>',
+    ].join('\n'));
+
+  const dir = join(distDir, 'misfinanzas');
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, 'index.html'), html);
+  console.log('✓ misfinanzas/index.html');
+}
+
 // menu route — necesita sus propios meta.
 // Copiar la plantilla tal cual heredaba el canonical de la raíz, lo que le
 // decía a Google "no me indexes", y /menu nunca podía posicionar.

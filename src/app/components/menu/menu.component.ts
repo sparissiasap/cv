@@ -5,6 +5,7 @@ interface ProfileCard {
   route: string;
   name: string;
   title: string;
+  cta?: string;
 }
 
 @Component({
@@ -34,6 +35,12 @@ export class MenuComponent implements OnInit, OnDestroy {
       route: '/teresina',
       name: 'Teresina Parissi Reyes',
       title: 'Lic. Administración · Maestra en Alta Gerencia e Inteligencia Estratégica'
+    },
+    {
+      route: '/misfinanzas',
+      name: 'MisFinanzas',
+      title: 'App de control de gastos y ahorro · Android · Kotlin & Firebase · Proyecto propio',
+      cta: 'Ver proyecto →'
     }
   ];
 

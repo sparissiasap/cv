@@ -274,7 +274,8 @@
       "items": [
         { "icon": "🔗", "text": "linkedin.com/in/sergioparissi", "href": "https://linkedin.com/in/sergioparissi" },
         { "icon": "💻", "text": "github.com/sparissiasap",       "href": "https://github.com/sparissiasap" },
-        { "icon": "📚", "text": "stackoverflow.com",             "href": "https://stackoverflow.com" }
+        { "icon": "📚", "text": "stackoverflow.com",             "href": "https://stackoverflow.com" },
+        { "icon": "📱", "text": "MisFinanzas — app que desarrollé y publiqué en Google Play", "href": "https://sergioparissi.is-a.dev/misfinanzas" }
       ]
     }
   ],

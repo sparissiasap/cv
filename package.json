@@ -3,8 +3,8 @@
   "version": "1.1",
   "scripts": {
     "start": "ng serve",
-    "build": "node scripts/backfill-badges.mjs && node scripts/optimize-images.mjs && ng build && node scripts/generate-og-pages.mjs && node scripts/prerender.mjs",
-    "build:prod": "node scripts/backfill-badges.mjs && node scripts/optimize-images.mjs && ng build --configuration production && node scripts/generate-og-pages.mjs",
+    "build": "node scripts/backfill-badges.mjs && node scripts/optimize-images.mjs && node scripts/generate-misfinanzas-og.mjs && ng build && node scripts/generate-og-pages.mjs && node scripts/prerender.mjs",
+    "build:prod": "node scripts/backfill-badges.mjs && node scripts/optimize-images.mjs && node scripts/generate-misfinanzas-og.mjs && ng build --configuration production && node scripts/generate-og-pages.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
     "add-badge-credly": "node scripts/add-badge.mjs",
     "add-pdf-cert": "node scripts/add-pdf-cert.mjs",

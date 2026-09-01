@@ -25,7 +25,8 @@
                 "ignore": [
                   "**/perfil.png",
                   "**/perfil.jpg",
-                  "**/og-image.png"
+                  "**/og-image.png",
+                  "**/logo-source.png"
                 ],
                 "output": "assets"
               },

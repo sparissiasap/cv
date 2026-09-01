@@ -1,0 +1,46 @@
+<div class="bg-fx mf-bg-fx" aria-hidden="true">
+  <div class="orb mf-o1"></div>
+  <div class="orb mf-o2"></div>
+  <div class="orb mf-o3"></div>
+</div>
+
+<main class="mf-page">
+  <a class="mf-back" routerLink="/menu">← Volver a los CVs</a>
+
+  <header class="mf-hero">
+    <img class="mf-hero-icon" src="assets/MisFinanzas/icon.webp" alt="Ícono de MisFinanzas" width="110" height="110" />
+    <h1>MisFinanzas</h1>
+    <p class="mf-hero-tagline">Escanea tickets. Controla tus gastos, deudas y ahorro. Sin hojas de cálculo.</p>
+    <a class="mf-cta" [href]="playStoreUrl" target="_blank" rel="noopener">Descargar gratis en Google Play →</a>
+    <p class="mf-hero-meta">Android · Gratis · MisFinanzas Pro es compra única, sin suscripción</p>
+  </header>
+
+  <section class="mf-section">
+    <h2 class="mf-section-label">¿Qué hace MisFinanzas?</h2>
+    <div class="mf-grid">
+      @for (f of features; track f.title) {
+        <div class="mf-card">
+          <div class="mf-card-icon">{{ f.icon }}</div>
+          <div class="mf-card-title">{{ f.title }}</div>
+          <div class="mf-card-text">{{ f.text }}</div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="mf-section mf-pro">
+    <h2 class="mf-section-label">⭐ MisFinanzas Pro</h2>
+    <p class="mf-pro-note">Compra única, no suscripción.</p>
+    <ul class="mf-pro-list">
+      @for (item of proFeatures; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  </section>
+
+  <footer class="mf-footer">
+    <a class="mf-cta mf-cta-outline" [href]="playStoreUrl" target="_blank" rel="noopener">Descargar en Google Play →</a>
+    <p class="mf-privacy">Tus datos se guardan de forma segura y solo tú tienes acceso a ellos.</p>
+    <p class="mf-credit">Diseñada y desarrollada por <a routerLink="/sergio">Sergio Parissi</a></p>
+  </footer>
+</main>

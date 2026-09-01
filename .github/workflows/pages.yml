@@ -36,6 +36,9 @@ jobs:
       - name: Optimize images
         run: node scripts/optimize-images.mjs
 
+      - name: Generate MisFinanzas OG image
+        run: node scripts/generate-misfinanzas-og.mjs
+
       - name: Backfill badges
         run: node scripts/backfill-badges.mjs
 

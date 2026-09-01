@@ -15,6 +15,7 @@ const images = [
   { src: 'src/assets/Giovanna/perfil.png', out: 'src/assets/Giovanna/perfil-1x.webp', quality: 85, width: 175 },
   { src: 'src/assets/Teresina/perfil.png', out: 'src/assets/Teresina/perfil.webp', quality: 85, width: 350 },
   { src: 'src/assets/Teresina/perfil.png', out: 'src/assets/Teresina/perfil-1x.webp', quality: 85, width: 175 },
+  { src: 'src/assets/MisFinanzas/logo-source.png', out: 'src/assets/MisFinanzas/icon.webp', quality: 90, width: 220 },
 ];
 
 for (const { src, out, quality, width } of images) {

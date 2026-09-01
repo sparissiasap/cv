@@ -16,7 +16,7 @@
         <div class="menu-card-accent" [attr.data-index]="i"></div>
         <div class="menu-card-name">{{ p.name }}</div>
         <div class="menu-card-title">{{ p.title }}</div>
-        <span class="menu-card-btn">Ver CV →</span>
+        <span class="menu-card-btn">{{ p.cta || 'Ver CV →' }}</span>
       </a>
     }
   </div>
