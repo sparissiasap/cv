@@ -1,6 +1,39 @@
 ﻿import { gemini } from "./gemini.js";
 import { profile } from "./profile.js";
 
+const RETRYABLE_STATUS_CODES = [429, 503];
+
+async function generateWithRetry(
+    model: ReturnType<typeof gemini.getGenerativeModel>,
+    prompt: string,
+    maxRetries = 3
+) {
+
+    for (let attempt = 0; ; attempt++) {
+
+        try {
+            return await model.generateContent(prompt);
+        }
+        catch (error: any) {
+
+            const isRetryable =
+                RETRYABLE_STATUS_CODES.includes(error?.status);
+
+            if (!isRetryable || attempt >= maxRetries) {
+                throw error;
+            }
+
+            const delayMs = 1000 * 2 ** attempt;
+
+            console.warn(
+                `Gemini request failed (status ${error.status}), retrying in ${delayMs}ms...`
+            );
+
+            await new Promise(resolve => setTimeout(resolve, delayMs));
+        }
+    }
+}
+
 export async function analyzeJob(email: {
     subject: string;
     body: string;
@@ -276,7 +309,7 @@ Structure:
 `;
 
 
-    const result = await model.generateContent(prompt);
+    const result = await generateWithRetry(model, prompt);
 
     let text = result.response.text();
 

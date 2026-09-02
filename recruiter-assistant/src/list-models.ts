@@ -1,3 +1,4 @@
+import "dotenv/config";
 const apiKey = process.env.GEMINI_API_KEY;
 
 const response = await fetch(

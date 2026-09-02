@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { authorize } from "./auth.js";
 import { getRecentEmails } from "./gmail.js";
 import { isRecruiterEmail } from "./filter.js";
