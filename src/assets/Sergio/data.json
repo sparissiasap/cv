@@ -46,7 +46,7 @@
         "current": true,
         "bullets": [
           "<strong>Primary technical point of contact</strong> for multiple enterprise clients, leading root-cause analysis, technical roadmap discussions, and feature design for mission-critical Sitecore applications.",
-          "Architected and developed custom <strong>Sitecore solutions using Helix, SXA, JSS, and Sitecore Personalization</strong>, ensuring performance, scalability, and long-term maintainability.",
+          "Architected and developed custom <strong>Sitecore solutions using Helix, SXA, JSS (Node.js), and Sitecore Personalization</strong>, ensuring performance, scalability, and long-term maintainability.",
           "Proactively proposed and evaluated multiple technical solutions per client request, clearly outlining trade-offs, risks, and implementation strategies — accelerating decision-making cycles.",
           "Deployed, configured, and managed <strong>Azure resources</strong> (App Services, Azure Functions, Storage, SQL), maintaining high availability and security across all environments.",
           "Monitored application health, validated infrastructure stability, and coordinated rapid incident response — reducing client-reported downtime.",
@@ -65,7 +65,7 @@
         "current": false,
         "bullets": [
           "Designed and delivered end-to-end <strong>Sitecore CMS solutions</strong> for clients across multiple industries, following Helix architecture and Sitecore best practices.",
-          "Built and integrated <strong>headless CMS components</strong> via custom REST APIs and the Sitecore JSS framework, enabling decoupled front-end architectures.",
+          "Built and integrated <strong>headless CMS components</strong> via custom REST APIs, <strong>Node.js</strong>, and the Sitecore JSS framework, enabling decoupled front-end architectures.",
           "Provided strategic technical consulting for Sitecore upgrades, SXA implementations, and personalization initiatives.",
           "Managed full project lifecycle independently: requirements, scoping, development, QA, delivery, and documentation."
         ]
@@ -77,7 +77,7 @@
         "location": "Cancún, Mexico",
         "current": false,
         "bullets": [
-          "Built and maintained enterprise web apps using <strong>C#, ASP.NET MVC, .NET Core, Web API, Angular, and React</strong>.",
+          "Built and maintained enterprise web apps using <strong>C#, ASP.NET MVC, .NET Core, Web API, Node.js, Angular, and React</strong>.",
           "Integrated <strong>Azure Functions</strong> and event-driven cloud services to support scalable, asynchronous workflows in a multi-tenant architecture.",
           "Authored and maintained <strong>NUnit unit and integration tests</strong>, raising code quality and reducing regression risk.",
           "Defined and rolled out a <strong>Git branching strategy</strong> adopted company-wide, improving collaboration and release velocity.",
@@ -178,6 +178,7 @@
             { "text": "React" },
             { "text": "Angular" },
             { "text": "JavaScript" },
+            { "text": "Node.js" },
             { "text": "SQL Server" },
             { "text": "Redis" },
             { "text": "MongoDB" },

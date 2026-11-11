@@ -46,7 +46,7 @@
         "current": true,
         "bullets": [
           "<strong>Principal punto de contacto técnico</strong> para múltiples clientes empresariales, liderando análisis de causa raíz, discusiones de hoja de ruta técnica y diseño de funcionalidades para aplicaciones Sitecore de misión crítica.",
-          "Diseñé y desarrollé soluciones Sitecore personalizadas usando <strong>Helix, SXA, JSS y Personalización</strong>, asegurando rendimiento, escalabilidad y mantenibilidad a largo plazo.",
+          "Diseñé y desarrollé soluciones Sitecore personalizadas usando <strong>Helix, SXA, JSS (Node.js) y Personalización</strong>, asegurando rendimiento, escalabilidad y mantenibilidad a largo plazo.",
           "Propuse y evalué proactivamente múltiples soluciones técnicas por solicitud del cliente, detallando claramente las compensaciones, riesgos y estrategias de implementación — acelerando los ciclos de toma de decisiones.",
           "Desplegué, configuré y gestioné <strong>recursos de Azure</strong> (App Services, Azure Functions, Storage, SQL), manteniendo alta disponibilidad y seguridad en todos los entornos.",
           "Monitoreé el estado de las aplicaciones, validé la estabilidad de la infraestructura y coordiné la respuesta rápida a incidentes — reduciendo el tiempo de inactividad reportado por clientes.",
@@ -65,7 +65,7 @@
         "current": false,
         "bullets": [
           "Diseñé y entregué soluciones <strong>Sitecore CMS</strong> de extremo a extremo para clientes de múltiples industrias, siguiendo la arquitectura Helix y las mejores prácticas de Sitecore.",
-          "Construí e integré <strong>componentes CMS headless</strong> a través de APIs REST personalizadas y el framework Sitecore JSS, habilitando arquitecturas de front-end desacopladas.",
+          "Construí e integré <strong>componentes CMS headless</strong> a través de APIs REST personalizadas, <strong>Node.js</strong> y el framework Sitecore JSS, habilitando arquitecturas de front-end desacopladas.",
           "Proporcioné consultoría técnica estratégica para actualizaciones de Sitecore, implementaciones de SXA e iniciativas de personalización.",
           "Gestioné el ciclo de vida completo del proyecto de forma independiente: requisitos, alcance, desarrollo, QA, entrega y documentación."
         ]
@@ -77,7 +77,7 @@
         "location": "Cancún, México",
         "current": false,
         "bullets": [
-          "Construí y mantuve aplicaciones web empresariales usando <strong>C#, ASP.NET MVC, .NET Core, Web API, Angular y React</strong>.",
+          "Construí y mantuve aplicaciones web empresariales usando <strong>C#, ASP.NET MVC, .NET Core, Web API, Node.js, Angular y React</strong>.",
           "Integré <strong>Azure Functions</strong> y servicios cloud basados en eventos para soportar flujos de trabajo escalables y asíncronos en una arquitectura multi-tenant.",
           "Desarrollé y mantuve <strong>pruebas unitarias e integración con NUnit</strong>, elevando la calidad del código y reduciendo el riesgo de regresión.",
           "Definí e implementé una <strong>estrategia de ramificación de Git</strong> adoptada a nivel empresarial, mejorando la colaboración y la velocidad de lanzamiento.",
@@ -178,6 +178,7 @@
             { "text": "React" },
             { "text": "Angular" },
             { "text": "JavaScript" },
+            { "text": "Node.js" },
             { "text": "SQL Server" },
             { "text": "Redis" },
             { "text": "MongoDB" },
